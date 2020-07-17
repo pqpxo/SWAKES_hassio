@@ -1,0 +1,110 @@
+# UX Goodie Theme by @fi-sch
+
+ux_goodie:
+  
+  lovelace-background: 'center / cover no-repeat url("/local/background.jpg") fixed'
+  
+# MAIN INTERFACE COLORS
+  primary-color: "#607D8B"  # "rgb(255, 159, 10)" # Top bar (global), HA links, panels like media player
+  light-primary-color: "#607D8B"  # user avatar
+  accent-color: "#FF9F0A"  # e.g. loader in HACS
+  divider-color: "#545454"  # divider in sidebar
+  ch-background: "rgba(10, 10, 10, 0.7)"  # top bar (custom header)
+  
+
+# BACKGROUND AND SIDEBAR
+  primary-background-color: "#2E2E2E"  # main app background mostly
+  secondary-background-color: "rgba(10, 10, 10, 0.85)"
+  
+  sidebar-background-color: "#2E2E2E"
+  sidebar-selected-background-color: "#1B1D26"
+  sidebar-selected-icon-color: "#FFF"
+  sidebar-selected-text-color: "var(--sidebar-selected-icon-color)"
+  sidebar-icon-color: "#BDBDBD"
+  sidebar-text-color: "#F1F1F1"
+
+
+# CARDS AND DIALOGS
+  card-background-color: "var(--secondary-background-color)"
+  paper-listbox-background-color: "var(--primary-background-color)"
+  ha-card-border-radius: "15px"
+  ha-card-background: "rgba(10, 10, 10, 0.87)"
+  paper-card-background-color: "var(--ha-card-background)"  # lovelace cards background
+  paper-dialog-background-color: "rgba(20, 20, 20, 0.95)"  # entity details background
+
+
+### CONTROLS
+  
+# SLIDER
+  paper-slider-knob-color: "#FFF"  # slider knob
+  paper-slider-knob-start-color: "var(--paper-slider-knob-color)"
+  paper-slider-pin-color: "var(--paper-slider-knob-color)"
+  paper-slider-active-color: "#0984FF"  # slider active side
+  paper-slider-secondary-color: "var(--paper-slider-knob-color)"
+  paper-slider-container-color: "rgba(255, 255, 255, 0.5)"  # slider inactive side
+  paper-slider-font-color: "#000"
+  ha-slider-background: "none !important"
+
+# TOGGLE BUTTON
+  paper-toggle-button-checked-button-color: "#484848"  # toggle active button
+  paper-toggle-button-checked-bar-color: "#484848"  # toggle active sliding area
+  paper-toggle-button-unchecked-button-color: "var(--paper-toggle-button-checked-button-color)"
+  paper-toggle-button-unchecked-bar-color: "var(--disabled-text-color)"
+
+# SWITCH
+  switch-checked-color: "#30D158"
+  switch-checked-track-color: "#30D158"
+  switch-checked-button-color: "#30D158"
+  switch-unchecked-color: "#BDBDBD"
+  switch-unchecked-track-color: "#BDBDBD"
+  switch-unchecked-button-color: "#FFF"
+
+# STATES AND BADGES
+  state-icon-color: "#FFF"
+  state-icon-active-color: "#FF9F0A"
+  state-icon-unavailable-color: "#9E9E9E"
+
+# LABEL BADGE
+  label-badge-background-color: "#23232E"
+  label-badge-text-color: "#F1F1F1"
+  label-badge-red: "#FF453A"
+  label-badge-blue: "#0A84FF"
+  label-badge-green: "#30D158"
+  label-badge-yellow: "#FFD60A"
+
+# TEXT
+  primary-text-color: "#FFF"
+  secondary-text-color: "#D3D3D3"
+  text-primary-color: "#FFF"
+  disabled-text-color: "#BDBDBD"
+  text-dark-color: "#FFF"
+
+
+### OTHERS
+  error-color: "#FF453A"
+  paper-green-400: "#30D158"
+  paper-blue-400: "#0A84FF"
+  paper-orange-400: "#FF9F0A"
+  
+  table-row-background-color: "#484848"
+  table-row-alternative-background-color: "#323232"
+  
+  paper-item-icon-color: "white"  # entity icons "off" status
+  more-info-header-background: "rgba(25, 25, 25, 0.5)"
+  mcg-title-letter-spacing: ".15em"
+  mini-media-player-base-color: "white"
+  mini-media-player-icon-color: "white"
+  
+  mdc-theme-primary: "f5f5f5"  # font on some app-wide buttons
+  mdc-theme-secondary: "#607D8B"  # round floating buttons (app-wide)
+  hacs-badge-color: "#FFF"
+
+  dark-disabled-opacity: "0.45"
+  dark-secondary-opacity: "0.6"
+  dark-primary-opacity: "0.9"
+  
+  google-red-500: "#FF453A"
+  google-blue-500: "#0A84FF"
+  google-green-500: "#30D158"
+  google-yellow-500: "#FF9F0A"
+  paper-spinner-color: "var(--primary-color)"

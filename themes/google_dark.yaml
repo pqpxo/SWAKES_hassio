@@ -1,0 +1,88 @@
+# Theme based on Google app dark theme
+# Creater: Juan - @juanmtech
+# Website: https://www.juanmtech.com
+# YouTube Channel: https://youtube.com/juanmtech
+# My Home Assistant Config files: https://github.com/JuanMTech/Home_Assistant_files
+#
+#
+Google Dark Theme: 
+  transparent: "rgba(0,0,0,0.0)"
+  # Header:
+  app-header-background-color: "#1F1F20"
+  app-header-text-color: "#F5F5F5"
+  # Main Interface Colors
+  primary-color: "#607d8b"
+  light-primary-color: var(--primary-color)
+  primary-background-color: "#1F1F20"
+  secondary-background-color: var(--primary-background-color)
+  divider-color: var(--primary-background-color)
+  # Text
+  primary-text-color: "#F5F5F5"
+  secondary-text-color: "#9e9e9e"
+  text-primary-color: "#FFFFFF"
+  disabled-text-color: "#717171"
+  card-header-text-color: "#F5F5F5"
+  # Sidebar Menu
+  sidebar-icon-color: var(--primary-text-color)
+  sidebar-text-color: '#BDC1C6'
+  sidebar-background-color: "rgba(27, 27, 27)"
+  sidebar-selected-background-color: var(--primary-background-color)
+  sidebar-selected-icon-color: "#607d8b"
+  sidebar-selected-text-color: var(--sidebar-selected-icon-color))
+  # States and Badges
+  state-icon-color: "#5F6267"
+  state-icon-active-color: "#ffc107"
+  state-icon-unavailable-color: var(--disabled-text-color)
+  # Sliders
+  paper-slider-knob-color: "#607d8b"
+  paper-slider-knob-start-color: var(--paper-slider-knob-color)
+  paper-slider-pin-color: var(--paper-slider-knob-color)
+  paper-slider-active-color: var(--paper-slider-knob-color)
+  paper-slider-secondary-color: var(--light-primary-color)
+  # Labels
+  label-badge-background-color: "#202124"
+  label-badge-text-color: "#BDC1C6"
+  label-badge-red: "#D06568"
+  label-badge-green: "#80C884"
+  label-badge-blue: "#5F9BEA"
+  label-badge-yellow: "#DFC271"
+  label-badge-gray: "#5F6267"
+
+  # Cards
+  ha-alert-background: "#251210"
+  ha-card-border-radius: "15px"
+  #ha-card-box-shadow: 1px 1px 5px 0px rgb(12, 12, 14)
+  card-box-shadow: "0 16px 22px 2px rgba(180, 180, 180, 0.05), 0 6px 30px 5px rgba(180, 180, 180, 0.04), 0 8px 10px -17px rgba(180, 180, 180, 0.2)"
+  ha-card-box-shadow: "none"
+  paper-card-background-color: 'var(--transparent)'
+  #paper-card-background-color: "#202124"
+  paper-listbox-background-color: "#202124"
+  # Switches
+  switch-checked-button-color: "#607d8b"
+  switch-checked-track-color: "#90a4ae"
+  switch-unchecked-button-color: "#636466"
+  switch-unchecked-track-color: "#636466"
+  # Toggles
+  paper-toggle-button-checked-button-color: var(--switch-checked-button-color)
+  paper-toggle-button-checked-bar-color: var(--switch-checked-track-color)
+  paper-toggle-button-unchecked-button-color: var(--switch-unchecked-button-color)
+  paper-toggle-button-unchecked-bar-color: var(--switch-unchecked-track-color)
+  # Table
+  table-row-background-color: var(--primary-background-color)
+  table-row-alternative-background-color: var(--secondary-background-color)
+  data-table-background-color: var(--primary-background-color)
+  # Custom Header
+  ch-background: 'var(--primary-background-color)'
+  ch-active-tab-color: 'var(--text-primary-color)'
+  ch-notification-dot-color: 'var(--accent-color)'
+  ch-all-tabs-color: 'var(--disabled-text-color)'
+  ch-tab-indicator-color: 'var(--transparent)'
+  ch-options-color: 'var(--transparent)'
+  ch-menu-color: 'var(--transparent)'
+  # Card Temp
+  card-temperature-cold: 'var(--sidebar-background-color)' 
+  card-temperature-warm: 'var(--sidebar-background-color)'
+  card-temperature-hot: 'var(--sidebar-background-color)'
+  # Simple Weather
+  default_start: 'rgba(78, 87, 108, 0.8)'
+  default_end: 'rgba(78, 87, 108)'

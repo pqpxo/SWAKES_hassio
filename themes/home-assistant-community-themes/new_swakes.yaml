@@ -1,0 +1,92 @@
+new_swakes:
+  # Background image
+  lovelace-background: 'center / cover no-repeat url("/local/lowpoly.png")'
+  background: 'center / cover no-repeat url("/local/lowpoly.png")'
+
+  # Colors
+  text-color: '#ffffff'                                                           # White text
+  text-medium-light-color: '#A0A2A8'                                              # Medium-light grey text
+  text-medium-color: '#80828A'                                                    # Medium grey text
+  text-dark-color: '#6A6B74'                                                      # Dark grey text
+  accent-color: '#10294A'                                                         # Blue
+  accent-medium-color: '#2686c1'                                                  # Decent blue
+  background-color: '#4c566a'                                                     # Dark grey background
+  background-color-2: '#10294A'                                                   # Light grey background
+  background-card-color: '#4c566a'                                                # Grey background
+  border-color: '#383C46'                                                         # Grey border
+  
+  primary-font-family: 'Raleway, sans-serif'
+  paper-font-common-base_-_font-family: "var(--primary-font-family)"
+  paper-font-common-code_-_font-family: "var(--primary-font-family)"
+  paper-font-body1_-_font-family: "var(--primary-font-family)"
+  paper-font-header_-_font-family: "var(--primary-font-family)"
+  paper-font-subhead_-_font-family: "var(--primary-font-family)"
+  paper-font-headline_-_font-family: "var(--primary-font-family)"
+  paper-font-caption_-_font-family: "var(--primary-font-family)"
+  paper-font-title_-_font-family: "var(--primary-font-family)"
+  
+  paper-card-font-common-base_-_font-family: "var(--primary-font-family)"
+  paper-card-font-common-code_-_font-family: "var(--primary-font-family)"
+  paper-card-font-body1_-_font-family: "var(--primary-font-family)"
+  paper-card-font-header_-_font-family: "var(--primary-font-family)"
+  paper-card-font-subhead_-_font-family: "var(--primary-font-family)"
+  paper-card-font-headline_-_font-family: "var(--primary-font-family)"
+  paper-card-font-caption_-_font-family: "var(--primary-font-family)"
+  paper-card-font-title_-_font-family: "var(--primary-font-family)"  
+
+  # Header
+  primary-color: '#3b4252'                                                        # Background color
+  text-primary-color: 'var(--text-color)'                                         # Text
+  
+  # Left Menu
+  paper-listbox-background-color: '#3b4252'                                       # Background
+  menu-background-color: '#3b4252' 
+  sidebar-icon-color: '#ffffff '                                                  # icons
+  sidebar-selected-icon-color: 'var(--text-medium-light-color)'                   # Selected row icon and background (15%)
+  sidebar-selected-text-color: 'var(--text-color)'                                # Selected row label
+ 
+  ### Table row ###
+  table-row-background-color: 'var(--primary-background-color)'
+  table-row-alternative-background-color: 'var(--secondary-background-color)'
+
+  # UI
+  paper-card-header-color: '#3b4252'                                    # Title in settings
+  primary-background-color: '#10294A'                        # Background (also title background in left menu)
+  mdc-theme-primary: 'var(--accent-medium-color)'                                 # Action Buttons (save, restart etc.)
+  card-background-color: 'var(--background-card-color)'                           # Entity Registry Background
+  color: '#3b4252'
+  
+  # Card
+  paper-card-background-color: 'var(--background-card-color)'                     # Background
+  dark-primary-color: 'var(--text-color)'
+  primary-text-color: 'var(--text-color)'
+  paper-listbox-color: 'var(--text-color)'
+  light-primary-color: 'var(--text-dark-color)'
+  secondary-text-color: 'var(--text-medium-color)'
+  disabled-text-color: 'var(--text-dark-color)'
+  paper-dialog-button-color: 'var(--text-color)'
+  secondary-background-color: 'var(--background-color-2)'                         # Background more info title
+  ha-card-border-radius: 10px  
+
+  # Icons
+  paper-item-icon-color: 'var(--text-color)'                                # Off
+  paper-item-icon-active-color: 'var(--accent-color)'                             # On
+  
+  # Switches
+  switch-checked-button-color: '#ffffff'                   # Knob On
+  switch-unchecked-button-color: '#353c4a'                 # Knob Off
+  switch-checked-track-color: '#009FFF'                                           # Background On
+  switch-unchecked-track-color: '#767682'                                         # Background Off
+
+  # Slider
+  paper-slider-active-color: 'var(--accent-color)'                                # Line On
+  paper-slider-container-color: 'var(--text-dark-color)'                          # Line Off
+  paper-slider-knob-color: 'var(--text-medium-light-color)'                       # Knob On
+  paper-slider-knob-start-color: 'var(--text-medium-light-color)'                 # Knob Off
+  
+  # Shadows
+  ha-card-box-shadow: 'inset 0px 0px 0px 1px var(--border-color)'
+  
+#   banner-card-heading-size: 3em
+#   banner-card-entity-value-size: 1.5em
+#   banner-card-spacing: 8xp

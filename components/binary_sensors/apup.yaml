@@ -1,0 +1,3 @@
+platform: ping
+host: !secret apup_host
+name: UniFi AP Up

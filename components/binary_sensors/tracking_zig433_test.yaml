@@ -1,0 +1,7 @@
+#   platform: template
+#   binary_sensor:
+#     updated_ago:
+#       entity_id:
+#         - binary_sensor.openclose_21
+#       value_template: >-
+#         {{ states.binary_sensor.openclose_21.last_updated|int }}

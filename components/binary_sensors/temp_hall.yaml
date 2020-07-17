@@ -1,0 +1,24 @@
+#platform: template
+#sensors:
+#   hallway_motion:
+#       value_template: '{% if is_state("binary_sensor.hallway_motion", "off") %}Clear{% else %}Alert{% endif %}'
+#       friendly_name: 'Hallway Motion'
+#       device_class: motion
+
+#platform: template
+#sensors:
+#  hallway_motion:
+#     value_template: "{% if is_state('binary_sensor.hallway_motion', 'off') %}Clear{% else %}Alert{% endif %}"
+
+    platform: template
+    sensors:
+     hall_pir:
+        device_class: motion
+        entity_id:
+          - binary_sensor.hallway_motion
+        value_template: >-
+          {% if is_state("binary_sensor.hall_pir", "on") %}
+            mdi:weather-sunset-up
+          {% else %}
+           mdi:weather-sunset-down
+          {% endif %}

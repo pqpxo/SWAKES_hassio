@@ -1,0 +1,3 @@
+platform: ping
+host: !secret swkvmplexsrv_host
+name: SWC-VUS18-PMS

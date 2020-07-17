@@ -1,0 +1,35 @@
+- id: '1591928451351'
+  name: kitchen
+  entities:
+    light.kitchen_corner_rgb:
+      effect_list:
+      - None
+      - Random
+      - Strobe
+      - Flicker
+      - Rainbow
+      - Color Wipe
+      - Scan
+      - Twinkle
+      - Random Twinkle
+      - Fireworks
+      - Addressable Flicker
+      friendly_name: Kitchen Corner RGB
+      state: 'off'
+      supported_features: 61
+    light.kitchen_sink_rgb:
+      effect_list:
+      - None
+      - Random
+      - Strobe
+      - Flicker
+      - Rainbow
+      - Color Wipe
+      - Scan
+      - Twinkle
+      - Random Twinkle
+      - Fireworks
+      - Addressable Flicker
+      friendly_name: Kitchen Sink RGB
+      state: 'off'
+      supported_features: 61

@@ -1,0 +1,12 @@
+
+platform: mqtt
+state_topic: "tele/RF_Bridge/RESULT"
+name: Office Button C
+value_template: '{{value_json.RfReceived.Data}}'
+payload_on: '00A0B1'
+payload_off: '00A0B1off'
+device_class: power
+#optimistic: false
+qos: 1
+#retain: false
+off_delay: 1

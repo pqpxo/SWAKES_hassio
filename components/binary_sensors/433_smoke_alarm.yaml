@@ -1,0 +1,10 @@
+platform: mqtt
+state_topic: "tele/RF_Bridge/RESULT"
+name: Fire Alarm
+value_template: '{{value_json.RfReceived.Data}}'
+payload_on: '6D5E28'
+payload_off: '6D5E28off'
+device_class: smoke
+#optimistic: false
+qos: 1
+#retain: false

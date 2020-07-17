@@ -1,0 +1,6 @@
+platform: template
+sensors:
+  433_ground_motion_status:
+    friendly_name: "Ground Floor Status"
+    device_class: connectivity
+    value_template: '{{ as_timestamp(states.binary_sensor.ground_hallway_motion.last_changed) + 900 < as_timestamp(now()) }}'

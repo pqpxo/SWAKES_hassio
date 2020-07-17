@@ -1,0 +1,547 @@
+- id: '1590614990299'
+  alias: IKEA Remote Left Click Office Lamp
+  description: ''
+  trigger:
+  - device_id: e2f9bfa49eaa4963987bbe96f4aa1953
+    discovery_id: 0x000d6ffffe4b5727 action_arrow_left_click
+    domain: mqtt
+    platform: device
+    subtype: arrow_left_click
+    type: action
+  condition: []
+  action:
+  - device_id: 1cdb60766cbb4ffc8b12ac9713fb1b55
+    domain: switch
+    entity_id: switch.office_lamp
+    type: toggle
+- id: '1590615088628'
+  alias: IKEA Remote Right Click Office Light
+  description: ''
+  trigger:
+  - device_id: e2f9bfa49eaa4963987bbe96f4aa1953
+    discovery_id: 0x000d6ffffe4b5727 action_arrow_right_click
+    domain: mqtt
+    platform: device
+    subtype: arrow_right_click
+    type: action
+  condition: []
+  action:
+  - device_id: 35b84bccb40a42efbd094c4c7c3e7b2b
+    domain: light
+    entity_id: light.office_light_light
+    type: toggle
+- id: '1590615168236'
+  alias: IKEA Remote Brightness Up Office Light
+  description: ''
+  trigger:
+  - device_id: e2f9bfa49eaa4963987bbe96f4aa1953
+    discovery_id: 0x000d6ffffe4b5727 action_brightness_up_click
+    domain: mqtt
+    platform: device
+    subtype: brightness_up_click
+    type: action
+  condition:
+  - condition: device
+    device_id: 35b84bccb40a42efbd094c4c7c3e7b2b
+    domain: light
+    entity_id: light.office_light_light
+    type: is_on
+  action:
+  - device_id: 35b84bccb40a42efbd094c4c7c3e7b2b
+    domain: light
+    entity_id: light.office_light_light
+    type: brightness_increase
+- id: '1590615242144'
+  alias: IKEA Remote Brightness Down Office Light
+  description: ''
+  trigger: []
+  condition:
+  - condition: device
+    device_id: 35b84bccb40a42efbd094c4c7c3e7b2b
+    domain: light
+    entity_id: light.office_light_light
+    type: is_on
+  action:
+  - device_id: 35b84bccb40a42efbd094c4c7c3e7b2b
+    domain: light
+    entity_id: light.office_light_light
+    type: brightness_decrease
+- id: '1234'
+  alias: Reset Ground Hallway PIR
+  trigger:
+  - entity_id: binary_sensor.ground_hallway_motion
+    for: 0:00:05
+    from: 'off'
+    platform: state
+    to: 'on'
+  action:
+  - data:
+      payload: 0B104Aoff
+      topic: tele/RF_Bridge/RESULT
+    service: mqtt.publish
+  initial_state: 'on'
+- id: '5678'
+  alias: Reset First Hallway PIR
+  trigger:
+  - entity_id: binary_sensor.first_hallway_motion
+    for: 0:00:05
+    from: 'off'
+    platform: state
+    to: 'on'
+  action:
+  - data:
+      payload: 63044Aoff
+      topic: tele/RF_Bridge/RESULT
+    service: mqtt.publish
+  initial_state: 'on'
+- id: '567322328'
+  alias: Reset Front Doorbell
+  trigger:
+  - entity_id: binary_sensor.front_doorbell
+    for: 0:00:03
+    from: 'off'
+    platform: state
+    to: 'on'
+  action:
+  - data:
+      payload: 9D8008off
+      topic: tele/RF_Bridge/RESULT
+    service: mqtt.publish
+  initial_state: 'on'
+- id: '91011'
+  alias: Reset Fire Alarm
+  initial_state: 'on'
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.fire_alarm
+    to: 'on'
+    for:
+      seconds: 300
+  action:
+  - service: mqtt.publish
+    data:
+      topic: tele/RF_Bridge/RESULT
+      payload: 6D5E28off
+- id: '910112211'
+  alias: Ground PIR Pushover
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.ground_hallway_motion
+    to: 'on'
+  action:
+    service: notify.pushover
+    data:
+      message: Ground Hallway PIR
+      title: Motion Detected
+- id: '910166211'
+  alias: First PIR Pushover
+  trigger:
+  - entity_id: binary_sensor.first_hallway_motion
+    from: 'off'
+    platform: state
+    to: 'on'
+  action:
+  - data:
+      message: First Hallway PIR
+      title: Motion Detected
+    service: notify.pushover
+- id: '91016627711'
+  alias: Office PIR Pushover
+  trigger:
+  - device_id: 97a8f57a55ac4a98848ba6062436cfc1
+    domain: binary_sensor
+    entity_id: binary_sensor.tradfri_motion_sensor
+    platform: device
+    type: motion
+  action:
+  - brightness_pct: 100
+    device_id: edc1241d41894acdb543685166d12c80
+    domain: light
+    entity_id: light.optihub_rgb
+    type: turn_on
+  - delay: '15'
+  - device_id: edc1241d41894acdb543685166d12c80
+    domain: light
+    entity_id: light.optihub_rgb
+    type: turn_off
+- id: '1591392891617'
+  alias: IKEA Remote Left Button
+  description: ''
+  trigger:
+  - event_data:
+      event: 4002
+      id: tradfri_remote_control
+    event_type: deconz_event
+    platform: event
+  condition: []
+  action:
+  - condition: state
+    entity_id: light.optihub_rgb
+    state: toggle
+- id: '1591549778285'
+  alias: Master Bedside Sam Motion
+  description: ''
+  trigger:
+  - device_id: 7f4bb8e00a9843aa9e61b2d4038218e6
+    domain: binary_sensor
+    entity_id: binary_sensor.master_bedside_sam_pir_sensor
+    platform: device
+    type: motion
+  condition: []
+  action:
+  - brightness_pct: 100
+    device_id: 7f4bb8e00a9843aa9e61b2d4038218e6
+    domain: light
+    entity_id: light.master_bedside_sam_rgb_light
+    type: turn_on
+  - delay: '10'
+  - device_id: 7f4bb8e00a9843aa9e61b2d4038218e6
+    domain: light
+    entity_id: light.master_bedside_sam_rgb_light
+    type: turn_off
+- id: '1591915449028'
+  alias: Kitchen Corner PIR
+  description: ''
+  trigger:
+  - device_id: 2c2892dc4f8049c8a0e3ce419e816442
+    domain: binary_sensor
+    entity_id: binary_sensor.kitchen_corner_pir
+    platform: device
+    type: motion
+  condition:
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: light.kitchen_corner_rgb
+      state: 'on'
+  action:
+  - brightness_pct: 100
+    device_id: 2c2892dc4f8049c8a0e3ce419e816442
+    domain: light
+    entity_id: light.kitchen_corner_rgb
+    type: turn_on
+  - delay: '180'
+  - device_id: 2c2892dc4f8049c8a0e3ce419e816442
+    domain: light
+    entity_id: light.kitchen_corner_rgb
+    type: turn_off
+- id: '1591915519944'
+  alias: Kitchen Sink PIR
+  description: ''
+  trigger:
+  - device_id: 2c2892dc4f8049c8a0e3ce419e816442
+    domain: binary_sensor
+    entity_id: binary_sensor.kitchen_sink_pir
+    platform: device
+    type: motion
+  condition:
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: light.kitchen_sink_rgb
+      state: 'on'
+  action:
+  - brightness_pct: 100
+    device_id: 2c2892dc4f8049c8a0e3ce419e816442
+    domain: light
+    entity_id: light.kitchen_sink_rgb
+    type: turn_on
+  - delay: '180'
+  - device_id: 2c2892dc4f8049c8a0e3ce419e816442
+    domain: light
+    entity_id: light.kitchen_sink_rgb
+    type: turn_off
+- id: '1592089195656'
+  alias: Back Door Lights On Inside
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.openclose_19
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+  - condition: device
+    device_id: 2c2892dc4f8049c8a0e3ce419e816442
+    domain: binary_sensor
+    entity_id: binary_sensor.kitchen_corner_pir
+    type: is_no_motion
+  - condition: device
+    device_id: 2c2892dc4f8049c8a0e3ce419e816442
+    domain: binary_sensor
+    entity_id: binary_sensor.kitchen_sink_pir
+    type: is_no_motion
+  action:
+  - brightness_pct: 100
+    device_id: 2c2892dc4f8049c8a0e3ce419e816442
+    domain: light
+    entity_id: light.kitchen_sink_rgb
+    type: turn_on
+  - delay: '2'
+  - brightness_pct: 100
+    device_id: 2c2892dc4f8049c8a0e3ce419e816442
+    domain: light
+    entity_id: light.kitchen_corner_rgb
+    type: turn_on
+  - delay: '30'
+  - device_id: 2c2892dc4f8049c8a0e3ce419e816442
+    domain: light
+    entity_id: light.kitchen_sink_rgb
+    type: turn_off
+  - device_id: 2c2892dc4f8049c8a0e3ce419e816442
+    domain: light
+    entity_id: light.kitchen_corner_rgb
+    type: turn_off
+- id: change_switch_01_state
+  alias: Change switch 01 state
+  trigger:
+    platform: state
+    entity_id: binary_sensor.office_button_a
+    to: 'on'
+  action:
+  - service: switch.toggle
+    data:
+      entity_id: switch.button_office_lamp_1
+- id: '1593119650807'
+  alias: Button Office Lamp
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.office_button_a
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - device_id: 1cdb60766cbb4ffc8b12ac9713fb1b55
+    domain: switch
+    entity_id: switch.office_lamp
+    type: toggle
+- id: '1593120217386'
+  alias: Button Office LightLow
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.office_button_b
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      brightness: 127
+    entity_id: light.office
+    service: light.turn_on
+- id: '1593120274755'
+  alias: Button Office Light High
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.office_button_c
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      brightness: 255
+    entity_id: light.office
+    service: light.turn_on
+- id: '1593120664574'
+  alias: Button Office Light Low Toggle
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.office_button_b
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+  - condition: state
+    entity_id: light.office
+    state: 'on'
+  action:
+  - device_id: b602d38aa5044d288637244b90c477a4
+    domain: light
+    entity_id: light.office_light
+    type: turn_off
+- id: '1593120770317'
+  alias: Button Office Light High
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.office_button_c
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+  - condition: state
+    entity_id: light.office
+    state: 'on'
+  action:
+  - device_id: b602d38aa5044d288637244b90c477a4
+    domain: light
+    entity_id: light.office_light
+    type: turn_off
+- id: '354614736547367'
+  alias: Reset Letter Box
+  trigger:
+  - entity_id: binary_sensor.letter_box
+    for: 0:00:05
+    from: 'off'
+    platform: state
+    to: 'on'
+  action:
+  - data:
+      payload: 5B30E9off
+      topic: tele/RF_Bridge/RESULT
+    service: mqtt.publish
+  initial_state: 'on'
+- id: '1593202103535'
+  alias: Pushover Letter Box
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.letter_box
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - service: camera.snapshot
+    data:
+      entity_id: camera.swk_cr_uniuvc1
+      filename: /config/www/tmp/snapshot_camera.swk_cr_uniuvc1.jpg
+  - service: light.turn_on
+    data:
+      brightness: 255
+      rgb_color:
+      - 65
+      - 105
+      - 225
+      effect: strobe
+      entity_id: light.master_bedside_sam_rgb_light
+  - service: notify.pushover
+    data_template:
+      data:
+        attachment: /config/www/tmp/snapshot_camera.swk_cr_uniuvc1.jpg
+        priority: 0
+        sound: spacealarm
+      message: You got mail at {{ now().strftime('%-I:%M:%S %p %-m/%-d/%y') }}
+      title: Home Assistant - Letter Box
+- id: '159321314503535'
+  alias: Pushover Door Bell Alert
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.front_doorbell
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      entity_id: camera.swk_cr_uniuvc1
+      filename: /config/www/tmp/snapshot_camera.swk_cr_uniuvc1.jpg
+    service: camera.snapshot
+  - data_template:
+      data:
+        attachment: /config/www/tmp/snapshot_camera.swk_cr_uniuvc1.jpg
+        message: Who goes there {{ now().strftime('%-I:%M:%S %p') }}
+      title: Home Assistant - Door Bell Alert
+    service: notify.pushover
+- id: '1593714498412'
+  alias: pushover front door
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.openclose_26
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      message: Front door opened
+      title: Home Assistant
+    service: notify.pushover
+- id: '1594190390871'
+  alias: Pushover Living Room Motion
+  description: ''
+  trigger:
+  - device_id: b349487613fe44f68f08d041924e64f1
+    domain: binary_sensor
+    entity_id: binary_sensor.living_room_tv_cabinet_pir_sensor
+    platform: device
+    type: motion
+  condition: []
+  action:
+  - data:
+      message: Living Room Motion
+      title: Home Assistant
+    service: notify.pushover
+- id: '91011231211'
+  alias: Second Floor Lights
+  trigger:
+  - entity_id: binary_sensor.tradfri_motion_sensor
+    platform: state
+    to: 'on'
+  condition:
+  - after: '21:00'
+    before: 04:00
+    condition: time
+  action:
+  - data:
+      brightness_pct: 10
+      color_temp: 300
+      entity_id: light.second_ceiling_lights
+    service: light.turn_on
+  - delay: '15'
+  - data:
+      entity_id: light.second_ceiling_lights
+    service: light.turn_off
+- id: '1594758544308'
+  alias: Master Bedroom Door Night Light
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.window_door_sensor_4
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      brightness_pct: 20
+      color_temp: 43
+      entity_id: light.second_ceiling_master
+    service: light.turn_on
+  - delay: '10'
+  - data: {}
+    entity_id: light.second_ceiling_master
+    service: light.turn_off
+- id: 1594sdsdsds308
+  alias: Office Door Night Light
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.openclose_21
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      brightness_pct: 10
+      color_temp: 43
+      entity_id: light.second_ceiling_office
+    service: light.turn_on
+  - delay: '10'
+  - data: {}
+    entity_id: light.second_ceiling_office
+    service: light.turn_off
+- id: '1594870532770'
+  alias: '111222333'
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.tradfri_motion_sensor
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      data:
+        priority: 2
+      message: Office Door PIR
+      title: Motion Detected
+    service: notify.pushover

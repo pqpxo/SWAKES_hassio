@@ -1,0 +1,10 @@
+platform: mqtt
+state_topic: "tele/RF_Bridge/RESULT"
+name: Ground Hallway Motion
+value_template: '{{value_json.RfReceived.Data}}'
+payload_on: '0B104A'
+payload_off: '0B104Aoff'
+device_class: motion
+#optimistic: false
+qos: 1
+#retain: false

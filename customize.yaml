@@ -1,0 +1,97 @@
+     group.all_door_sensors:
+      entity_picture: /local/zg1.png
+      friendly_name: All Door Sensors
+     sensor.door_sensors_status:
+      entity_picture: /local/zg1.png
+      friendly_name: Zigbee Door Sensors     
+     group.unifi_cameras:
+      entity_picture: /local/uvcflex.png
+      friendly_name: UniFi Cameras      
+     group.fire_alarm:
+      entity_picture: /local/firealarm.png
+      friendly_name: Fire Alarms
+     group.water_leak:
+      entity_picture: /local/water_leak.png
+      friendly_name: Water Leak Sensors
+     group.pir_motion:
+      entity_picture: /local/pir.png
+      friendly_name: PIR Motion Sensors     
+
+     binary_sensor.unifi_usg:
+      entity_picture: /local/unifi2.png
+      friendly_name: UniFi CKG2+
+     binary_sensor.unifi_controller:
+      entity_picture: /local/unifi1.png
+      friendly_name: UniFi USG      
+     binary_sensor.unifi_16_switch:
+      entity_picture: /local/unifi3.png
+      friendly_name: UniFi 16 Port Switch  
+     binary_sensor.unifi_ap_up:
+      entity_picture: /local/unifi4.png
+      friendly_name: UniFi AP Up
+     binary_sensor.unifi_ap_down:
+      entity_picture: /local/unifi4.png
+      friendly_name: UniFi AP Down 
+     binary_sensor.unifi_ap_iw:
+      entity_picture: /local/unifi5.png
+      friendly_name: UniFi AP Inwall       
+      
+     sensor.sonoff_rf_bridge_online:
+      entity_picture: /local/rfbrdge.png
+      friendly_name: 433Mhz RF Devices
+     group.zigbee_devices:
+      entity_picture: /local/conbee.png
+      friendly_name: Zigbee Devices      
+     group.esphome_devices:
+      entity_picture: /local/esph.png
+      friendly_name: ESPHome Devices  
+     group.wifi_devices:
+      entity_picture: /local/unifiapp.png
+      friendly_name: WiFi Devices       
+
+     binary_sensor.esxi_host:
+      entity_picture: /local/esxxxi.png
+      friendly_name: ESXi
+     binary_sensor.dell_t330:
+      entity_picture: /local/t3330.png
+      friendly_name: Dell PowerEdge T330     
+     sensor.deconz_online:
+      entity_picture: /local/rasss.png
+      friendly_name: deCONZ RaspBerry Pi  
+     binary_sensor.swc_rspn_pihl:
+      entity_picture: /local/rasss.png
+      friendly_name: PiHole Raspberry Pi
+      
+     binary_sensor.swc_vus18_pms:
+      entity_picture: /local/pubuntu.png
+      friendly_name: PMS Ubuntu
+     sensor.swi_vus18_pms_docker_portainer_status:
+      entity_picture: /local/pportainer.png
+      friendly_name: PMS Portainer     
+     sensor.plex_online:
+      entity_picture: /local/plx.png
+      friendly_name: Plex Media Server  
+     sensor.dvbpi_online:
+      entity_picture: /local/rasss.png
+      friendly_name: PMS DVB Pi    
+     sensor.transmission_online:
+      entity_picture: /local/ptrans.png
+      friendly_name: PMS Transmission
+     sensor.sabnzbd_online:
+      entity_picture: /local/psab.png
+      friendly_name: PMS SABnzbd     
+     sensor.jackett_online:
+      entity_picture: /local/pjack.png
+      friendly_name: PMS Jackett 
+     sensor.sonarr_online:
+      entity_picture: /local/psonarr.png
+      friendly_name: PMS Sonarr  
+     sensor.radarr_online:
+      entity_picture: /local/prad.png
+      friendly_name: PMS Radarr 
+     sensor.swi_vus18_pms_docker_lazylibrarian_status:
+      entity_picture: /local/plid.png
+      friendly_name: PMS Lidarr  
+     sensor.tautulli_online:
+      entity_picture: /local/ptaut.png
+      friendly_name: PMS Tautulli  

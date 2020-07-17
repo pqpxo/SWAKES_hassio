@@ -1,0 +1,28 @@
+
+
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: SWAKES
+  latitude: !secret home_lat
+  longitude: !secret home_long
+  elevation: 10
+  unit_system: metric
+  time_zone: Europe/London
+  packages: !include_dir_named components/packages
+  whitelist_external_dirs:
+    - /config/www
+    - /config/www/tmp
+  customize: !include customize.yaml
+      
+
+
+automation: !include automations.yaml #!include_dir_named components/automation 
+
+
+    
+
+    
+    
+
+    
+

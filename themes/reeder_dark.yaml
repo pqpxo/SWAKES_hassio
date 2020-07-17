@@ -1,0 +1,102 @@
+reeder_dark:
+  # Main
+  primary-color: "#888888"
+  accent-color: "#C29356"
+  dark-primary-color: "var(--accent-color)"
+  light-primary-color: "var(--accent-color)"
+  mdc-theme-primary: "var(--secondary-text-color)"
+
+  # Text
+  primary-text-color: "#FFFFFF"
+  text-primary-color: "#FFFFFF"
+  secondary-text-color: "#C1C1C1"
+  disabled-text-color: "var(--primary-color)"
+  mdc-theme-on-primary: "var(--paper-listbox-background-color)"
+  mdc-theme-on-secondary: "var(--paper-listbox-background-color)"
+
+  # Background / sidebar
+  primary-background-color: "#464646"
+  secondary-background-color: "var(--primary-color)"
+
+  # Divider
+  divider-color: "rgba(0, 0, 0, .1)"
+
+  # Table rows
+  table-row-background-color: "#3E3E3E"
+  table-row-alternative-background-color: "var(--paper-listbox-background-color)"
+
+  # Sidebar
+  sidebar-text-color: "var(--primary-color)"
+  sidebar-background-color: "var(--paper-listbox-background-color)"
+  sidebar-icon-color: "var(--primary-color)"
+  sidebar-selected-text-color: "var(--primary-text-color)"
+  sidebar-selected-icon-color: "var(--primary-text-color)"
+
+  # Card
+  ha-card-header-color: "var(--secondary-text-color)"
+  ha-card-header-font-size: "1.4em"
+  ha-card-background: "var(--paper-card-background-color)"
+  paper-card-background-color: "#4C4C4C"
+  card-background-color: "var(--ha-card-background)"
+  paper-listbox-background-color: "#333333"
+  paper-dialog-background-color: "#333333"
+  paper-item-icon-color: "var(--primary-text-color)"
+  paper-item-icon-active-color: "var(--accent-color)"
+  state-icon-unavailable-color: "var(--google-red-500)"
+  paper-item-icon_-_color: "var(--google-green-500)"
+  paper-item-selected_-_background-color: "#333333"
+  paper-tabs-selection-bar-color: "var(--google-green-500)"
+
+  # Card shadow / border
+  ha-card-box-shadow: "0px 5px 5px rgba(0, 0, 0, .3), inset 0px 0px 1px rgba(255, 255, 255, 0.5)"
+
+  # Card border radius
+  ha-card-border-radius: "6px"
+
+  # Popup card
+  more-info-header-color: "var(--primary-text-color)"
+  more-info-header-background: "var(--primary-color)"
+
+  # Labels
+  ha-label-badge-color: "var(--accent-color)"
+  label-badge-border-color: "var(--google-green-500)"
+  label-badge-background-color: "#464646"
+  label-badge-text-color: "var(--primary-text-color)"
+  label-badge-green: "var(--google-green-500)"
+  label-badge-red: "var(--google-red-500)"
+  label-badge-yellow: "var(--accent-color)"
+  label-badge-blue: "#09C6D5"
+
+  # Switches
+  switch-checked-color: "#BBBBBB"
+  switch-checked-button-color: "var(--accent-color)"
+  switch-unchecked-color: "var(--primary-color)"
+  switch-unchecked-button-color: "var(--primary-color)"
+  switch-unchecked-track-color: "var(--primary-color)"
+
+  # Sliders
+  paper-slider-knob-color: "var(--accent-color)"
+  paper-slider-knob-start-color: "var(--primary-color)"
+  paper-slider-pin-color: "#333333"
+  paper-slider-active-color: "#A6A6A6"
+  paper-slider-container-color: "linear-gradient(var(--primary-background-color), var(--secondary-background-color)) no-repeat"
+  paper-slider-secondary-color: "var(--secondary-background-color)"
+  paper-slider-disabled-active-color: "var(--disabled-text-color)"
+  paper-slider-disabled-secondary-color: "var(--disabled-text-color)"
+
+  # Google
+  google-red-500: "#E45E65"
+  google-green-500: "#0EE770"
+
+  # HACS
+  hacs-badge-color: "#09C6D5"
+  hacs-badge-text-color: "var(--text-primary-color)"
+  hacs-status-installed: "var(--google-green-500)"
+  hacs-status-pending-restart: "var(--google-red-500)"
+  hacs-status-pending-update: "#FFA73B"
+  hacs-status-not-loaded: "var(--google-red-500)"
+  link-text-color: "var(--accent-color)"
+
+  # Mini Graph Card
+  mcg-title-letter-spacing: ".05em"
+  mcg-title-font-weight: "500"

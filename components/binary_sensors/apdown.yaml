@@ -1,0 +1,3 @@
+platform: ping
+host: !secret apdown_host
+name: UniFi AP Down

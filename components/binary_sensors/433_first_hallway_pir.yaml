@@ -1,0 +1,10 @@
+platform: mqtt
+state_topic: "tele/RF_Bridge/RESULT"
+name: First Hallway Motion
+value_template: '{{value_json.RfReceived.Data}}'
+payload_on: '63044A'
+payload_off: '63044Aoff'
+device_class: motion
+#optimistic: false
+qos: 1
+#retain: false

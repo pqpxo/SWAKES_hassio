@@ -1,0 +1,10 @@
+platform: mqtt
+state_topic: "tele/RF_Bridge/RESULT"
+name: Letter Box
+value_template: '{{value_json.RfReceived.Data}}'
+payload_on: '5B30E9'
+payload_off: '5B30E9off'
+device_class: door
+#optimistic: false
+qos: 1
+#retain: false

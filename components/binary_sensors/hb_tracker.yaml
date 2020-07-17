@@ -1,0 +1,16 @@
+  platform: template
+  sensors:
+    hb_master_door_sensor:
+      entity_id:
+        - sensor.hb_master_door_sensor
+      value_template: >-
+        {{ states('sensor.hb_master_door_sensor')|int > 43200 }}
+        
+    hb_office_door_sensor:
+      entity_id:
+        - sensor.hb_office_door_sensor
+      value_template: >-
+        {{ states('sensor.hb_office_door_sensor')|int > 43200 }}        
+        
+        
+        

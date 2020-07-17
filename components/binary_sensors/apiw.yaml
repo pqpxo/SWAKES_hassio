@@ -1,0 +1,3 @@
+platform: ping
+host: !secret apiw_host
+name: UniFi AP IW

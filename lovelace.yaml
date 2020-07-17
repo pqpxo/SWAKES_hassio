@@ -1,0 +1,1537 @@
+button_card:
+  style:
+    .: |
+      ha-card {
+        margin: -20px 0px -105px -35px;
+        padding: 20px !important;
+        }
+      h1 {
+          font-weight: 500 !important;
+          font-size: 19px !important;
+          color: var(--app-header-text-color) !important;
+          margin: -10px 0px -8px -25px !important;
+        }
+      p {
+          color: var(--secondary-text-color) !important;
+          font-size: 12px !important;
+          margin-left: -25px !important;
+        }
+      ha-icon {
+        margin-top: -14px;
+        background-color: rgba(81, 134, 236, 0.15);
+        border-radius: 50px;
+        padding: 10px;
+        }  
+cam_card:
+  style: |
+    ha-card {
+        margin: 0px 14px 10px 14px;
+        box-shadow: var(--card-box-shadow) !important;
+    }
+card_header:
+  style:
+    .: |
+      ha-card {
+        margin: 10px 0px 0px 8px;
+      }
+    ha-markdown:
+      $: |
+        h1 {
+          font-size: 15px !important;
+          font-weight: 500 !important;
+          padding: 0px 0px 0px 8px !important;
+          border-left: 3px solid rgba(81, 134, 236);
+          color: var(--card-header-text-color);
+        }
+custom_header:
+  background: var(--primary-background-color)
+  compact_mode: true
+  elements_color: var(--primary-text-color)
+  hide_help: true
+  hide_unused: true
+  tab_indicator_color: var(--primary-text-color)
+  voice_hide: true
+title: SWAKES
+views:
+  - badges: []
+    cards:
+      - cards:
+          - entity: weather.home
+            type: weather-forecast
+          - entities:
+              - entity: device_tracker.swakes_huaweip20
+                icon: 'mdi:human-male'
+                name: Sam
+              - entity: device_tracker.iphone
+                icon: 'mdi:human-female'
+                name: Nabila
+              - entity: device_tracker.bedroom_tv
+                icon: 'mdi:account-group'
+                name: Guests
+            type: glance
+          - cards:
+              - background: '#2b374e'
+                entities:
+                  - entity: sensor.next_bus_to_nottingham
+                    name: Bus Arriving
+                  - entity: sensor.next_bus_route
+                    name: Bus Route
+                  - entity: sensor.next_bus_estimated
+                    name: Next Bus
+                heading: false
+                row_size: 3
+                type: 'custom:banner-card'
+              - background: '#2b374e'
+                entities:
+                  - sensor.redscan
+                  - sensor.station_street
+                  - sensor.hamilton
+                heading: false
+                row_size: 3
+                type: 'custom:banner-card'
+            type: vertical-stack
+          - entities:
+              - entity: sensor.general
+              - entity: sensor.recycling_2
+                icon: 'mdi:recycle'
+              - entity: sensor.garden
+                icon: 'mdi:sprout'
+            type: glance
+          - entities:
+              - entity: calendar.samandnabz_gmail_com
+            type: 'custom:atomic-calendar-revive'
+        type: vertical-stack
+      - cards:
+          - control: false
+            entity: climate.hallway_thermostat
+            icon: false
+            name: false
+            step_layout: row
+            type: 'custom:simple-thermostat'
+          - entities:
+              - entity: sensor.temperature_27
+                name: Hallway
+              - entity: sensor.living_room_temperature
+                name: Snug
+              - entity: sensor.temperature_23
+                name: Kitchen
+            icon: 'mdi:home-floor-g'
+            name: Ground Floor
+            type: 'custom:mini-graph-card'
+          - entities:
+              - entity: sensor.temperature_23
+                name: Hallway
+              - entity: sensor.living_room_temperature
+                name: Living Room
+            icon: 'mdi:home-floor-1'
+            name: First Floor
+            type: 'custom:mini-graph-card'
+          - entities:
+              - entity: sensor.multi_sensor_2
+                name: Hallway
+              - entity: sensor.living_room_temperature
+                name: Bedroom
+              - entity: sensor.temperature_23
+                name: Office
+            icon: 'mdi:home-floor-2'
+            name: Second Floor
+            type: 'custom:mini-graph-card'
+        type: vertical-stack
+    icon: 'mdi:home'
+    path: home
+    title: ''
+  - badges: []
+    cards:
+      - cards:
+          - content: |
+              # Security
+            style:
+              .: |
+                ha-card {
+                  --paper-card-background-color: none !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                    #font-variant: small-caps;
+                    font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - cards:
+              - color_type: card
+                entity: binary_sensor.first_hallway_motion
+                name: Security
+                state:
+                  - color: red
+                    icon: 'mdi:alert'
+                    styles:
+                      card:
+                        - animation: blink 2s ease infinite
+                    value: 'on'
+                  - color: '#2b374e'
+                    icon: 'mdi:cctv'
+                    operator: default
+                type: 'custom:button-card'
+              - color_type: card
+                entity: binary_sensor.first_hallway_motion
+                name: Fire
+                state:
+                  - color: red
+                    icon: 'mdi:alert'
+                    styles:
+                      card:
+                        - animation: blink 2s ease infinite
+                    value: 'on'
+                  - color: '#2b374e'
+                    icon: 'mdi:fire'
+                    operator: default
+                type: 'custom:button-card'
+              - color_type: card
+                entity: binary_sensor.first_hallway_motion
+                name: Water
+                state:
+                  - color: red
+                    icon: 'mdi:alert'
+                    styles:
+                      card:
+                        - animation: blink 2s ease infinite
+                    value: 'on'
+                  - color: '#2b374e'
+                    icon: 'mdi:water'
+                    operator: default
+                type: 'custom:button-card'
+              - color_type: card
+                entity: binary_sensor.first_hallway_motion
+                name: Network
+                state:
+                  - color: red
+                    icon: 'mdi:alert'
+                    styles:
+                      card:
+                        - animation: blink 2s ease infinite
+                    value: 'on'
+                  - color: '#2b374e'
+                    icon: 'mdi:lan'
+                    operator: default
+                type: 'custom:button-card'
+            type: horizontal-stack
+          - cards:
+              - cards:
+                  - aspect_ratio: 50%
+                    entity: camera.swk_cr_uniuvc1
+                    image: 'https://demo.home-assistant.io/stub_config/bedroom.png'
+                    show_name: false
+                    show_state: false
+                    type: picture-entity
+                  - aspect_ratio: 50%
+                    entity: camera.swk_cr_uniuvc2
+                    image: 'https://demo.home-assistant.io/stub_config/bedroom.png'
+                    show_name: false
+                    show_state: false
+                    type: picture-entity
+                type: horizontal-stack
+              - cards:
+                  - aspect_ratio: 50%
+                    entity: camera.swk_cr_uniuvc3
+                    image: 'https://demo.home-assistant.io/stub_config/bedroom.png'
+                    show_name: false
+                    show_state: false
+                    type: picture-entity
+                  - cards:
+                      - aspect_ratio: 50%
+                        entity: camera.swk_cr_uniuvc1
+                        image: 'https://demo.home-assistant.io/stub_config/bedroom.png'
+                        show_name: false
+                        show_state: false
+                        type: picture-entity
+                    type: horizontal-stack
+                type: horizontal-stack
+            type: vertical-stack
+          - cards:
+              - entities:
+                  - entity: device_tracker.swakes_huaweip20
+                    name: Sam
+                type: glance
+              - entities:
+                  - entity: device_tracker.iphone
+                    name: Nabila
+                type: glance
+              - entities:
+                  - entity: device_tracker.grants_iphone
+                    name: Guests
+                type: glance
+            type: horizontal-stack
+          - content: |
+              # Alarm Panel
+            style:
+              .: |
+                ha-card {
+                  --paper-card-background-color: none !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                    #font-variant: small-caps;
+                    font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - cards:
+              - color_type: card
+                entity: binary_sensor.first_hallway_motion
+                name: Arm
+                state:
+                  - color: red
+                    icon: 'mdi:alert'
+                    styles:
+                      card:
+                        - animation: blink 2s ease infinite
+                    value: 'on'
+                  - color: '#2b374e'
+                    icon: 'mdi:home-lock'
+                    operator: default
+                type: 'custom:button-card'
+              - color_type: card
+                entity: binary_sensor.first_hallway_motion
+                name: Disarm
+                state:
+                  - color: red
+                    icon: 'mdi:home-lock-open'
+                    styles:
+                      card:
+                        - animation: blink 2s ease infinite
+                    value: 'on'
+                  - color: '#2b374e'
+                    icon: 'mdi:home-lock-open'
+                    operator: default
+                type: 'custom:button-card'
+            type: horizontal-stack
+          - cards:
+              - color_type: card
+                entity: binary_sensor.first_hallway_motion
+                name: Home
+                state:
+                  - color: red
+                    icon: 'mdi:alert'
+                    styles:
+                      card:
+                        - animation: blink 2s ease infinite
+                    value: 'on'
+                  - color: '#2b374e'
+                    icon: 'mdi:door-closed-lock'
+                    operator: default
+                type: 'custom:button-card'
+              - color_type: card
+                entity: binary_sensor.first_hallway_motion
+                name: Night
+                state:
+                  - color: red
+                    icon: 'mdi:home-lock-open'
+                    styles:
+                      card:
+                        - animation: blink 2s ease infinite
+                    value: 'on'
+                  - color: '#2b374e'
+                    icon: 'mdi:weather-night'
+                    operator: default
+                type: 'custom:button-card'
+              - color_type: card
+                entity: binary_sensor.first_hallway_motion
+                name: Silent
+                state:
+                  - color: red
+                    icon: 'mdi:alert'
+                    styles:
+                      card:
+                        - animation: blink 2s ease infinite
+                    value: 'on'
+                  - color: '#2b374e'
+                    icon: 'mdi:volume-off'
+                    operator: default
+                type: 'custom:button-card'
+              - color_type: card
+                entity: binary_sensor.first_hallway_motion
+                name: Panic
+                state:
+                  - color: red
+                    icon: 'mdi:alert'
+                    styles:
+                      card:
+                        - animation: blink 2s ease infinite
+                    value: 'on'
+                  - color: '#2b374e'
+                    icon: 'mdi:alarm-light-outline'
+                    operator: default
+                type: 'custom:button-card'
+            type: horizontal-stack
+        type: vertical-stack
+      - cards:
+          - content: |
+              # Ground Floor Sensors
+            style:
+              .: |
+                ha-card {
+                  --paper-card-background-color: none !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                   # font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - cards:
+              - entities:
+                  - entity: binary_sensor.openclose_26
+                    secondary_info: last-changed
+                  - entity: binary_sensor.openclose_30
+                    secondary_info: last-changed
+                  - entity: binary_sensor.openclose_20
+                    secondary_info: last-changed
+                  - entity: binary_sensor.openclose_19
+                    secondary_info: last-changed
+                title: false
+                type: entities
+              - entities:
+                  - entity: binary_sensor.ground_hallway_motion
+                    secondary_info: last-changed
+                  - entity: binary_sensor.ground_hallway_motion
+                    name: Snug Motion
+                    secondary_info: last-changed
+                  - entity: binary_sensor.ground_hallway_motion
+                    name: Kitchen Motion
+                    secondary_info: last-changed
+                type: entities
+              - entities:
+                  - entity: binary_sensor.fire_alarm
+                    icon: 'mdi:water-off'
+                    name: Kitchen Water Leak
+                    secondary_info: last-changed
+                  - entity: binary_sensor.fire_alarm
+                    icon: 'mdi:fire'
+                    name: Hallway Fire Alarm
+                    secondary_info: last-changed
+                  - entity: binary_sensor.fire_alarm
+                    icon: 'mdi:fire'
+                    name: Kitchen Fire Alarm
+                    secondary_info: last-changed
+                type: entities
+            title: false
+            type: 'custom:vertical-stack-in-card'
+          - content: |
+              # First Floor Sensors
+            style:
+              .: |
+                ha-card {
+                  --paper-card-background-color: none !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                   # font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - cards:
+              - entities:
+                  - entity: binary_sensor.window_door_sensor
+                    secondary_info: last-changed
+                  - entity: binary_sensor.openclose_22
+                    secondary_info: last-changed
+                  - entity: binary_sensor.window_door_sensor_2
+                    secondary_info: last-changed
+                title: false
+                type: entities
+              - entities:
+                  - entity: binary_sensor.first_hallway_motion
+                    name: Hallway Motion
+                    secondary_info: last-changed
+                  - entity: binary_sensor.ground_hallway_motion
+                    name: Living Room Motion
+                    secondary_info: last-changed
+                type: entities
+              - entities:
+                  - entity: binary_sensor.fire_alarm
+                    icon: 'mdi:fire'
+                    name: Hallway Fire Alarm
+                    secondary_info: last-changed
+                type: entities
+            title: false
+            type: 'custom:vertical-stack-in-card'
+        type: vertical-stack
+      - cards:
+          - content: |
+              # Second Floor Sensors
+            style:
+              .: |
+                ha-card {
+                  --paper-card-background-color: none !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                   # font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - cards:
+              - entities:
+                  - entity: binary_sensor.window_door_sensor_4
+                    secondary_info: last-changed
+                  - entity: binary_sensor.window_door_sensor_3
+                    secondary_info: last-changed
+                  - entity: binary_sensor.openclose_21
+                    secondary_info: last-changed
+                  - entity: binary_sensor.window_door_sensor_5
+                    secondary_info: last-changed
+                title: null
+                type: entities
+              - entities:
+                  - entity: binary_sensor.tradfri_motion_sensor
+                    name: Hallway Motion
+                    secondary_info: last-changed
+                  - entity: binary_sensor.tradfri_motion_sensor
+                    name: Master Bedroom Motion
+                    secondary_info: last-changed
+                  - entity: binary_sensor.tradfri_motion_sensor
+                    name: Office Motion
+                    secondary_info: last-changed
+                type: entities
+              - entities:
+                  - entity: binary_sensor.fire_alarm
+                    icon: 'mdi:fire'
+                    name: Hallway Fire Alarm
+                    secondary_info: last-changed
+                  - entity: binary_sensor.fire_alarm
+                    icon: 'mdi:fire'
+                    name: Office Fire Alarm
+                    secondary_info: last-changed
+                type: entities
+            title: false
+            type: 'custom:vertical-stack-in-card'
+          - content: |
+              # Push Notifications
+            style:
+              .: |
+                ha-card {
+                  --paper-card-background-color: none !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                   # font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - entities:
+              - text: PIR Motion
+                type: 'custom:text-divider-row'
+              - entity: automation.ground_pir_pushover
+                icon: 'mdi:home-floor-g'
+                name: Ground  Floor Motion
+              - entity: automation.first_pir_pushover
+                icon: 'mdi:home-floor-1'
+                name: First Floor Motion
+              - entity: automation.office_pir_pushover
+                icon: 'mdi:home-floor-2'
+                name: Second Floor Motion
+              - text: House Alerts
+                type: 'custom:text-divider-row'
+              - entity: automation.pushover_letter_box
+                icon: 'mdi:doorbell'
+                name: Doorbell Alert
+              - entity: automation.pushover_letter_box
+                icon: 'mdi:mailbox'
+                name: Letterbox Alert
+              - entity: automation.pushover_letter_box
+                icon: 'mdi:fridge-alert-outline'
+                name: Fridge/Freezer Alert
+              - text: Door Alerts
+                type: 'custom:text-divider-row'
+              - entity: automation.pushover_front_door
+                icon: 'mdi:door-closed'
+                name: Front Door Alert
+              - entity: automation.pushover_front_door
+                icon: 'mdi:door-closed'
+                name: Back Door Alert
+              - entity: automation.pushover_front_door
+                icon: 'mdi:garage'
+                name: Garage Door Alert
+            show_header_toggle: false
+            title: false
+            type: entities
+        type: vertical-stack
+    icon: 'mdi:shield-home'
+    path: security
+    visible:
+      - user: a590c18a02c64a5c95c3b01b888c135f
+  - badges: []
+    cards:
+      - cards:
+          - content: |
+              # Hallway
+            style:
+              .: |
+                ha-card {
+                  --paper-card-background-color: none !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                   # font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - entities:
+              - entity: switch.front_door_lamp
+                icon: 'mdi:lamp'
+                name: Front Door Lamp
+              - entity: switch.front_door_lamp
+                icon: 'mdi:wall-sconce-flat'
+                name: Ground Ceiling Lights
+              - entity: switch.front_door_lamp
+                icon: 'mdi:wall-sconce-flat'
+                name: First Ceiling Lights
+              - entity: light.second_ceiling_lights
+                icon: 'mdi:wall-sconce-flat'
+                name: Second Ceiling Lights
+                type: 'custom:slider-entity-row'
+            show_header_toggle: false
+            style: |
+              .card-content {
+                padding: 10
+              }
+
+              .card-header {
+                margin-left: auto;
+                margin-right: auto;
+              }
+            title: false
+            type: entities
+          - content: |
+              # Snug
+            style:
+              .: |
+                ha-card {
+                  --paper-card-background-color: none !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                   # font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - entities:
+              - entity: switch.sonoff_10004008d2
+                icon: 'mdi:ceiling-light'
+                name: Ceiling Light
+              - entity: switch.sonoff_10004008d2
+                icon: 'mdi:floor-lamp'
+                name: Floor Lamp
+            show_header_toggle: false
+            style: |
+              .card-content {
+                padding: 10
+              }
+
+              .card-header {
+                margin-left: auto;
+                margin-right: auto;
+              }
+            title: false
+            type: entities
+          - content: |
+              # Kitchen
+            style:
+              .: |
+                ha-card {
+                  --paper-card-background-color: none !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                   # font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - cards:
+              - cards:
+                  - entities:
+                      - entity: light.optihub_rgb
+                        icon: 'mdi:wall-sconce-flat'
+                        name: Ceiling Lights
+                        type: 'custom:slider-entity-row'
+                      - entity: light.optihub_rgb
+                        icon: 'mdi:ceiling-light'
+                        name: Table Light
+                      - entity: group.kitchen_rgb
+                        icon: 'mdi:led-strip-variant'
+                        name: RGB Strips
+                      - entity: light.kitchen_corner_rgb
+                        icon: 'mdi:led-strip'
+                        name: Corner
+                        type: 'custom:slider-entity-row'
+                      - entity: light.kitchen_sink_rgb
+                        icon: 'mdi:led-strip'
+                        name: Sink
+                        type: 'custom:slider-entity-row'
+                      - entity: light.kitchen_sink_rgb
+                        icon: 'mdi:led-strip'
+                        name: Boiler
+                        type: 'custom:slider-entity-row'
+                    show_header_toggle: false
+                    style: |
+                      .card-content {
+                        padding: 10
+                      }
+
+                      .card-header {
+                        margin-left: auto;
+                        margin-right: auto;
+                      }
+                    type: entities
+                title: false
+                type: 'custom:vertical-stack-in-card'
+            type: 'custom:vertical-stack-in-card'
+        type: vertical-stack
+      - cards:
+          - content: |
+              # Living Room 
+            style:
+              .: |
+                ha-card {
+                  --paper-card-background-color: none !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                    font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - cards:
+              - cards:
+                  - entities:
+                      - entity: light.optihub_rgb
+                        icon: 'mdi:globe-light'
+                        name: Ceiling Lights
+                      - entity: switch.living_room_corner_lamp
+                        icon: 'mdi:lamp'
+                        name: Table Lamp
+                      - entity: light.living_room
+                        icon: 'mdi:floor-lamp'
+                        name: Floor Lamp
+                        type: 'custom:slider-entity-row'
+                      - entity: light.living_room_tv_cabinet_rgb_light
+                        icon: 'mdi:led-strip'
+                        name: TV Cabinet
+                        type: 'custom:slider-entity-row'
+                    show_header_toggle: false
+                    type: entities
+                title: false
+                type: 'custom:vertical-stack-in-card'
+            type: 'custom:vertical-stack-in-card'
+          - content: |
+              # Master Bedroom
+            style:
+              .: |
+                ha-card {
+                  --paper-card-background-color: none !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                    font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - cards:
+              - cards:
+                  - entities:
+                      - entity: light.master_lights
+                        icon: 'mdi:globe-light'
+                        name: Ceiling Lights
+                        type: 'custom:slider-entity-row'
+                      - entity: switch.sonoff_1000ae39fc_2
+                        icon: 'mdi:desk-lamp'
+                        name: Left Bedside Lamp
+                      - entity: switch.sonoff_1000ae39fc_1
+                        icon: 'mdi:desk-lamp'
+                        name: Right Bedside Lamp
+                      - entity: switch.front_door_lamp
+                        icon: 'mdi:wall-sconce-flat'
+                        name: Ensuite Ceiling Lights
+                    show_header_toggle: false
+                    type: entities
+                title: false
+                type: 'custom:vertical-stack-in-card'
+              - entities:
+                  - entity: group.kitchen_rgb
+                    icon: 'mdi:led-strip-variant'
+                    name: RGB Strips
+                  - entity: light.master_bedside_sam_rgb_light
+                    icon: 'mdi:led-strip'
+                    name: Left Bedside
+                    type: 'custom:slider-entity-row'
+                  - entity: light.master_bedside_sam_rgb_light
+                    icon: 'mdi:led-strip'
+                    name: Right Bedside
+                    type: 'custom:slider-entity-row'
+                show_header_toggle: false
+                type: entities
+            type: 'custom:vertical-stack-in-card'
+          - content: |
+              # Office
+            style:
+              .: |
+                ha-card {
+                  --paper-card-background-color: none !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                    font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - cards:
+              - cards:
+                  - entities:
+                      - entity: light.office
+                        icon: 'mdi:globe-light'
+                        name: Ceiling Light
+                        type: 'custom:slider-entity-row'
+                      - entity: switch.office_lamp
+                        icon: 'mdi:desk-lamp'
+                        name: Desk Lamp
+                    show_header_toggle: false
+                    type: entities
+                title: false
+                type: 'custom:vertical-stack-in-card'
+              - entities:
+                  - entity: group.kitchen_rgb
+                    icon: 'mdi:led-strip-variant'
+                    name: RGB Strips
+                  - entity: light.kitchen_sink_rgb
+                    icon: 'mdi:led-strip'
+                    name: LEGO Train
+                    type: 'custom:slider-entity-row'
+                  - entity: light.kitchen_sink_rgb
+                    icon: 'mdi:led-strip'
+                    name: Cabinets
+                    type: 'custom:slider-entity-row'
+                  - entity: light.kitchen_sink_rgb
+                    icon: 'mdi:led-strip'
+                    name: Under Desk
+                    type: 'custom:slider-entity-row'
+                show_header_toggle: false
+                type: entities
+            type: 'custom:vertical-stack-in-card'
+        type: vertical-stack
+      - cards:
+          - content: |
+              # Automations 
+            style:
+              .: |
+                ha-card {
+                  --paper-card-background-color: none !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                    font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - entities:
+              - entity: group.kitchen_rgb_automations
+                icon: 'mdi:mailbox-open-outline'
+                name: Letterbox Notification
+              - entity: group.kitchen_rgb_automations
+                icon: 'mdi:stove'
+                name: Kitchen RGB Motion
+              - entity: automation.back_door_lights_on_inside
+                icon: 'mdi:door-open'
+                name: Back Door RGB
+              - entity: automation.office_door_night_light
+                icon: 'mdi:sofa'
+                name: Living Room RGB
+              - entity: automation.master_bedroom_door_night_light
+                icon: 'mdi:bed-king-outline'
+                name: Master Bedroom Ceiling Light
+              - entity: automation.office_door_night_light
+                icon: 'mdi:desk'
+                name: Office Ceiling Light
+            show_header_toggle: false
+            type: entities
+          - content: |
+              # Scenes 
+            style:
+              .: |
+                ha-card {
+                  --paper-card-background-color: none !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                    font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - entities:
+              - entity: automation.back_door_lights_on_inside
+                icon: 'mdi:weather-night'
+                name: Bedtime
+              - entity: automation.back_door_lights_on_inside
+                icon: 'mdi:gamepad-square'
+                name: Gaming
+              - entity: automation.back_door_lights_on_inside
+                icon: 'mdi:netflix'
+                name: Netflix
+              - entity: automation.back_door_lights_on_inside
+                icon: 'mdi:tree'
+                name: Garden
+            show_header_toggle: false
+            type: entities
+        type: vertical-stack
+    icon: 'mdi:lightbulb-group-outline'
+    path: lights
+    title: lights
+  - badges: []
+    cards:
+      - cards:
+          - entity_id:
+              '1': null
+            max_results: 15
+            name: 'Toggle {1}'
+            service: homeassistant.toggle
+            service_data: null
+            type: 'custom:search-card'
+        type: vertical-stack
+    icon: 'mdi:database-search'
+    panel: true
+    path: search
+  - badges: []
+    cards:
+      - cards:
+          - content: |
+              # Home Assistant
+            style:
+              .: |
+                ha-card {
+                  --paper-card-background-color: none !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                   # font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - entities:
+              - entity: sensor.hassio_uptime
+                name: Uptime
+              - entity: sensor.latest_version
+                name: Version
+              - entity: sensor.last_successful_authentication
+                name: Last Login
+              - entity: sensor.supervisor_updates
+                icon: 'mdi:download-network'
+                name: Updates
+            style: |
+              ha-card {
+                text-align: center;
+                
+                    }    
+            title: false
+            type: glance
+          - cards:
+              - align_icon: left
+                align_state: center
+                entities:
+                  - sensor.processor_use
+                font_size: 75
+                icon: 'mdi:chip'
+                name: CPU
+                show:
+                  fill: false
+                type: 'custom:mini-graph-card'
+              - align_icon: left
+                align_state: center
+                entities:
+                  - sensor.memory_use_percent
+                font_size: 75
+                name: Memory
+                show:
+                  fill: false
+                type: 'custom:mini-graph-card'
+              - align_icon: left
+                align_state: center
+                entities:
+                  - sensor.disk_use_percent_home
+                font_size: 75
+                name: Disk
+                show:
+                  fill: false
+                type: 'custom:mini-graph-card'
+            type: horizontal-stack
+          - columns: 3
+            entities:
+              - entity: sensor.count_binary_sensors
+                name: Binary Sensors
+              - entity: sensor.count_sensors
+                name: Sensors
+              - entity: sensor.count_switches
+                name: Switches
+              - entity: sensor.count_device_trackers
+                name: Device Trackers
+              - entity: sensor.count_automations
+                name: Automations
+              - entity: sensor.count_scripts
+                name: Scripts
+            show_icon: false
+            show_name: true
+            show_state: true
+            type: glance
+          - content: |
+              # Docker
+            style:
+              .: |
+                ha-card {
+                  --paper-card-background-color: none !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                   # font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - columns: 4
+            entities:
+              - entity: sensor.swi_vus18_hass_docker_containers_running
+                name: Running
+              - entity: sensor.swi_vus18_hass_docker_containers_stopped
+                name: Stopped
+              - entity: sensor.swi_vus18_hass_docker_hassio_supervisor_status
+                name: Supervisor
+              - entity: sensor.swi_vus18_hass_docker_homeassistant_status
+                name: Hassio
+            show_icon: true
+            show_name: true
+            show_state: true
+            style: |
+              ha-card {
+                text-align: center;
+                    }
+            title: false
+            type: glance
+          - content: |
+              # Restart Services
+            style:
+              .: |
+                ha-card {
+                  --paper-card-background-color: none !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                   # font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - entities:
+              - entity: zone.home
+                icon: 'mdi:home-assistant'
+                name: Hassio
+                tap_action:
+                  action: call-service
+                  service: homeassistant.restart
+              - entity: zone.home
+                icon: 'mdi:cogs'
+                name: Automation
+                tap_action:
+                  action: call-service
+                  service: automation.reload
+              - entity: zone.home
+                icon: 'mdi:script-text'
+                name: Script
+                tap_action:
+                  action: call-service
+                  service: script.reload
+              - entity: zone.home
+                icon: 'mdi:group'
+                name: Groups
+                tap_action:
+                  action: call-service
+                  service: group.reload
+            show_header_toggle: false
+            show_state: false
+            style: |
+              ha-card {
+                text-align: center;
+                    }    
+            title: false
+            type: glance
+        type: vertical-stack
+      - cards:
+          - content: |
+              # Sensor Network
+            style:
+              .: |
+                ha-card {
+                  --paper-card-background-color: none !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                   # font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - entities:
+              - entity: group.zigbee_devices
+                name: Zigbee
+              - entity: group.433_rf_devices
+                name: 433Mhz RF
+              - entity: group.esphome_devices
+                name: ESPHome
+              - entity: group.wifi_devices
+                name: WiFi
+            style: |
+              ha-card {
+                text-align: center;
+                
+                    }    
+            title: false
+            type: glance
+          - entities:
+              - entity: sensor.door_sensors_status
+                name: Door
+              - entity: group.pir_motion
+                name: PIR
+              - entity: group.unifi_cameras
+                name: CCTV
+              - entity: group.fire_alarm
+                name: Fire
+              - entity: group.water_leak
+                name: Water
+            type: glance
+          - cards:
+              - content: |
+                  # Sensors
+                style:
+                  .: |
+                    ha-card {
+                      --paper-card-background-color: none !important;
+                      box-shadow: none !important;
+                    }
+                  ha-markdown:
+                    $: |
+                      h1 {
+                        font-size: 25px;
+                       # font-weight: bold;
+                        text-align: center;
+                        letter-spacing: '-0.01em';
+                      }
+                type: markdown
+              - entity_id:
+                  '1': null
+                max_results: 15
+                name: 'Toggle {1}'
+                service: homeassistant.toggle
+                service_data: null
+                type: 'custom:search-card'
+              - cards:
+                  - card:
+                      type: entities
+                    filter:
+                      include:
+                        - entity_id: binary_sensor.ground_hallway_motion
+                          options:
+                            secondary_info: last-changed
+                        - entity_id: binary_sensor.first_hallway_motion
+                          options:
+                            secondary_info: last-changed
+                        - entity_id: binary_sensor.tradfri_motion_sensor
+                          options:
+                            secondary_info: last-changed
+                    sort:
+                      count: 1
+                      method: last_changed
+                    type: 'custom:auto-entities'
+                  - card:
+                      show_icon: false
+                      type: entities
+                    filter:
+                      include:
+                        - entity_id: binary_sensor.openclose_*
+                          options:
+                            secondary_info: last-changed
+                        - entity_id: binary_sensor.window_*
+                          options:
+                            secondary_info: last-changed
+                    sort:
+                      count: 1
+                      method: last_changed
+                    type: 'custom:auto-entities'
+                style: |
+                  div.card-header {
+                    text-align: center;
+                    
+                        }  
+                title: false
+                type: 'custom:vertical-stack-in-card'
+            type: vertical-stack
+          - content: |
+              # Battery Levels
+            style:
+              .: |
+                ha-card {
+                  --paper-card-background-color: none !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                   # font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - collapse: 3
+            entities:
+              - sensor.back_door_battery_level
+              - sensor.first_floor_temp_battery_level
+              - sensor.ground_floor_temp_battery_level
+              - sensor.multi_sensor_2_battery_level
+              - sensor.openclose_20_battery_level
+              - sensor.openclose_21_battery_level
+              - sensor.openclose_22_battery_level
+              - sensor.openclose_26_battery_level
+              - sensor.openclose_30_battery_level
+              - sensor.openclose_31_battery_level
+              - sensor.window_door_sensor_battery_level
+              - sensor.tradfri_motion_sensor_battery_level
+              - sensor.tradfri_remote_control_battery_level
+              - sensor.window_door_sensor_2_battery_level
+              - sensor.window_door_sensor_3_battery_level
+              - sensor.window_door_sensor_4_battery_level
+              - sensor.window_door_sensor_5_battery_level
+            sort_by_level: asc
+            title: false
+            type: 'custom:battery-state-card'
+        type: vertical-stack
+      - cards:
+          - content: |
+              # UniFi Network
+            style:
+              .: |
+                ha-card {
+                  --paper-card-background-color: none !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                   # font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - entities:
+              - entity: binary_sensor.unifi_controller
+                name: CKG2+
+              - entity: binary_sensor.unifi_usg
+                name: USG
+              - entity: binary_sensor.unifi_16_switch
+                name: Switch
+              - entity: binary_sensor.unifi_ap_up
+                name: AP
+              - entity: group.unifi_cameras
+                name: null
+            style: |
+              ha-card {
+                text-align: center;
+                
+                    }    
+                    
+            title: false
+            type: glance
+          - cards:
+              - align_icon: left
+                align_state: center
+                entities:
+                  - sensor.unifi_gateway_wan_cpu
+                font_size: 75
+                icon: 'mdi:chip'
+                name: CPU
+                show:
+                  fill: false
+                type: 'custom:mini-graph-card'
+              - align_icon: left
+                align_state: center
+                entities:
+                  - sensor.unifi_gateway_wan_mem
+                font_size: 75
+                icon: 'mdi:memory'
+                name: Memory
+                show:
+                  fill: false
+                type: 'custom:mini-graph-card'
+              - align_icon: left
+                align_state: center
+                entities:
+                  - sensor.unifi_gateway_3_packets_s_sent
+                  - sensor.unifi_gateway_3_packets_s_received
+                font_size: 75
+                name: Traffic
+                show:
+                  fill: false
+                  legend: false
+                type: 'custom:mini-graph-card'
+            type: horizontal-stack
+          - entities:
+              - entity: sensor.local_ip
+                name: Local IP
+              - entity: sensor.myip
+                name: External IP
+              - entity: sensor.speedtest_download
+              - entity: sensor.speedtest_upload
+            type: entities
+          - content: |
+              # Pi-Hole
+            style:
+              .: |
+                ha-card {
+                  --paper-card-background-color: none !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                   # font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - columns: null
+            entities:
+              - entity: sensor.pi_hole_ads_blocked_today
+                name: Requests Blocked
+              - entity: sensor.pi_hole_dns_queries_today
+                name: DNS Queries
+              - entity: sensor.pi_hole_domains_blocked
+                name: Domains Blocked
+            style: |
+              ha-card {
+                text-align: center;
+                justify-content: center;
+                    } 
+            title: false
+            type: glance
+        type: vertical-stack
+    icon: 'mdi:lan'
+    path: system
+  - badges: []
+    cards:
+      - cards:
+          - accent_color: '#13274b'
+            border_color: '#13274b'
+            entity: sensor.plex_recently_added
+            flag_color: '#13274b'
+            image_style: fanart
+            title: Recently Downloaded
+            type: 'custom:upcoming-media-card'
+          - entities:
+              - entity: sensor.ombi_movie_requests
+                name: Movie Requests
+              - entity: sensor.ombi_tv_show_requests
+                name: TV Requests
+              - entity: sensor.ombi_pending_requests
+                name: Pending Requests
+            style: |
+              ha-card {
+                text-align: center;
+
+                    }   
+            title: Ombi
+            type: glance
+          - cards:
+              - entities:
+                  - entity: sensor.sabnzbd_queue_count
+                    icon: 'mdi:download'
+                    name: Active
+                  - entity: sensor.sabnzbd_status
+                    icon: 'mdi:information'
+                    name: Status
+                style: |
+                  ha-card {
+                    text-align: center;
+
+                        }   
+                title: SABnzbd
+                type: glance
+              - entities:
+                  - entity: sensor.sabnzbd_queue_count
+                    icon: 'mdi:download'
+                    name: Active
+                  - entity: sensor.sabnzbd_status
+                    icon: 'mdi:information'
+                    name: Status
+                style: |
+                  ha-card {
+                    text-align: center;
+
+                        }     
+                title: Transmission
+                type: glance
+            type: horizontal-stack
+          - entities:
+              - entity: sensor.sonarr_upcoming
+              - entity: sensor.radarr_movies
+            title: Upcoming Media
+            type: glance
+          - entities:
+              - entity: sensor.tautulli
+            type: glance
+        type: vertical-stack
+      - cards:
+          - columns: 3
+            entities:
+              - entity: binary_sensor.swc_vus18_pms
+                name: SWC-VUS18-PMS
+              - entity: sensor.swi_vus18_pms_docker_portainer_status
+                name: Portainer
+              - entity: sensor.plex_online
+                name: Plex Media Server
+            show_icon: true
+            show_name: true
+            show_state: true
+            style: |
+              ha-card {
+                text-align: center;
+                
+                    } 
+            title: Plex Media Server
+            type: glance
+          - cards:
+              - align_icon: left
+                align_state: center
+                entities:
+                  - sensor.glances_cpu_used
+                font_size: 75
+                icon: 'mdi:chip'
+                name: CPU
+                show:
+                  fill: false
+                type: 'custom:mini-graph-card'
+              - align_icon: left
+                align_state: center
+                entities:
+                  - sensor.unifi_gateway_wan_mem
+                font_size: 75
+                icon: 'mdi:memory'
+                name: Memory
+                show:
+                  fill: false
+                type: 'custom:mini-graph-card'
+              - align_icon: left
+                align_state: center
+                entities:
+                  - sensor.glances_media_media_used_percent
+                font_size: 75
+                name: Disk
+                show:
+                  fill: false
+                  legend: false
+                type: 'custom:mini-graph-card'
+            type: horizontal-stack
+          - entities:
+              - entity: sensor.dvbpi_online
+                name: DVB Pi
+              - entity: sensor.transmission_online
+                name: Transmission
+              - entity: sensor.sabnzbd_online
+                name: SABnzbd
+              - entity: sensor.jackett_online
+                name: Jackett
+            type: glance
+          - entities:
+              - entity: sensor.sonarr_online
+                name: Sonarr
+              - entity: sensor.radarr_online
+                name: Radarr
+              - entity: sensor.swi_vus18_pms_docker_lazylibrarian_status
+                name: Lidarr
+            type: glance
+          - entities:
+              - entity: sensor.ombi_online
+                name: Ombi
+              - entity: sensor.tautulli_online
+                name: Tautulli
+            type: glance
+        type: vertical-stack
+    icon: 'mdi:plex'
+    path: media
+    visible:
+      - user: a590c18a02c64a5c95c3b01b888c135f

@@ -1,0 +1,10 @@
+platform: mqtt
+state_topic: "tele/RF_Bridge/RESULT"
+name: Front Doorbell
+value_template: '{{value_json.RfReceived.Data}}'
+payload_on: '9D8008'
+payload_off: '9D8008off'
+device_class: motion
+#optimistic: false
+qos: 1
+#retain: false

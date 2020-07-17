@@ -1,0 +1,3 @@
+platform: ping
+host: !secret swkvmwbsrv_host
+name: SWC-VUS18-WEB
