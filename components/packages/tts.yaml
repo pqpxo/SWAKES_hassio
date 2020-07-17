@@ -1,0 +1,7 @@
+tts:
+  - platform: google_translate
+    cache: true
+    cache_dir: /tmp/tts
+    time_memory: 300
+    base_url: !secret tts_base_url
+    service_name: google_say

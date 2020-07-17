@@ -1,0 +1,12 @@
+alarm_control_panel:
+  - platform: manual
+    name: Home Alarm
+    code: !secret alarm_panel_code
+    arming_time: 30
+    delay_time: 20
+    trigger_time: 4
+    disarmed:
+      trigger_time: 0
+    armed_home:
+      arming_time: 0
+      delay_time: 0

@@ -1,0 +1,5 @@
+platform: samsung_multi_room
+name: "Soundbar" # name, otherwise it will use name of your soundbar
+host: 192.168.1.11 # ip of YOUR soundbar
+max_volume: 5 # on this level glass breaks, and there are 80 levels more on K650...
+power_options: True # enable/disable power options

@@ -1,0 +1,5 @@
+platform: template
+sensors:
+      ps4:
+       value_template: '{% if is_state("device_tracker.playstation", "home") %}Online{% else %}Offline{% endif %}'
+       friendly_name: 'Playstation 4'

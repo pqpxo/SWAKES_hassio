@@ -1,0 +1,105 @@
+  tv_hit_source:
+    sequence:
+      - service: broadlink.send
+        data:
+          host: !secret remote_host
+          packet:
+            - "JgA0ABceOR8cHhweHB4cOxwfHB4cHjkfGx8cAAsXGB45HhwfHB4cHhw7HB4cHxweOR4cHhwADQUAAAAA"
+  tv_hit_volup:
+    sequence:
+      - service: remote.send_command
+        data:
+          host: !secret remote_host
+          packet:
+            - "JgBIABgcHhw7HR4cHhweOTs6OxweHB4dHAALGBceHB46HhweHB4cOzo7OR4cHhwfGwALFB0dHR07HB4cHh0dOjs5Ox0dHR0dHgANBQ=="
+  tv_hit_voldown:
+    sequence:
+      - service: remote.send_command
+        data:
+          host: !secret remote_host
+          packet:
+            - "JgAwABkcHhw7HR0dHhweOTk8OR4cHhw7HgAK9xoeHB45Hh8cGx8cOzk7OR8cHhw7HAANBQAAAAAAAAAA"
+  tv_hit_keyup:
+    sequence:
+      - service: broadlink.send
+        data:
+          host: !secret remote_host
+          packet:
+            - "JgAsABcfHR07HB4cHB8bPDk7OTw7HB4ACxIcHh4cOxwcHx0dHjk7OTs6OxweAA0FAAAAAAAAAAAAAAAA"
+  tv_hit_keydown:
+    sequence:
+      - service: broadlink.send
+        data:
+          host: !secret remote_host
+          packet:
+            - "JgAwABceOR4cHhwfHB4cOzk7OR8cOxweHAAK9xweOR4cHh0eHB4cOzk7OR8cOxweHAANBQAAAAAAAAAA"
+  tv_hit_keyleft:
+    sequence:
+      - service: broadlink.send
+        data:
+          host: !secret remote_host
+          packet:
+            - "JgAsABYfHR07HB4cHh0eOTs5OTw7OR4ACvUeHB4cOxwcHx4cHjk5Ozs6OzkeAA0FAAAAAAAAAAAAAAAA"
+  tv_hit_keyright:
+    sequence:
+      - service: broadlink.send
+        data:
+          host: !secret remote_host
+          packet:
+            - "JgAsABceOh4cHxwdHB8cOzk8ODwcHjkACxUaHzkeHB4cHhwfHDs5Ozk8HB45AA0FAAAAAAAAAAAAAAAA"
+  tv_hit_ok:
+    sequence:
+      - service: broadlink.send
+        data:
+          host: !secret remote_host
+          packet:
+            - "JgAwABceHB85HhweHB4cPBweHB45Ozo7HAAK9hwfHB45HhweHB8cOx0dHB45PDk7HAANBQAAAAAAAAAA"
+  tv_hit_back:
+    sequence:
+      - service: broadlink.send
+        data:
+          host: !secret remote_host
+          packet:
+            - "JgAsABkcHB85Hh4cHB4eOjkeHDs7OjkACxcZHxweOR4eHRweHjk7HBw8OTs7AA0FAAAAAAAAAAAAAAAA"
+  tv_hit_exit:
+    sequence:
+      - service: broadlink.send
+        data:
+          host: !secret remote_host
+          packet:
+            - "JgAwABgeOxweHR0dHhweOR4cOx0eOTs5HAAK9h4dOxwcHhweHh0eORweOxweOjs5HAANBQAAAAAAAAAA"
+  tv_hit_menu:
+    sequence:
+      - service: broadlink.send
+        data:
+          host: !secret remote_host
+          packet:
+            - "JgA0ABkcHhw7HR4cHhweOh0dHhw7HB4dHR0eAAsTHR0cHjscHhweHR45HhweHDsdHhweHB4ADQUAAAAA"
+  tv_hit_netflix:
+    sequence:
+      - service: broadlink.send
+        data:
+          host: !secret remote_host
+          packet:
+            - "JgA0ABceHB47HRweHhweOR4cOx0dOhweHB4eAAr2Gh4eHTscHhwcHhw8HB47HB45Hh0eHBwADQUAAAAA"
+  tv_hit_subtitles:
+    sequence:
+      - service: broadlink.send
+        data:
+          host: !secret remote_host
+          packet:
+            - "JgA0ABceOh4cHhweHB4cPDk7HB4cHhwfHB4cAAr3Gx87HBweHB4cHxw7OTscHhwfHB4cHhwADQUAAAAA"
+  tv_hit_info:
+    sequence:
+      - service: broadlink.send
+        data:
+          host: !secret remote_host
+          packet:
+            - "JgAsABceHB85HhweHB4cPDs5OR8cOzsACxMbHhweOR8eHB4cHjk7OjscHjk8AA0FAAAAAAAAAAAAAAAA"
+  tv_hit_power:
+    sequence:
+      - service: broadlink.send
+        data:
+          host: !secret remote_host
+          packet:
+            - "JgAwABkdOR4eHB4cHh0eOTscHjodHTscHgALEh0cOx0dHRweHhweOTofHTkeHDsdHgANBQAAAAAAAAAA"

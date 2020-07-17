@@ -1,0 +1,7 @@
+ps4back:
+  alias: PS4 Back
+  sequence:
+   service: ps4.send_command
+   entity_id: media_player.playstation_4
+   data:
+     command: back

@@ -1,0 +1,7 @@
+glances:
+  - host: !secret glances_SWC-VUS18-HASS_host
+    port: !secret glances_SWC-VUS18-HASS_port
+    name: SWC-VUS18-HASS
+  - host: !secret glances_SWC-VUS18-PMS_host
+    port: !secret glances_SWC-VUS18-PMS_port
+    name: SWC-VUS18-PMS

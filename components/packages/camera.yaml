@@ -1,0 +1,16 @@
+camera:
+  - platform: generic
+    name: UVC-G3 Front
+    still_image_url: !secret uvcg1_still_source
+    stream_source: !secret uvcg1_stream_source
+    verify_ssl: false
+  - platform: generic
+    name: UVC-G3 Back
+    still_image_url: !secret uvcg2_still_source
+    stream_source: !secret uvcg2_stream_source
+    verify_ssl: false
+  - platform: generic
+    name: UVC-G3 Back
+    still_image_url: !secret uvcg3_still_source
+    stream_source: !secret uvcg3_stream_source
+    verify_ssl: false

@@ -1,0 +1,7 @@
+recorder:
+  include:
+    domains:
+      - sensor
+      - switch
+      - media_player
+      - binary_sensor

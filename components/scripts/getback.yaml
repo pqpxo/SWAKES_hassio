@@ -1,0 +1,13 @@
+get_back:
+  alias: "get backf"
+  sequence:
+  - service: media_player.volume_set
+    data:
+      entity_id: media_player.living_room_speaker
+      volume_level: 0.3
+  
+  - service: media_player.play_media
+    data:
+        entity_id: media_player.living_room_speaker
+        media_content_id: 'https://www.myinstants.com/media/sounds/774.mp3'
+        media_content_type: 'music'

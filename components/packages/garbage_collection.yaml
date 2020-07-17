@@ -1,0 +1,27 @@
+garbage_collection:
+  sensors:
+  - name: General
+    frequency: 'even-weeks'
+    collection_days: wed
+    verbose_state: True
+    verbose_format: '{days} days'     
+  - name: Recycling
+    frequency: 'odd-weeks'
+    collection_days: wed    
+    verbose_state: True
+    verbose_format: '{days} days'
+  - name: Garden
+    frequency: 'odd-weeks'
+    collection_days: wed     
+    verbose_state: True
+    verbose_format: '{days} days'    
+  - name: Meter Readings
+    frequency: 'annual'
+    date: '06/19'
+    include_dates:
+    - '2020-07-19'
+    - '2020-08-19'
+    - '2020-09-19'
+    - '2020-10-19'    
+    verbose_state: True
+    verbose_format: '{days} days'

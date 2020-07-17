@@ -1,0 +1,5 @@
+remote:
+  - platform: broadlink
+    host: !secret remote_host
+    mac: !secret remote_mac
+    type: rm_mini  

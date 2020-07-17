@@ -1,0 +1,30 @@
+switch:
+ - platform: broadlink
+   host: !secret remote_host
+   mac: !secret remote_mac
+   timeout: 15
+   switches:
+     tv_hitachi_power:
+        friendly_name: "HITACHI TV Power"
+        command_on: 'JgAwABkdOR4eHB4cHh0eOTscHjodHTscHgALEh0cOx0dHRweHhweOTofHTkeHDsdHgANBQAAAAAAAAAA'
+        command_off: 'JgAwABkdOR4eHB4cHh0eOTscHjodHTscHgALEh0cOx0dHRweHhweOTofHTkeHDsdHgANBQAAAAAAAAAA'
+     tv_hitachi_source:
+        friendly_name: "HITACHI TV Source"
+        command_on: 'JgA0ABceOR8cHhweHB4cOxwfHB4cHjkfGx8cAAsXGB45HhwfHB4cHhw7HB4cHxweOR4cHhwADQUAAAAA'
+        #command_off: 'JgA0ABceOR8cHhweHB4cOxwfHB4cHjkfGx8cAAsXGB45HhwfHB4cHhw7HB4cHxweOR4cHhwADQUAAAAA'
+     tv_hitachi_volumeup:
+        friendly_name: "HITACHI TV Volume"
+        command_on: 'JgBIABgcHhw7HR4cHhweOTs6OxweHB4dHAALGBceHB46HhweHB4cOzo7OR4cHhwfGwALFB0dHR07HB4cHh0dOjs5Ox0dHR0dHgANBQ=='
+        #command_off: 'JgAwABkcHhw7HR0dHhweOTk8OR4cHhw7HgAK9xoeHB45Hh8cGx8cOzk7OR8cHhw7HAANBQAAAAAAAAAA'
+     tv_hitachi_volumedown:
+        friendly_name: "HITACHI TV Volume"
+        command_on: 'JgAwABkcHhw7HR0dHhweOTk8OR4cHhw7HgAK9xoeHB45Hh8cGx8cOzk7OR8cHhw7HAANBQAAAAAAAAAA'
+        #command_off: 'JgAwABkcHhw7HR0dHhweOTk8OR4cHhw7HgAK9xoeHB45Hh8cGx8cOzk7OR8cHhw7HAANBQAAAAAAAAAA'
+ - platform: mqtt
+   name: "button_office_lamp_1"
+   command_topic: "cmnd/RF_Bridge/power"
+   state_topic: "tele/RF_Bridge/POWER"
+   qos: 1
+   payload_on: "ON"
+   payload_off: "OFF"
+   retain: true           

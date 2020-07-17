@@ -1,0 +1,7 @@
+ombi:
+  api_key: !secret ombi_apikey
+  host: !secret ombi_host
+  username: !secret ombi_username
+  port: 3579
+  #urlbase: ombi/
+  ssl: false

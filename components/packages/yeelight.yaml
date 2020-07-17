@@ -1,0 +1,6 @@
+yeelight:
+  devices:
+    192.168.1.219:
+      name: Master Bedroom_Bed
+    192.168.1.218:
+      name: Master Bedroom_Wardrobe

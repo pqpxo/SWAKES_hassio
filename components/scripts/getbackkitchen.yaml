@@ -1,0 +1,8 @@
+get_back_kitchen:
+  alias: "get back kitchen"
+  sequence:
+  - service: media_player.play_media
+    data:
+        entity_id: media_player.samsung_spk_wam550
+        media_content_id: 'https://www.myinstants.com/media/sounds/774.mp3'
+        media_content_type: 'music'

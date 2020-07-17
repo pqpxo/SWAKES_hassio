@@ -1,0 +1,3 @@
+#http:
+# ssl_certificate: /config/www/ssl/fullchain.pem
+# ssl_key: /config/www/ssl/privkey.pem

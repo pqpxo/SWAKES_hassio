@@ -1,0 +1,6 @@
+    name: Livingroom normal
+    entities:
+        light.optihub_rgb:
+            state: on
+            transition: 10
+            brightness_pct: 100

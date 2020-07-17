@@ -1,0 +1,97 @@
+    
+monitor_docker:
+  - name: SWC-VUS18-BCKP Docker
+    url: !secret monitor_docker_SWC-VUS18-BCKP_url
+    containers:    
+      - davos
+      - snipe-mysql
+      - portainer
+      - Nextcloud
+    monitored_conditions:
+      - version
+      - containers_total
+      - containers_running
+      - containers_paused
+      - containers_stopped
+      - containers_cpu_percentage
+      - containers_memory
+      - containers_memory_percentage
+      - images
+      - status
+      - uptime
+      - image
+      - cpu_percentage
+      - memory
+      - memory_percentage
+      - network_speed_up
+      - network_speed_down
+      - network_total_up
+      - network_total_down
+  - name: SWI-VUS18-HASS Docker
+    url: !secret monitor_docker_SWI-VUS18-HASS_url
+    containers:    
+      - homeassistant
+      - addon_a0d7b954_nodered
+      - addon_15ef4d2f_esphome
+      - addon_a0d7b954_jupyterlablite
+      - addon_core_configurator
+      - addon_core_ssh
+      - addon_core_mosquitto
+      - hassio_multicast
+      - hassio_cli
+      - hassio_audio
+      - hassio_dns
+      - hassio_supervisor
+      - Portainer
+    monitored_conditions:
+      - version
+      - containers_total
+      - containers_running
+      - containers_paused
+      - containers_stopped
+      - containers_cpu_percentage
+      - containers_memory
+      - containers_memory_percentage
+      - images
+      - status
+      - uptime
+      - image
+      - cpu_percentage
+      - memory
+      - memory_percentage
+      - network_speed_up
+      - network_speed_down
+      - network_total_up
+      - network_total_down      
+      
+  - name: SWI-VUS18-PMS Docker
+    url: !secret monitor_docker_SWI-VUS18-PMS_url
+    containers:    
+      - SABnzbd
+      - Sonarr
+      - Radarr
+      - Jackett
+      - Portainer
+      - TransmissionPIA
+      - LazyLibrarian
+      - Tautulli
+    monitored_conditions:
+      - version
+      - containers_total
+      - containers_running
+      - containers_paused
+      - containers_stopped
+      - containers_cpu_percentage
+      - containers_memory
+      - containers_memory_percentage
+      - images
+      - status
+      - uptime
+      - image
+      - cpu_percentage
+      - memory
+      - memory_percentage
+      - network_speed_up
+      - network_speed_down
+      - network_total_up
+      - network_total_down        

@@ -1,0 +1,4 @@
+monitor_on:
+ alias: Monitor On
+ sequence:
+  - service: shell_command.monitor_on

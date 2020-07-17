@@ -1,0 +1,4 @@
+discovery:
+  ignore:
+    - yeelight
+    - sabnzbd

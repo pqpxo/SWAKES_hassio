@@ -1,0 +1,4 @@
+monitor_off:
+ alias: Monitor Off
+ sequence:
+  - service: shell_command.monitor_off

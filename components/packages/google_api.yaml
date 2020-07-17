@@ -1,0 +1,4 @@
+google:
+  client_id: !secret google_api_caldnr_clientid
+  client_secret: !secret google_api_caldnr_clientskey
+  track_new_calendar: true

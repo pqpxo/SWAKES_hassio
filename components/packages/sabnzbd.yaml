@@ -1,0 +1,14 @@
+sabnzbd:
+  api_key: !secret sabnzbd_api
+  host: !secret sabnzbd_host
+  name: sabnzbd
+  port: 8080
+  sensors:
+    - current_status
+    - speed
+    - queue_count
+    - queue_size
+    - queue_remaining
+    - disk_size
+    - disk_free
+    - total_size  

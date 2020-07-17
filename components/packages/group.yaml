@@ -1,0 +1,263 @@
+group:
+
+# ###################################################
+# ################## Door Sensors
+# ###################################################
+
+  all_door_sensors:
+    name: All Door Sensors
+    #all: true
+    icon: mdi:home
+    entities:
+    - binary_sensor.openclose_26
+    - binary_sensor.openclose_30
+    - binary_sensor.openclose_20
+    - binary_sensor.openclose_19  
+    - binary_sensor.window_door_sensor
+    - binary_sensor.openclose_22
+    - binary_sensor.window_door_sensor_2
+    - binary_sensor.window_door_sensor_4
+    - binary_sensor.window_door_sensor_3
+    - binary_sensor.openclose_21
+    - binary_sensor.window_door_sensor_5
+    
+  ground_door_sensors:
+    name: Ground Door Sensors
+    #all: true
+    icon: mdi:home
+    entities:
+    - binary_sensor.openclose_26
+    - binary_sensor.openclose_30
+    - binary_sensor.openclose_20
+    - binary_sensor.openclose_19  
+
+    
+  first_door_sensors:
+    name: First Door Sensors
+    #all: true
+    icon: mdi:home
+    entities:
+    - binary_sensor.window_door_sensor
+    - binary_sensor.openclose_22
+    - binary_sensor.window_door_sensor_2   
+    
+  second_door_sensors:
+    name: Second Door Sensors
+    #all: true
+    icon: mdi:home
+    entities:
+    - binary_sensor.window_door_sensor_4
+    - binary_sensor.window_door_sensor_3
+    - binary_sensor.openclose_21
+    - binary_sensor.window_door_sensor_5 
+    
+  ground_floor_security:
+    name: Ground Floor Security Sensors
+    #all: true
+    icon: mdi:home
+    entities:
+    - binary_sensor.openclose_26
+    - binary_sensor.openclose_30
+    - binary_sensor.openclose_20
+    - binary_sensor.openclose_19  
+    - binary_sensor.ground_hallway_motion  
+    
+  first_floor_security:
+    name: First Floor Security Sensors
+    #all: true
+    icon: mdi:home
+    entities:
+    - binary_sensor.window_door_sensor
+    - binary_sensor.openclose_22
+    - binary_sensor.window_door_sensor_2
+    - binary_sensor.first_hallway_motion      
+
+  second_floor_security:
+    name: Second Floor Security Sensors
+    #all: true
+    icon: mdi:home
+    entities:
+    - binary_sensor.window_door_sensor_4
+    - binary_sensor.window_door_sensor_3
+    - binary_sensor.openclose_21
+    - binary_sensor.window_door_sensor_5 
+    - binary_sensor.fire_alarm    
+    - binary_sensor.tradfri_motion_sensor
+
+    
+  pushover_notifications:
+    name: Pushover Notifications
+    #all: true
+    icon: mdi:home
+    entities:    
+    - automation.first_pir_pushover
+    - automation.ground_pir_pushover
+    - automation.office_pir_pushover
+
+  kitchen_RGB_automations:
+    name: Kitchen Under RGB Automations
+    #all: true
+    icon: mdi:home
+    entities:    
+    - automation.back_door_lights_on_inside
+    - automation.kitchen_corner_pir
+    - automation.kitchen_sink_pir
+
+  kitchen_RGB:
+    name: Kitchen Under RGB Lights
+    #all: true
+    icon: mdi:led-strip-variant
+    entities:    
+    - light.kitchen_corner_rgb
+    - light.kitchen_sink_rgb
+
+  zigbee_battery:
+    name: ZigBee Battery Levels
+    icon: mdi:battery-charging-wireless
+    entities:
+    - sensor.back_door_battery_level
+    - sensor.first_floor_temp_battery_level
+    - sensor.ground_floor_temp_battery_level
+    - sensor.multi_sensor_2_battery_level
+    - sensor.openclose_20_battery_level
+    - sensor.openclose_21_battery_level
+    - sensor.openclose_22_battery_level
+    - sensor.openclose_26_battery_level
+    - sensor.openclose_30_battery_level
+    - sensor.openclose_31_battery_level
+    - sensor.window_door_sensor_battery_level
+    - sensor.tradfri_motion_sensor_battery_level
+    - sensor.tradfri_remote_control_battery_level
+    - sensor.window_door_sensor_2_battery_level
+    - sensor.window_door_sensor_3_battery_level
+    - sensor.window_door_sensor_4_battery_level
+    - sensor.window_door_sensor_5_battery_level    
+    
+  433_rf_devices:
+    name: 433Mhz RF Devices
+    icon: mdi:radio-tower
+    entities:    
+    - binary_sensor.ground_hallway_motion
+    - binary_sensor.first_hallway_motion
+    - binary_sensor.fire_alarm
+
+  433_rf_office_button:
+    name: 433Mhz RF Office Button
+    icon: mdi:radio-tower
+    entities:    
+    - binary_sensor.office_button_a
+    - binary_sensor.office_button_b
+    - binary_sensor.office_button_c
+
+  unifi_cameras:
+    name: UniFi UVC Cameras
+    icon: mdi:cctv
+    entities:    
+    - camera.swk_cr_uniuvc1
+    - camera.swk_cr_uniuvc2
+    - camera.swk_cr_uniuvc3
+
+  fire_alarm:
+    name: Fire Alarms
+    icon: mdi:fire
+    entities:    
+    - binary_sensor.fire_alarm
+
+  water_leak:
+    name: Water Leak Sensors
+    icon: mdi:water
+    entities:    
+    - binary_sensor.fire_alarm
+    
+  pir_motion:
+    name: PIR Motion Sensors
+    icon: mdi:motion-sensor
+    entities:    
+    - binary_sensor.ground_hallway_motion   
+    - binary_sensor.first_hallway_motion
+    - binary_sensor.tradfri_motion_sensor
+# ###################################################
+# ################## Lights
+# ###################################################
+
+  zigbee_devices:
+    name: Zigbee Devices
+    icon: mdi:zigbee
+    entities:    
+    - binary_sensor.fire_alarm
+    
+  esphome_devices:
+    name: ESPHome Devices
+    icon: mdi:water
+    entities:    
+    - binary_sensor.fire_alarm
+    
+  wifi_devices:
+    name: WiFi Devices
+    icon: mdi:wifi
+    entities:    
+    - binary_sensor.fire_alarm   
+
+
+
+#  ground_lights:
+#     name: Ground Floor Lights
+#     #all: true
+#     icon: mdi:home-floor-g
+#     entities:
+#     - switch.front_door_lamp
+#     - switch.sonoff_10004008d2
+#     - light.kitchen_under_rgb
+    
+#  first_lights:
+#     name: First Floor Lights
+#     #all: true
+#     icon: mdi:home-floor-1
+#     entities:
+#     - switch.living_room_corner_lamp
+#     - light.tvcabinet_rgb
+#     - light.0x086bd7fffe0013f1_light
+    
+#  second_lights:
+#     name: Second Floor Lights
+#     #all: true
+#     icon: mdi:home-floor-2
+#     entities:
+#     - switch.office_lamp
+#     - light.office_light_light
+#     - light.0x086bd7fffe0013f1_light
+#     - switch.sonoff_1000ae39fc_2
+#     - switch.sonoff_1000ae39fc_1
+#     - light.master_bedside_sam_rgb_light
+    
+    
+#  lights:
+#     name: Lights
+#     #all: true
+#     icon: mdi:home
+#     entities:
+#     - switch.front_door_lamp
+#     - switch.sonoff_10004008d2
+#     - light.kitchen_under_rgb
+#      - switch.living_room_corner_lamp
+#     - light.tvcabinet_rgb
+#     - light.0x086bd7fffe0013f1_light
+#     - switch.office_lamp
+#     - light.office_light_light
+#     - light.0x086bd7fffe0013f1_light
+#     - switch.sonoff_1000ae39fc_2
+#     - switch.sonoff_1000ae39fc_1
+#     - light.master_bedside_sam_rgb_light    
+    
+# ###################################################
+# ################## Automations
+# ###################################################
+
+#  pushover_pir_notifications:
+#     name: Pushover PIR Notifications
+#     #all: true
+#     icon: mdi:weather-cloudy-alert
+#     entities:
+#     - automation.first_pir_pushover
+#     - automation.ground_pir_pushover
+#     - automation.office_pir_pushover

@@ -1,0 +1,7 @@
+ps4option:
+  alias: PS4 Option
+  sequence:
+   service: ps4.send_command
+   entity_id: media_player.playstation_4
+   data:
+     command: option

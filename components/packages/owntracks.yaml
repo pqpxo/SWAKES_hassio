@@ -1,0 +1,11 @@
+owntracks:
+  max_gps_accuracy: 30
+  waypoints: true
+  mqtt_topic: "owntracks/#"
+  events_only: true
+#  waypoint_whitelist:
+#   - jon
+#    - ram
+  region_mapping:
+    home: home
+    work: work

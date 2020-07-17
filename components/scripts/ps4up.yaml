@@ -1,0 +1,7 @@
+ps4up:
+  alias: PS4 Up
+  sequence:
+   service: ps4.send_command
+   entity_id: media_player.playstation_4
+   data:
+     command: up

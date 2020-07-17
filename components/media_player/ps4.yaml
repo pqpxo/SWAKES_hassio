@@ -1,0 +1,2 @@
+platform: ps4
+host: !secret ps4_host
