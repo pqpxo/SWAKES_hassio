@@ -2,7 +2,7 @@
 
 Hi there and welcome to my Github repo containing configuration and setup files/code for Home Assistant. 
 
-I will en-devour to keep this updated however please check out my other references and sources in the following links below ...
+I will endeavour to keep this updated however please check out my other references and sources in the following links below ...
 
  - [SWAKES Blog](https://blog.swakes.co.uk/tag/home-assistant/)
  - [SWAKES Reddit](https://old.reddit.com/user/swake88/)
