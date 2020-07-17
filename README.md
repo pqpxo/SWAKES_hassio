@@ -1,8 +1,13 @@
 # Welcome to SWAKES - Home Assistant
 
-Hi! I'm your first Markdown file in **StackEdit**. If you want to learn about StackEdit, you can read me. If you want to play with Markdown, you can edit me. Once you have finished with me, you can create new files by opening the **file explorer** on the left corner of the navigation bar.
+Hi there and welcome to my Github repo containing my configuration and setup files/code for Home Assistant. I will en-devour to keep this up to date however please check out my other references and sources in the following links before
 
+ - [SWAKES Blog](https://blog.swakes.co.uk/tag/home-assistant/)
+ - [SWAKES Reddit](https://old.reddit.com/user/swake88/)
+ - [SWAKES Home Assistant Community](https://community.home-assistant.io/u/pqpxd/summary)
+ - [Home Assistant Facebook Community Page](https://www.facebook.com/groups/HomeAssistant)
 
+Please note that some files, images, custom components and addons have been referenced but not uploaded in this repo.
 # Hardware
 
 
