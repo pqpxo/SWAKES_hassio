@@ -1,8 +1,6 @@
 # Welcome to SWAKES - Home Assistant
 
-Hi there and welcome to my Github repo containing configuration and setup files/code for Home Assistant. 
-
-I will endeavour to keep this updated however please check out my other references and sources in the following links below ...
+Hi there and welcome to my Github repo containing my configuration and setup files/code for Home Assistant. I will en-devour to keep this up to date however please check out my other references and sources in the following links before
 
  - [SWAKES Blog](https://blog.swakes.co.uk/tag/home-assistant/)
  - [SWAKES Reddit](https://old.reddit.com/user/swake88/)
@@ -11,6 +9,9 @@ I will endeavour to keep this updated however please check out my other referenc
  - [Screenshots](https://github.com/pqpxo/SWAKES_hassio/tree/master/screenshots)
 
 Please note that some files, images, custom components and addons have been referenced but not uploaded in this repo.
+
+#### Screenshots
+![System Dashboard](https://i.imgur.com/x2Evkqz.jpg)![Light Dashboard](https://i.imgur.com/FCChiJh.png)![Security Dashboard](https://i.imgur.com/2sduNJ1.png)
 # Hardware
 
 
@@ -166,4 +167,3 @@ Please note that some files, images, custom components and addons have been refe
 - Google ChromeCast [2]
 - Sony Playstation 4 [1]   
 
-... Still more the add! 
