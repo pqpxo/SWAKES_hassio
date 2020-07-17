@@ -8,7 +8,7 @@ I will en-devour to keep this updated however please check out my other referenc
  - [SWAKES Reddit](https://old.reddit.com/user/swake88/)
  - [SWAKES Home Assistant Community](https://community.home-assistant.io/u/pqpxd/summary)
  - [Home Assistant Facebook Community Page](https://www.facebook.com/groups/HomeAssistant)
- - Screenshots
+ - [Screenshots](https://github.com/pqpxo/SWAKES_hassio/tree/master/screenshots)
 
 Please note that some files, images, custom components and addons have been referenced but not uploaded in this repo.
 # Hardware
