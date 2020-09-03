@@ -1,0 +1,14 @@
+  - badges: []
+    cards:
+      - cards:
+          - entity_id:
+              '1': null
+            max_results: 15
+            name: 'Toggle {1}'
+            service: homeassistant.toggle
+            service_data: null
+            type: 'custom:search-card'
+        type: vertical-stack
+    icon: 'mdi:database-search'
+    panel: true
+    path: search
