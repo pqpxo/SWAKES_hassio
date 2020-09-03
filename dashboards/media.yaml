@@ -1,0 +1,522 @@
+  - badges: []
+    cards:
+      - cards:
+          - content: >
+              # <img width="30" height="30" src='/local/googlehome.png'
+              style='vertical-align:middle' /> Speakers 
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                   # font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - cards:
+              - artwork: cover
+                entity: media_player.googlehome4654
+                hide:
+                  power_state: false
+                  source: true
+                  volume: false
+                icon: 'mdi:google-home'
+                tts:
+                  platform: google_translate
+                type: 'custom:mini-media-player'
+              - artwork: cover
+                entity: media_player.living_room_speaker
+                hide:
+                  power_state: false
+                  source: true
+                  volume: false
+                icon: 'mdi:google-home'
+                tts:
+                  platform: google_translate
+                type: 'custom:mini-media-player'
+              - artwork: cover
+                entity: media_player.master_bedroom_speaker
+                hide:
+                  power_state: true
+                  source: true
+                  volume: false
+                icon: 'mdi:google-home'
+                name: Master Bedroom Speaker
+                tts:
+                  platform: google_translate
+                type: 'custom:mini-media-player'
+            type: vertical-stack
+          - type: vertical-stack
+            cards:
+              - content: >
+                  # <img width="30" height="30" src='/local/gochca.png'
+                  style='vertical-align:middle' /> Chromecasts 
+                style:
+                  .: |
+                    ha-card {
+                      background-color: transparent !important;
+                      box-shadow: none !important;
+                    }
+                  ha-markdown:
+                    $: |
+                      h1 {
+                        font-size: 25px;
+                       # font-weight: bold;
+                        text-align: center;
+                        letter-spacing: '-0.01em';
+                      }
+                type: markdown
+              - cards:
+                  - artwork: cover
+                    entity: media_player.snug_tv
+                    hide:
+                      power: false
+                      power_state: true
+                      source: true
+                      volume: true
+                    icon: 'mdi:cast-connected'
+                    name: Snug Chromecast
+                    type: 'custom:mini-media-player'
+                  - artwork: cover
+                    entity: media_player.master_bedroom_tv
+                    hide:
+                      power_state: true
+                      source: true
+                      volume: true
+                    icon: 'mdi:cast-connected'
+                    name: Living Room Chromecast
+                    type: 'custom:mini-media-player'
+                  - artwork: cover
+                    entity: media_player.master_bedroom_tv
+                    hide:
+                      power_state: true
+                      source: true
+                      volume: true
+                    icon: 'mdi:cast-connected'
+                    name: Master Bedroom Chromecast
+                    type: 'custom:mini-media-player'
+                type: vertical-stack
+          - type: vertical-stack
+            cards:
+              - content: >
+                  # <img width="30" height="30" src='/local/ps.png'
+                  style='vertical-align:middle' /> Playstaion 4 
+                style:
+                  .: |
+                    ha-card {
+                      background-color: transparent !important;
+                      box-shadow: none !important;
+                    }
+                  ha-markdown:
+                    $: |
+                      h1 {
+                        font-size: 25px;
+                       # font-weight: bold;
+                        text-align: center;
+                        letter-spacing: '-0.01em';
+                      }
+                type: markdown
+              - entity: media_player.playstation_4
+                type: 'custom:mini-media-player'
+        type: vertical-stack
+      - cards:
+          - type: vertical-stack
+            cards:
+              - content: >
+                  # <img width="30" height="30" src='/local/ukradio.png'
+                  style='vertical-align:middle' /> Radio 
+                style:
+                  .: |
+                    ha-card {
+                      background-color: transparent !important;
+                      box-shadow: none !important;
+                    }
+                  ha-markdown:
+                    $: |
+                      h1 {
+                        font-size: 25px;
+                       # font-weight: bold;
+                        text-align: center;
+                        letter-spacing: '-0.01em';
+                      }
+                type: markdown
+              - entities:
+                  - entity: input_select.radio_station
+                    icon: 'mdi:radio'
+                  - entity: input_select.googlehome_radio
+                  - action_name: Play
+                    entity: script.radio
+                    icon: 'mdi:play'
+                    name: Start Listening
+                title: false
+                type: entities
+          - type: vertical-stack
+            cards:
+              - content: >
+                  # <img width="30" height="30" src='/local/spot.png'
+                  style='vertical-align:middle' /> Spotify 
+                style:
+                  .: |
+                    ha-card {
+                      background-color: transparent !important;
+                      box-shadow: none !important;
+                    }
+                  ha-markdown:
+                    $: |
+                      h1 {
+                        font-size: 25px;
+                       # font-weight: bold;
+                        text-align: center;
+                        letter-spacing: '-0.01em';
+                      }
+                type: markdown
+              - account: default
+                device: media_player.googlehome4654
+                grid_covers_per_row: 5
+                hide_warning: true
+                limit: 15
+                playlist_type: default
+                spotify_entity: media_player.spotify_pencilshavingsuk
+                type: 'custom:spotify-card'
+                grid_center_covers: true
+                display_style: grid
+          - content: >
+              # <img width="30" height="30" src='/local/ucg.png'
+              style='vertical-align:middle' /> Cast Cameras 
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                   # font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - entities:
+              - entity: input_select.chromecast_tv
+                icon: 'mdi:cast-connected'
+              - entity: input_select.camera_select
+                icon: 'mdi:cctv'
+              - action_name: Stream
+                entity: script.cameracast
+                icon: 'mdi:play'
+                name: Start Casting
+            title: false
+            type: entities
+        type: vertical-stack
+      - cards:
+          - content: >
+              # <img width="30" height="30" src='/local/plx.png'
+              style='vertical-align:middle' /> Recently Added 
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                   # font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - accent_color: '#2b374e'
+            border_color: '#13274b'
+            date: ddmm
+            entity: sensor.recently_added_movies_2
+            flag: false
+            flag_color: '#13274b'
+            image_style: fanart
+            line1_text: $empty
+            line2_size: small
+            line2_text: $episode
+            line3_text: $number
+            line4_text: 'Runtime: $runtime'
+            max: 2
+            title: false
+            title_size: large
+            title_text: $title
+            type: 'custom:upcoming-media-card'
+          - accent_color: '#2b374e'
+            border_color: '#13274b'
+            date: ddmm
+            entity: sensor.recently_added_movies
+            flag: false
+            flag_color: '#13274b'
+            image_style: fanart
+            line1_text: $empty
+            line2_size: small
+            line2_text: $rating
+            line3_text: $genres
+            line4_text: 'Runtime: $runtime'
+            max: 2
+            title: false
+            title_size: large
+            title_text: $title
+            type: 'custom:upcoming-media-card'
+          - content: >
+              # <img width="30" height="30" src='/local/plx.png'
+              style='vertical-align:middle' /> Upcoming Media 
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                   # font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - cards:
+              - accent_color: '#2b374e'
+                border_color: '#13274b'
+                date: ddmm
+                entity: sensor.radarr_upcoming_media
+                flag: false
+                flag_color: '#13274b'
+                image_style: fanart
+                line1_text: $empty
+                line2_size: small
+                line2_text: $rating
+                line3_text: $genres
+                line4_text: 'Runtime: $runtime'
+                max: 1
+                title: false
+                title_size: large
+                title_text: $title
+                type: 'custom:upcoming-media-card'
+              - accent_color: '#2b374e'
+                border_color: '#13274b'
+                date: ddmm
+                entity: sensor.sonarr_upcoming_media
+                flag: false
+                flag_color: '#13274b'
+                image_style: fanart
+                line1_text: $empty
+                line2_size: small
+                line2_text: $episode
+                line3_text: $number
+                line4_text: 'Runtime: $runtime'
+                max: 1
+                title: false
+                title_size: large
+                title_text: $title
+                type: 'custom:upcoming-media-card'
+            type: vertical-stack
+        type: vertical-stack
+      - cards:
+          - content: >
+              # <img width="30" height="30" src='/local/plx.png'
+              style='vertical-align:middle' /> Plex Media Server 
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                   # font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - columns: 3
+            entities:
+              - entity: binary_sensor.swc_vus18_pms
+                name: SWC-VUS18-PMS
+              - entity: sensor.portainer_online
+                name: Portainer
+              - entity: sensor.plex_online
+                name: Plex Media Server
+            show_icon: true
+            show_name: true
+            show_state: true
+            style: |
+              ha-card {
+                text-align: center;
+                
+                    } 
+            title: false
+            type: glance
+          - cards:
+              - align_icon: left
+                align_state: center
+                entities:
+                  - sensor.glances_cpu_used
+                font_size: 75
+                icon: 'mdi:chip'
+                name: CPU
+                show:
+                  fill: false
+                type: 'custom:mini-graph-card'
+              - align_icon: left
+                align_state: center
+                entities:
+                  - sensor.unifi_gateway_wan_mem
+                font_size: 75
+                icon: 'mdi:memory'
+                name: Memory
+                show:
+                  fill: false
+                type: 'custom:mini-graph-card'
+              - align_icon: left
+                align_state: center
+                entities:
+                  - sensor.glances_media_media_used_percent
+                font_size: 75
+                name: Disk
+                show:
+                  fill: false
+                  legend: false
+                type: 'custom:mini-graph-card'
+            type: horizontal-stack
+          - entities:
+              - entity: sensor.dvbpi_online
+                name: DVB Pi
+              - entity: sensor.transmission_online
+                name: Transmission
+              - entity: sensor.sabnzbd_online
+                name: SABnzbd
+              - entity: sensor.jackett_online
+                name: Jackett
+            type: glance
+          - entities:
+              - entity: sensor.sonarr_online
+                name: Sonarr
+              - entity: sensor.radarr_online
+                name: Radarr
+              - entity: sensor.ombi_online
+                name: Ombi
+              - entity: sensor.tautulli_online
+                name: Tautulli
+            type: glance
+          - cards:
+              - cards:
+                  - content: >
+                      # <img width="30" height="30" src='/local/psab.png'
+                      style='vertical-align:middle' /> SABnzbd
+                    style:
+                      .: |
+                        ha-card {
+                          background-color: transparent !important;
+                          box-shadow: none !important;
+                        }
+                      ha-markdown:
+                        $: |
+                          h1 {
+                            font-size: 20px;
+                            font-weight: bold;
+                            text-align: center;
+                            letter-spacing: '-0.01em';
+                          }
+                    type: markdown
+                  - entities:
+                      - entity: sensor.sabnzbd_queue_count
+                        icon: 'mdi:download'
+                        name: Active
+                      - entity: sensor.sabnzbd_status
+                        icon: 'mdi:information'
+                        name: Status
+                    style: |
+                      ha-card {
+                        text-align: center;
+
+                            }   
+                    title: false
+                    type: glance
+                type: vertical-stack
+              - cards:
+                  - cards:
+                      - content: >
+                          # <img width="30" height="30" src='/local/ptrans.png'
+                          style='vertical-align:middle' /> Transmission
+                        style:
+                          .: |
+                            ha-card {
+                              background-color: transparent !important;
+                              box-shadow: none !important;
+                            }
+                          ha-markdown:
+                            $: |
+                              h1 {
+                                font-size: 20px;
+                                font-weight: bold;
+                                text-align: center;
+                                letter-spacing: '-0.01em';
+                              }
+                        type: markdown
+                      - entities:
+                          - entity: sensor.sabnzbd_queue_count
+                            icon: 'mdi:download'
+                            name: Active
+                          - entity: sensor.sabnzbd_status
+                            icon: 'mdi:information'
+                            name: Status
+                        style: |
+                          ha-card {
+                            text-align: center;
+
+                                }   
+                        title: false
+                        type: glance
+                    type: vertical-stack
+                type: horizontal-stack
+            type: horizontal-stack
+          - content: >
+              # <img width="30" height="30" src='/local/pombi.png'
+              style='vertical-align:middle' /> Ombi Requests 
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 20px;
+                    font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - entities:
+              - entity: sensor.ombi_movie_requests
+                name: Movie Requests
+              - entity: sensor.ombi_tv_show_requests
+                name: TV Requests
+              - entity: sensor.ombi_pending_requests
+                name: Pending Requests
+            style: |
+              ha-card {
+                text-align: center;
+
+                    }   
+            title: false
+            type: glance
+        type: vertical-stack
+    icon: 'mdi:plex'
+    path: media
