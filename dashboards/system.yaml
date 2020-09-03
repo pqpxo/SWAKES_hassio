@@ -1,0 +1,437 @@
+  - badges: []
+    cards:
+      - cards:
+          - content: |
+              # Home Assistant
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                   # font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - entities:
+              - entity: sensor.hassio_uptime
+                name: Uptime
+              - entity: sensor.latest_version
+                name: Version
+              - entity: sensor.last_successful_authentication
+                name: Last Login
+              - entity: sensor.supervisor_updates
+                icon: 'mdi:download-network'
+                name: Updates
+            style: |
+              ha-card {
+                text-align: center;
+                
+                    }    
+            title: false
+            type: glance
+          - cards:
+              - align_icon: left
+                align_state: center
+                entities:
+                  - sensor.processor_use
+                font_size: 75
+                icon: 'mdi:chip'
+                name: CPU
+                show:
+                  fill: false
+                type: 'custom:mini-graph-card'
+              - align_icon: left
+                align_state: center
+                entities:
+                  - sensor.memory_use_percent
+                font_size: 75
+                name: Memory
+                show:
+                  fill: false
+                type: 'custom:mini-graph-card'
+              - align_icon: left
+                align_state: center
+                entities:
+                  - sensor.disk_use_percent_home
+                font_size: 75
+                name: Disk
+                show:
+                  fill: false
+                type: 'custom:mini-graph-card'
+            type: horizontal-stack
+          - columns: 3
+            entities:
+              - entity: sensor.count_binary_sensors
+                name: Binary Sensors
+              - entity: sensor.count_sensors
+                name: Sensors
+              - entity: sensor.count_switches
+                name: Switches
+              - entity: sensor.count_device_trackers
+                name: Device Trackers
+              - entity: sensor.count_automations
+                name: Automations
+              - entity: sensor.count_scripts
+                name: Scripts
+            show_icon: false
+            show_name: true
+            show_state: true
+            type: glance
+          - content: |
+              # Docker
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                   # font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - columns: 4
+            entities:
+              - entity: sensor.swi_vus18_hass_docker_containers_running
+                name: Running
+              - entity: sensor.swi_vus18_hass_docker_containers_stopped
+                name: Stopped
+              - entity: sensor.swi_vus18_hass_docker_hassio_supervisor_status
+                name: Supervisor
+              - entity: sensor.swi_vus18_hass_docker_homeassistant_status
+                name: Hassio
+            show_icon: true
+            show_name: true
+            show_state: true
+            style: |
+              ha-card {
+                text-align: center;
+                    }
+            title: false
+            type: glance
+          - content: |
+              # Restart Services
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                   # font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - entities:
+              - entity: zone.home
+                icon: 'mdi:home-assistant'
+                name: Hassio
+                tap_action:
+                  action: call-service
+                  service: homeassistant.restart
+              - entity: zone.home
+                icon: 'mdi:cogs'
+                name: Automation
+                tap_action:
+                  action: call-service
+                  service: automation.reload
+              - entity: zone.home
+                icon: 'mdi:script-text'
+                name: Script
+                tap_action:
+                  action: call-service
+                  service: script.reload
+              - entity: zone.home
+                icon: 'mdi:group'
+                name: Groups
+                tap_action:
+                  action: call-service
+                  service: group.reload
+            show_header_toggle: false
+            show_state: false
+            style: |
+              ha-card {
+                text-align: center;
+                    }    
+            title: false
+            type: glance
+        type: vertical-stack
+      - cards:
+          - content: |
+              # Sensor Network
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                   # font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - entities:
+              - entity: group.zigbee_devices
+                name: Zigbee
+              - entity: group.433_rf_devices
+                name: 433Mhz RF
+              - entity: group.esphome_devices
+                name: ESPHome
+              - entity: group.wifi_devices
+                name: WiFi
+            style: |
+              ha-card {
+                text-align: center;
+                
+                    }    
+            title: false
+            type: glance
+          - entities:
+              - entity: sensor.door_sensors_status
+                name: Door
+              - entity: group.pir_motion
+                name: PIR
+              - entity: group.unifi_cameras
+                name: CCTV
+              - entity: group.fire_alarm
+                name: Fire
+              - entity: group.water_leak
+                name: Water
+            type: glance
+          - cards:
+              - content: |
+                  # Sensors
+                style:
+                  .: |
+                    ha-card {
+                      background-color: transparent !important;
+                      box-shadow: none !important;
+                    }
+                  ha-markdown:
+                    $: |
+                      h1 {
+                        font-size: 25px;
+                       # font-weight: bold;
+                        text-align: center;
+                        letter-spacing: '-0.01em';
+                      }
+                type: markdown
+              - entity_id:
+                  '1': null
+                max_results: 15
+                name: 'Toggle {1}'
+                service: homeassistant.toggle
+                service_data: null
+                type: 'custom:search-card'
+              - cards:
+                  - card:
+                      type: entities
+                    filter:
+                      include:
+                        - entity_id: binary_sensor.ground_hallway_motion
+                          options:
+                            secondary_info: last-changed
+                        - entity_id: binary_sensor.first_hallway_motion
+                          options:
+                            secondary_info: last-changed
+                        - entity_id: binary_sensor.tradfri_motion_sensor
+                          options:
+                            secondary_info: last-changed
+                    sort:
+                      count: 1
+                      method: last_changed
+                    type: 'custom:auto-entities'
+                  - card:
+                      show_icon: false
+                      type: entities
+                    filter:
+                      include:
+                        - entity_id: binary_sensor.openclose_*
+                          options:
+                            secondary_info: last-changed
+                        - entity_id: binary_sensor.window_*
+                          options:
+                            secondary_info: last-changed
+                    sort:
+                      count: 1
+                      method: last_changed
+                    type: 'custom:auto-entities'
+                style: |
+                  div.card-header {
+                    text-align: center;
+                    
+                        }  
+                title: false
+                type: 'custom:vertical-stack-in-card'
+            type: vertical-stack
+          - content: |
+              # Battery Levels
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                   # font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - collapse: 3
+            entities:
+              - sensor.back_door_battery_level
+              - sensor.first_floor_temp_battery_level
+              - sensor.ground_floor_temp_battery_level
+              - sensor.multi_sensor_2_battery_level
+              - sensor.openclose_20_battery_level
+              - sensor.openclose_21_battery_level
+              - sensor.openclose_22_battery_level
+              - sensor.openclose_26_battery_level
+              - sensor.openclose_30_battery_level
+              - sensor.openclose_31_battery_level
+              - sensor.window_door_sensor_battery_level
+              - sensor.tradfri_motion_sensor_battery_level
+              - sensor.tradfri_remote_control_battery_level
+              - sensor.window_door_sensor_2_battery_level
+              - sensor.window_door_sensor_3_battery_level
+              - sensor.window_door_sensor_4_battery_level
+              - sensor.window_door_sensor_5_battery_level
+            sort_by_level: asc
+            title: false
+            type: 'custom:battery-state-card'
+        type: vertical-stack
+      - cards:
+          - content: |
+              # UniFi Network
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                   # font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - entities:
+              - entity: binary_sensor.unifi_controller
+                name: CKG2+
+              - entity: binary_sensor.unifi_usg
+                name: USG
+              - entity: binary_sensor.unifi_16_switch
+                name: Switch
+              - entity: binary_sensor.unifi_ap_up
+                name: AP
+              - entity: group.unifi_cameras
+                name: null
+            style: |
+              ha-card {
+                text-align: center;
+                
+                    }    
+                    
+            title: false
+            type: glance
+          - cards:
+              - align_icon: left
+                align_state: center
+                entities:
+                  - sensor.unifi_gateway_wan_cpu
+                font_size: 75
+                icon: 'mdi:chip'
+                name: CPU
+                show:
+                  fill: false
+                type: 'custom:mini-graph-card'
+              - align_icon: left
+                align_state: center
+                entities:
+                  - sensor.unifi_gateway_wan_mem
+                font_size: 75
+                icon: 'mdi:memory'
+                name: Memory
+                show:
+                  fill: false
+                type: 'custom:mini-graph-card'
+              - align_icon: left
+                align_state: center
+                entities:
+                  - sensor.unifi_gateway_3_packets_s_sent
+                  - sensor.unifi_gateway_3_packets_s_received
+                font_size: 75
+                name: Traffic
+                show:
+                  fill: false
+                  legend: false
+                type: 'custom:mini-graph-card'
+            type: horizontal-stack
+          - entities:
+              - entity: sensor.local_ip
+                name: Local IP
+              - entity: sensor.myip
+                name: External IP
+              - entity: sensor.speedtest_download
+              - entity: sensor.speedtest_upload
+            type: entities
+          - content: |
+              # Pi-Hole
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                   # font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - columns: null
+            entities:
+              - entity: sensor.pi_hole_ads_blocked_today
+                name: Requests Blocked
+              - entity: sensor.pi_hole_dns_queries_today
+                name: DNS Queries
+              - entity: sensor.pi_hole_domains_blocked
+                name: Domains Blocked
+            style: |
+              ha-card {
+                text-align: center;
+                justify-content: center;
+                    } 
+            title: false
+            type: glance
+        type: vertical-stack
+    icon: 'mdi:lan'
+    path: system
