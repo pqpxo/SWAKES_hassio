@@ -1,0 +1,480 @@
+  - badges: []
+    cards:
+      - cards:
+          - content: |
+              # Security
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                    #font-variant: small-caps;
+                    font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - cards:
+              - color_type: card
+                entity: binary_sensor.tradfri_motion_sensor
+                name: Security
+                state:
+                  - color: red
+                    icon: 'mdi:alert'
+                    styles:
+                      card:
+                        - animation: blink 2s ease infinite
+                    value: 'on'
+                  - color: '#2b374e'
+                    icon: 'mdi:cctv'
+                    operator: default
+                type: 'custom:button-card'
+              - color_type: card
+                entity: binary_sensor.tradfri_motion_sensor
+                name: Fire
+                state:
+                  - color: red
+                    icon: 'mdi:alert'
+                    styles:
+                      card:
+                        - animation: blink 2s ease infinite
+                    value: 'on'
+                  - color: '#2b374e'
+                    icon: 'mdi:fire'
+                    operator: default
+                type: 'custom:button-card'
+              - color_type: card
+                entity: binary_sensor.tradfri_motion_sensor
+                name: Water
+                state:
+                  - color: red
+                    icon: 'mdi:alert'
+                    styles:
+                      card:
+                        - animation: blink 2s ease infinite
+                    value: 'on'
+                  - color: '#2b374e'
+                    icon: 'mdi:water'
+                    operator: default
+                type: 'custom:button-card'
+              - color_type: card
+                entity: binary_sensor.tradfri_motion_sensor
+                name: Network
+                state:
+                  - color: red
+                    icon: 'mdi:alert'
+                    styles:
+                      card:
+                        - animation: blink 2s ease infinite
+                    value: 'on'
+                  - color: '#2b374e'
+                    icon: 'mdi:lan'
+                    operator: default
+                type: 'custom:button-card'
+            type: horizontal-stack
+          - cards:
+              - cards:
+                  - aspect_ratio: 50%
+                    entity: camera.swk_cr_uniuvc1
+                    image: 'https://demo.home-assistant.io/stub_config/bedroom.png'
+                    show_name: false
+                    show_state: false
+                    type: picture-entity
+                  - aspect_ratio: 50%
+                    entity: camera.swk_cr_uniuvc2
+                    image: 'https://demo.home-assistant.io/stub_config/bedroom.png'
+                    show_name: false
+                    show_state: false
+                    type: picture-entity
+                type: horizontal-stack
+              - cards:
+                  - aspect_ratio: 50%
+                    entity: camera.swk_cr_uniuvc3
+                    image: 'https://demo.home-assistant.io/stub_config/bedroom.png'
+                    show_name: false
+                    show_state: false
+                    type: picture-entity
+                  - cards:
+                      - aspect_ratio: 50%
+                        entity: camera.swk_cr_uniuvc1
+                        image: 'https://demo.home-assistant.io/stub_config/bedroom.png'
+                        show_name: false
+                        show_state: false
+                        type: picture-entity
+                    type: horizontal-stack
+                type: horizontal-stack
+            type: vertical-stack
+          - cards:
+              - entities:
+                  - entity: device_tracker.swakes_huaweip20
+                    name: Sam
+                type: glance
+              - entities:
+                  - entity: device_tracker.iphone
+                    name: Nabila
+                type: glance
+              - entities:
+                  - entity: device_tracker.grants_iphone
+                    name: Guests
+                type: glance
+            type: horizontal-stack
+          - content: |
+              # Alarm Panel
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                    #font-variant: small-caps;
+                    font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - cards:
+              - color_type: card
+                entity: binary_sensor.first_hallway_motion
+                name: Arm
+                state:
+                  - color: red
+                    icon: 'mdi:alert'
+                    styles:
+                      card:
+                        - animation: blink 2s ease infinite
+                    value: 'on'
+                  - color: '#2b374e'
+                    icon: 'mdi:home-lock'
+                    operator: default
+                type: 'custom:button-card'
+              - color_type: card
+                entity: binary_sensor.first_hallway_motion
+                name: Disarm
+                state:
+                  - color: red
+                    icon: 'mdi:home-lock-open'
+                    styles:
+                      card:
+                        - animation: blink 2s ease infinite
+                    value: 'on'
+                  - color: '#2b374e'
+                    icon: 'mdi:home-lock-open'
+                    operator: default
+                type: 'custom:button-card'
+            type: horizontal-stack
+          - cards:
+              - color_type: card
+                entity: binary_sensor.first_hallway_motion
+                name: Home
+                state:
+                  - color: red
+                    icon: 'mdi:alert'
+                    styles:
+                      card:
+                        - animation: blink 2s ease infinite
+                    value: 'on'
+                  - color: '#2b374e'
+                    icon: 'mdi:door-closed-lock'
+                    operator: default
+                type: 'custom:button-card'
+              - color_type: card
+                entity: binary_sensor.first_hallway_motion
+                name: Night
+                state:
+                  - color: red
+                    icon: 'mdi:home-lock-open'
+                    styles:
+                      card:
+                        - animation: blink 2s ease infinite
+                    value: 'on'
+                  - color: '#2b374e'
+                    icon: 'mdi:weather-night'
+                    operator: default
+                type: 'custom:button-card'
+              - color_type: card
+                entity: binary_sensor.first_hallway_motion
+                name: Silent
+                state:
+                  - color: red
+                    icon: 'mdi:alert'
+                    styles:
+                      card:
+                        - animation: blink 2s ease infinite
+                    value: 'on'
+                  - color: '#2b374e'
+                    icon: 'mdi:volume-off'
+                    operator: default
+                type: 'custom:button-card'
+              - color_type: card
+                entity: binary_sensor.first_hallway_motion
+                name: Panic
+                state:
+                  - color: red
+                    icon: 'mdi:alert'
+                    styles:
+                      card:
+                        - animation: blink 2s ease infinite
+                    value: 'on'
+                  - color: '#2b374e'
+                    icon: 'mdi:alarm-light-outline'
+                    operator: default
+                type: 'custom:button-card'
+            type: horizontal-stack
+          - content: |
+              # Cast Camera's
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                    #font-variant: small-caps;
+                    font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - entities:
+              - entity: input_select.chromecast_tv
+                icon: 'mdi:cast-connected'
+              - entity: input_select.camera_select
+                icon: 'mdi:cctv'
+              - action_name: Stream
+                entity: script.cameracast
+                icon: 'mdi:play'
+                name: Start Casting
+            title: false
+            type: entities
+        type: vertical-stack
+      - cards:
+          - content: |
+              # Ground Floor Sensors
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                   # font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - cards:
+              - entities:
+                  - entity: binary_sensor.openclose_26
+                    secondary_info: last-changed
+                  - entity: binary_sensor.openclose_30
+                    secondary_info: last-changed
+                  - entity: binary_sensor.openclose_20
+                    secondary_info: last-changed
+                  - entity: binary_sensor.openclose_19
+                    secondary_info: last-changed
+                title: false
+                type: entities
+              - entities:
+                  - entity: binary_sensor.ground_hallway_motion
+                    secondary_info: last-changed
+                  - entity: binary_sensor.ground_hallway_motion
+                    name: Snug Motion
+                    secondary_info: last-changed
+                  - entity: binary_sensor.ground_hallway_motion
+                    name: Kitchen Motion
+                    secondary_info: last-changed
+                type: entities
+              - entities:
+                  - entity: binary_sensor.fire_alarm
+                    icon: 'mdi:water-off'
+                    name: Kitchen Water Leak
+                    secondary_info: last-changed
+                  - entity: binary_sensor.fire_alarm
+                    icon: 'mdi:fire'
+                    name: Hallway Fire Alarm
+                    secondary_info: last-changed
+                  - entity: binary_sensor.fire_alarm
+                    icon: 'mdi:fire'
+                    name: Kitchen Fire Alarm
+                    secondary_info: last-changed
+                type: entities
+            title: false
+            type: 'custom:vertical-stack-in-card'
+          - content: |
+              # First Floor Sensors
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                   # font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - cards:
+              - entities:
+                  - entity: binary_sensor.window_door_sensor
+                    secondary_info: last-changed
+                  - entity: binary_sensor.openclose_22
+                    secondary_info: last-changed
+                  - entity: binary_sensor.window_door_sensor_2
+                    secondary_info: last-changed
+                title: false
+                type: entities
+              - entities:
+                  - entity: binary_sensor.first_hallway_motion
+                    name: Hallway Motion
+                    secondary_info: last-changed
+                  - entity: binary_sensor.ground_hallway_motion
+                    name: Living Room Motion
+                    secondary_info: last-changed
+                type: entities
+              - entities:
+                  - entity: binary_sensor.fire_alarm
+                    icon: 'mdi:fire'
+                    name: Hallway Fire Alarm
+                    secondary_info: last-changed
+                type: entities
+            title: false
+            type: 'custom:vertical-stack-in-card'
+        type: vertical-stack
+      - cards:
+          - content: |
+              # Second Floor Sensors
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                   # font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - cards:
+              - entities:
+                  - entity: binary_sensor.window_door_sensor_4
+                    secondary_info: last-changed
+                  - entity: binary_sensor.window_door_sensor_3
+                    secondary_info: last-changed
+                  - entity: binary_sensor.openclose_21
+                    secondary_info: last-changed
+                  - entity: binary_sensor.window_door_sensor_5
+                    secondary_info: last-changed
+                title: null
+                type: entities
+              - entities:
+                  - entity: binary_sensor.tradfri_motion_sensor
+                    name: Hallway Motion
+                    secondary_info: last-changed
+                  - entity: binary_sensor.tradfri_motion_sensor
+                    name: Master Bedroom Motion
+                    secondary_info: last-changed
+                  - entity: binary_sensor.tradfri_motion_sensor
+                    name: Office Motion
+                    secondary_info: last-changed
+                type: entities
+              - entities:
+                  - entity: binary_sensor.fire_alarm
+                    icon: 'mdi:fire'
+                    name: Hallway Fire Alarm
+                    secondary_info: last-changed
+                  - entity: binary_sensor.fire_alarm
+                    icon: 'mdi:fire'
+                    name: Office Fire Alarm
+                    secondary_info: last-changed
+                type: entities
+            title: false
+            type: 'custom:vertical-stack-in-card'
+          - content: |
+              # Push Notifications
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                   # font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - entities:
+              - text: PIR Motion
+                type: 'custom:text-divider-row'
+              - entity: automation.ground_pir_pushover
+                secondary_info: last-changed
+                icon: 'mdi:home-floor-g'
+                name: Ground  Floor Motion
+              - entity: automation.first_pir_pushover
+                secondary_info: last-changed
+                icon: 'mdi:home-floor-1'
+                name: First Floor Motion
+              - entity: automation.office_pir_pushover
+                secondary_info: last-changed
+                icon: 'mdi:home-floor-2'
+                name: Second Floor Motion
+              - text: House Alerts
+                type: 'custom:text-divider-row'
+              - entity: automation.pushover_letter_box
+                secondary_info: last-changed
+                icon: 'mdi:doorbell'
+                name: Doorbell Alert
+              - entity: automation.pushover_letter_box
+                secondary_info: last-changed
+                icon: 'mdi:mailbox'
+                name: Letterbox Alert
+              - entity: automation.pushover_letter_box
+                secondary_info: last-changed
+                icon: 'mdi:fridge-alert-outline'
+                name: Fridge/Freezer Alert
+              - text: Door Alerts
+                type: 'custom:text-divider-row'
+              - entity: automation.pushover_front_door
+                secondary_info: last-changed
+                icon: 'mdi:door-closed'
+                name: Front Door Alert
+              - entity: automation.pushover_front_door
+                secondary_info: last-changed
+                icon: 'mdi:door-closed'
+                name: Back Door Alert
+              - entity: automation.pushover_front_door
+                secondary_info: last-changed
+                icon: 'mdi:garage'
+                name: Garage Door Alert
+            show_header_toggle: false
+            title: false
+            type: entities
+        type: vertical-stack
+    icon: 'mdi:shield-home'
+    path: security
