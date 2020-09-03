@@ -10,6 +10,8 @@ Hi there and welcome to my Github repo containing my configuration and setup fil
 
 Please note that some files, images, custom components and addons have been referenced but not uploaded in this repo.
 
+### 04/09/2020 - Updated 'dashboards'
+
 #### Screenshots
 ![System Dashboard](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/HA-System.png)![Light Dashboard](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/HA-Lights.png)![Security Dashboard](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/HA-Security.png)![Media Dashboard](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/HA-Media.png)
 # Hardware
