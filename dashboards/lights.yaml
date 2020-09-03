@@ -1,0 +1,2040 @@
+  - badges: []
+    cards:
+      - cards:
+          - content: |
+              # Hallway
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                   # font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+              - entity: switch.front_door_lamp
+                icon: 'mdi:lamp'
+                name: Front Door Lamp
+                state:
+                  - icon: 'mdi:lamp'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 25%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:lamp'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 25%
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: light.second_ceiling_lights
+                icon: 'mdi:wall-sconce-flat'
+                name: Ground Floor Ceiling
+                state:
+                  - icon: 'mdi:wall-sconce-flat'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 25%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:wall-sconce-flat'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 25%
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+            type: horizontal-stack
+          - cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+              - entity: light.second_ceiling_lights
+                hold_action:
+                  action: more-info
+                icon: 'mdi:wall-sconce-flat'
+                name: First Floor Ceiling
+                state:
+                  - icon: 'mdi:wall-sconce-flat'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 25%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:wall-sconce-flat'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 25%
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: light.second_ceiling_lights
+                hold_action:
+                  action: more-info
+                icon: 'mdi:wall-sconce-flat'
+                name: Second Floor Ceiling
+                state:
+                  - icon: 'mdi:wall-sconce-flat'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 25%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:wall-sconce-flat'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 25%
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+            type: horizontal-stack
+          - cards:
+              - color: transparent
+                color_type: label-card
+                double_tap_action:
+                  action: toggle
+                entity: group.lights_snug
+                name: Snug
+                show_icon: false
+                styles:
+                  card:
+                    - background-color: transparent
+                    - box-shadow: none
+                  name:
+                    - font-size: 25px
+                    - text-align: center
+                    - letter-spacing: '-0.01em'
+                    - font-weight: bold
+                type: 'custom:button-card'
+              - cards:
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 50px
+                    type: 'custom:button-card'
+                  - entity: switch.sonoff_10004008d2
+                    icon: 'mdi:ceiling-light'
+                    name: Ceiling
+                    state:
+                      - icon: 'mdi:ceiling-light'
+                        styles:
+                          card:
+                            - height: 100px
+                          icon:
+                            - width: 25%
+                            - opacity: 0.5
+                          name:
+                            - padding: 5px 0px
+                            - font-size: 15px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                        value: 'off'
+                      - color: white
+                        icon: 'mdi:ceiling-light'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 100px
+                          icon:
+                            - width: 25%
+                          name:
+                            - padding: 5px 0px
+                            - font-size: 15px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - entity: switch.sonoff_10004008d2
+                    icon: 'mdi:floor-lamp'
+                    name: Floor Lamp
+                    state:
+                      - icon: 'mdi:floor-lamp'
+                        styles:
+                          card:
+                            - height: 100px
+                          icon:
+                            - width: 25%
+                            - opacity: 0.5
+                          name:
+                            - padding: 5px 0px
+                            - font-size: 15px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                        value: 'off'
+                      - color: white
+                        icon: 'mdi:floor-lamp'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 100px
+                          icon:
+                            - width: 25%
+                          name:
+                            - padding: 5px 0px
+                            - font-size: 15px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 50px
+                    type: 'custom:button-card'
+                type: horizontal-stack
+            type: vertical-stack
+          - cards:
+              - color: transparent
+                color_type: label-card
+                double_tap_action:
+                  action: toggle
+                entity: group.lights_kitchen
+                name: Kitchen
+                show_icon: false
+                styles:
+                  card:
+                    - background-color: transparent
+                    - box-shadow: none
+                  name:
+                    - font-size: 25px
+                    - text-align: center
+                    - letter-spacing: '-0.01em'
+                    - font-weight: bold
+                type: 'custom:button-card'
+              - cards:
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 50px
+                    type: 'custom:button-card'
+                  - entity: light.second_ceiling_lights
+                    icon: 'mdi:wall-sconce-flat'
+                    name: Ceiling
+                    state:
+                      - icon: 'mdi:wall-sconce-flat'
+                        styles:
+                          card:
+                            - height: 100px
+                          icon:
+                            - width: 25%
+                            - opacity: 0.5
+                          name:
+                            - padding: 5px 0px
+                            - font-size: 15px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                        value: 'off'
+                      - color: white
+                        icon: 'mdi:wall-sconce-flat'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 100px
+                          icon:
+                            - width: 25%
+                          name:
+                            - padding: 5px 0px
+                            - font-size: 15px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - entity: light.second_ceiling_lights
+                    icon: 'mdi:ceiling-light'
+                    name: Table
+                    state:
+                      - icon: 'mdi:ceiling-light'
+                        styles:
+                          card:
+                            - height: 100px
+                          icon:
+                            - width: 25%
+                            - opacity: 0.5
+                          name:
+                            - padding: 5px 0px
+                            - font-size: 15px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                        value: 'off'
+                      - color: white
+                        icon: 'mdi:ceiling-light'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 100px
+                          icon:
+                            - width: 25%
+                          name:
+                            - padding: 5px 0px
+                            - font-size: 15px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - entity: group.kitchen_rgb
+                    hold_action:
+                      action: more-info
+                    icon: 'mdi:led-strip-variant'
+                    name: Cabinets
+                    state:
+                      - icon: 'mdi:led-strip-variant'
+                        styles:
+                          card:
+                            - height: 100px
+                          icon:
+                            - width: 25%
+                            - opacity: 0.5
+                          name:
+                            - padding: 5px 0px
+                            - font-size: 15px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                        value: 'off'
+                      - color: white
+                        icon: 'mdi:led-strip-variant'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 100px
+                          icon:
+                            - width: 25%
+                          name:
+                            - padding: 5px 0px
+                            - font-size: 15px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 50px
+                    type: 'custom:button-card'
+                type: horizontal-stack
+            type: vertical-stack
+          - cards:
+              - color: transparent
+                color_type: label-card
+                double_tap_action:
+                  action: toggle
+                entity: group.lights_living_room
+                name: Living Room
+                show_icon: false
+                styles:
+                  card:
+                    - background-color: transparent
+                    - box-shadow: none
+                  name:
+                    - font-size: 25px
+                    - text-align: center
+                    - letter-spacing: '-0.01em'
+                    - font-weight: bold
+                type: 'custom:button-card'
+              - cards:
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 50px
+                    type: 'custom:button-card'
+                  - entity: switch.living_room_corner_lamp
+                    icon: 'mdi:lamp'
+                    name: Lamp
+                    state:
+                      - icon: 'mdi:lamp'
+                        styles:
+                          card:
+                            - height: 100px
+                          icon:
+                            - width: 25%
+                            - opacity: 0.5
+                          name:
+                            - padding: 5px 0px
+                            - font-size: 15px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                        value: 'off'
+                      - color: white
+                        icon: 'mdi:lamp'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 100px
+                          icon:
+                            - width: 25%
+                          name:
+                            - padding: 5px 0px
+                            - font-size: 15px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - entity: light.living_room
+                    hold_action:
+                      action: more-info
+                    icon: 'mdi:floor-lamp'
+                    name: Floor Lamp
+                    state:
+                      - icon: 'mdi:floor-lamp'
+                        styles:
+                          card:
+                            - height: 100px
+                          icon:
+                            - width: 25%
+                            - opacity: 0.5
+                          name:
+                            - padding: 5px 0px
+                            - font-size: 15px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                        value: 'off'
+                      - color: white
+                        icon: 'mdi:floor-lamp'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 100px
+                          icon:
+                            - width: 25%
+                          name:
+                            - padding: 5px 0px
+                            - font-size: 15px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 50px
+                    type: 'custom:button-card'
+                type: horizontal-stack
+              - cards:
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 50px
+                    type: 'custom:button-card'
+                  - entity: light.living_room
+                    icon: 'mdi:globe-light'
+                    name: Ceiling
+                    state:
+                      - icon: 'mdi:globe-light'
+                        styles:
+                          card:
+                            - height: 100px
+                          icon:
+                            - width: 25%
+                            - opacity: 0.5
+                          name:
+                            - padding: 5px 0px
+                            - font-size: 15px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                        value: 'off'
+                      - color: white
+                        icon: 'mdi:globe-light'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 100px
+                          icon:
+                            - width: 25%
+                          name:
+                            - padding: 5px 0px
+                            - font-size: 15px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - entity: light.living_room_tv_cabinet_rgb_light
+                    hold_action:
+                      action: more-info
+                    icon: 'mdi:led-strip-variant'
+                    name: TV Cabinet
+                    state:
+                      - icon: 'mdi:led-strip-variant'
+                        styles:
+                          card:
+                            - height: 100px
+                          icon:
+                            - width: 25%
+                            - opacity: 0.5
+                          name:
+                            - padding: 5px 0px
+                            - font-size: 15px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                        value: 'off'
+                      - color: white
+                        icon: 'mdi:led-strip-variant'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 100px
+                          icon:
+                            - width: 25%
+                          name:
+                            - padding: 5px 0px
+                            - font-size: 15px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 50px
+                    type: 'custom:button-card'
+                type: horizontal-stack
+            type: vertical-stack
+        type: vertical-stack
+      - cards:
+          - cards:
+              - cards:
+                  - content: |
+                      # Master Bedroom
+                    style:
+                      .: |
+                        ha-card {
+                          background-color: transparent !important;
+                          box-shadow: none !important;
+                        }
+                      ha-markdown:
+                        $: |
+                          h1 {
+                            font-size: 25px;
+                           # font-weight: bold;
+                            text-align: center;
+                            letter-spacing: '-0.01em';
+                          }
+                    type: markdown
+                  - cards:
+                      - color_type: blank-card
+                        icon: 'mdi:led-strip-variant'
+                        name: Floor
+                        styles:
+                          card:
+                            - width: 50px
+                            - height: 100px
+                          icon:
+                            - width: 30%
+                          name:
+                            - padding: 5px 0px
+                        type: 'custom:button-card'
+                      - entity: light.master_lights
+                        hold_action:
+                          action: more-info
+                        icon: 'mdi:ceiling-light'
+                        name: Ceiling
+                        state:
+                          - icon: 'mdi:ceiling-light'
+                            styles:
+                              card:
+                                - height: 100px
+                              icon:
+                                - width: 30%
+                                - opacity: 0.5
+                              name:
+                                - padding: 5px 0px
+                                - font-size: 15px
+                                - text-overflow: unset
+                                - white-space: unset
+                                - word-break: break-word
+                            value: 'off'
+                          - color: white
+                            icon: 'mdi:ceiling-light'
+                            operator: default
+                            styles:
+                              card:
+                                - height: 100px
+                              icon:
+                                - width: 30%
+                              name:
+                                - padding: 5px 0px
+                                - font-size: 15px
+                                - text-overflow: unset
+                                - white-space: unset
+                                - word-break: break-word
+                        type: 'custom:button-card'
+                      - entity: light.living_room
+                        icon: 'mdi:wall-sconce-flat'
+                        name: Ensuite
+                        state:
+                          - icon: 'mdi:wall-sconce-flat'
+                            styles:
+                              card:
+                                - height: 100px
+                              icon:
+                                - width: 30%
+                                - opacity: 0.5
+                              name:
+                                - padding: 5px 0px
+                                - font-size: 15px
+                                - text-overflow: unset
+                                - white-space: unset
+                                - word-break: break-word
+                            value: 'off'
+                          - color: white
+                            icon: 'mdi:wall-sconce-flat'
+                            operator: default
+                            styles:
+                              card:
+                                - height: 100px
+                              icon:
+                                - width: 30%
+                              name:
+                                - padding: 5px 0px
+                                - font-size: 15px
+                                - text-overflow: unset
+                                - white-space: unset
+                                - word-break: break-word
+                        type: 'custom:button-card'
+                      - entity: light.living_room
+                        icon: 'mdi:wardrobe-outline'
+                        name: Wardrobe
+                        state:
+                          - icon: 'mdi:wardrobe-outline'
+                            styles:
+                              card:
+                                - height: 100px
+                              icon:
+                                - width: 30%
+                                - opacity: 0.5
+                              name:
+                                - padding: 5px 0px
+                                - font-size: 15px
+                                - text-overflow: unset
+                                - white-space: unset
+                                - word-break: break-word
+                            value: 'off'
+                          - color: white
+                            icon: 'mdi:wardrobe-outline'
+                            operator: default
+                            styles:
+                              card:
+                                - height: 100px
+                              icon:
+                                - width: 30%
+                              name:
+                                - padding: 5px 0px
+                                - font-size: 15px
+                                - text-overflow: unset
+                                - white-space: unset
+                                - word-break: break-word
+                        type: 'custom:button-card'
+                      - color_type: blank-card
+                        icon: 'mdi:led-strip-variant'
+                        name: Floor
+                        styles:
+                          card:
+                            - width: 50px
+                            - height: 100px
+                          icon:
+                            - width: 30%
+                        type: 'custom:button-card'
+                    type: horizontal-stack
+                  - cards:
+                      - color_type: blank-card
+                        icon: 'mdi:led-strip-variant'
+                        name: Floor
+                        styles:
+                          card:
+                            - width: 50px
+                        type: 'custom:button-card'
+                      - entity: switch.sonoff_1000ae39fc_2
+                        icon: 'mdi:desk-lamp'
+                        name: Left Lamp
+                        state:
+                          - icon: 'mdi:desk-lamp'
+                            styles:
+                              card:
+                                - height: 100px
+                              icon:
+                                - width: 30%
+                                - opacity: 0.5
+                              name:
+                                - padding: 5px 0px
+                                - font-size: 15px
+                                - text-overflow: unset
+                                - white-space: unset
+                                - word-break: break-word
+                            value: 'off'
+                          - color: white
+                            icon: 'mdi:desk-lamp'
+                            operator: default
+                            styles:
+                              card:
+                                - height: 100px
+                              icon:
+                                - width: 30%
+                              name:
+                                - padding: 5px 0px
+                                - font-size: 15px
+                                - text-overflow: unset
+                                - white-space: unset
+                                - word-break: break-word
+                        type: 'custom:button-card'
+                      - entity: light.master_bedside_sam_rgb_light
+                        hold_action:
+                          action: more-info
+                        icon: 'mdi:led-strip-variant'
+                        name: Left RGB
+                        state:
+                          - icon: 'mdi:led-strip-variant'
+                            styles:
+                              card:
+                                - height: 100px
+                              icon:
+                                - width: 30%
+                                - opacity: 0.5
+                              name:
+                                - padding: 5px 0px
+                                - font-size: 15px
+                                - text-overflow: unset
+                                - white-space: unset
+                                - word-break: break-word
+                            value: 'off'
+                          - color: white
+                            icon: 'mdi:led-strip-variant'
+                            operator: default
+                            styles:
+                              card:
+                                - height: 100px
+                              icon:
+                                - width: 30%
+                              name:
+                                - padding: 5px 0px
+                                - font-size: 15px
+                                - text-overflow: unset
+                                - white-space: unset
+                                - word-break: break-word
+                        type: 'custom:button-card'
+                      - color_type: blank-card
+                        icon: 'mdi:led-strip-variant'
+                        name: Floor
+                        styles:
+                          card:
+                            - width: 50px
+                        type: 'custom:button-card'
+                    type: horizontal-stack
+                  - cards:
+                      - color_type: blank-card
+                        icon: 'mdi:led-strip-variant'
+                        name: Floor
+                        styles:
+                          card:
+                            - width: 50px
+                        type: 'custom:button-card'
+                      - entity: switch.sonoff_1000ae39fc_2
+                        icon: 'mdi:desk-lamp'
+                        name: Right Lamp
+                        state:
+                          - icon: 'mdi:desk-lamp'
+                            styles:
+                              card:
+                                - height: 100px
+                              icon:
+                                - width: 30%
+                                - opacity: 0.5
+                              name:
+                                - padding: 5px 0px
+                                - font-size: 15px
+                                - text-overflow: unset
+                                - white-space: unset
+                                - word-break: break-word
+                            value: 'off'
+                          - color: white
+                            icon: 'mdi:desk-lamp'
+                            operator: default
+                            styles:
+                              card:
+                                - height: 100px
+                              icon:
+                                - width: 30%
+                              name:
+                                - padding: 5px 0px
+                                - font-size: 15px
+                                - text-overflow: unset
+                                - white-space: unset
+                                - word-break: break-word
+                        type: 'custom:button-card'
+                      - entity: light.master_bedside_sam_rgb_light
+                        icon: 'mdi:led-strip-variant'
+                        name: Right RGB
+                        state:
+                          - icon: 'mdi:led-strip-variant'
+                            styles:
+                              card:
+                                - height: 100px
+                              icon:
+                                - width: 30%
+                                - opacity: 0.5
+                              name:
+                                - padding: 5px 0px
+                                - font-size: 15px
+                                - text-overflow: unset
+                                - white-space: unset
+                                - word-break: break-word
+                            value: 'off'
+                          - color: white
+                            icon: 'mdi:led-strip-variant'
+                            operator: default
+                            styles:
+                              card:
+                                - height: 100px
+                              icon:
+                                - width: 30%
+                              name:
+                                - padding: 5px 0px
+                                - font-size: 15px
+                                - text-overflow: unset
+                                - white-space: unset
+                                - word-break: break-word
+                        type: 'custom:button-card'
+                      - color_type: blank-card
+                        icon: 'mdi:led-strip-variant'
+                        name: Floor
+                        styles:
+                          card:
+                            - width: 50px
+                        type: 'custom:button-card'
+                    type: horizontal-stack
+                type: vertical-stack
+              - color: transparent
+                color_type: label-card
+                entity: group.lights_office
+                name: Office
+                show_icon: false
+                styles:
+                  card:
+                    - background-color: transparent
+                    - box-shadow: none
+                  name:
+                    - font-size: 25px
+                    - text-align: center
+                    - letter-spacing: '-0.01em'
+                    - font-weight: bold
+                tap_action:
+                  action: toggle
+                type: 'custom:button-card'
+              - cards:
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 50px
+                    type: 'custom:button-card'
+                  - entity: light.office
+                    hold_action:
+                      action: more-info
+                    icon: 'mdi:globe-light'
+                    name: Ceiling
+                    state:
+                      - icon: 'mdi:globe-light'
+                        styles:
+                          card:
+                            - height: 100px
+                          icon:
+                            - width: 30%
+                            - opacity: 0.5
+                          name:
+                            - padding: 5px 0px
+                            - font-size: 15px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                        value: 'off'
+                      - color: white
+                        icon: 'mdi:globe-light'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 100px
+                          icon:
+                            - width: 30%
+                          name:
+                            - padding: 5px 0px
+                            - font-size: 15px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - entity: switch.office_lamp
+                    icon: 'mdi:desk-lamp'
+                    name: Desk Lamp
+                    state:
+                      - icon: 'mdi:desk-lamp'
+                        styles:
+                          card:
+                            - height: 100px
+                          icon:
+                            - width: 30%
+                            - opacity: 0.5
+                          name:
+                            - padding: 5px 0px
+                            - font-size: 15px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                        value: 'off'
+                      - color: white
+                        icon: 'mdi:desk-lamp'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 100px
+                          icon:
+                            - width: 30%
+                          name:
+                            - padding: 5px 0px
+                            - font-size: 15px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 50px
+                    type: 'custom:button-card'
+                type: horizontal-stack
+              - cards:
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 50px
+                    type: 'custom:button-card'
+                  - entity: light.optihub_rgb
+                    icon: 'mdi:led-strip-variant'
+                    name: Desk RGB
+                    state:
+                      - icon: 'mdi:led-strip-variant'
+                        styles:
+                          card:
+                            - height: 100px
+                          icon:
+                            - width: 30%
+                            - opacity: 0.5
+                          name:
+                            - padding: 5px 0px
+                            - font-size: 15px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                        value: 'off'
+                      - color: white
+                        icon: 'mdi:led-strip-variant'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 100px
+                          icon:
+                            - width: 30%
+                          name:
+                            - padding: 5px 0px
+                            - font-size: 15px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - entity: light.optihub_rgb
+                    icon: 'mdi:led-strip-variant'
+                    name: LEGO RGB
+                    state:
+                      - icon: 'mdi:led-strip-variant'
+                        styles:
+                          card:
+                            - height: 100px
+                          icon:
+                            - width: 30%
+                            - opacity: 0.5
+                          name:
+                            - padding: 5px 0px
+                            - font-size: 15px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                        value: 'off'
+                      - color: white
+                        icon: 'mdi:led-strip-variant'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 100px
+                          icon:
+                            - width: 30%
+                          name:
+                            - padding: 5px 0px
+                            - font-size: 15px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 50px
+                    type: 'custom:button-card'
+                type: horizontal-stack
+            type: vertical-stack
+          - content: |
+              # Outside
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                   # font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+              - entity: light.office
+                icon: 'mdi:outdoor-lamp'
+                name: Porch
+                state:
+                  - icon: 'mdi:outdoor-lamp'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 25%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:outdoor-lamp'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 25%
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: switch.office_lamp
+                icon: 'mdi:track-light'
+                name: Back Security Light
+                state:
+                  - icon: 'mdi:track-light'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 25%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:track-light'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 25%
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+            type: horizontal-stack
+          - cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+              - entity: light.optihub_rgb
+                icon: 'mdi:led-strip-variant'
+                name: Back RGB
+                state:
+                  - icon: 'mdi:led-strip-variant'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 30%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:led-strip-variant'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 30%
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: light.optihub_rgb
+                icon: 'mdi:dome-light'
+                name: Garage
+                state:
+                  - icon: 'mdi:ceiling-light'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 30%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:ceiling-light'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 30%
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+            type: horizontal-stack
+        type: vertical-stack
+      - cards:
+          - content: |
+              # Light Automations 
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                    font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+              - entity: switch.office_lamp
+                icon: 'mdi:door'
+                name: Front Door Alert
+                state:
+                  - icon: 'mdi:door'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 25%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:door'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 25%
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: switch.office_lamp
+                icon: 'mdi:doorbell'
+                name: Door Bell Alert
+                state:
+                  - icon: 'mdi:doorbell'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 25%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:doorbell'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 25%
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: switch.office_lamp
+                icon: 'mdi:mailbox-open-outline'
+                name: Letterbox Alert
+                state:
+                  - icon: 'mdi:mailbox-open-outline'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 25%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:mailbox-open-outline'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 25%
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+            type: horizontal-stack
+          - cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+              - entity: switch.office_lamp
+                icon: 'mdi:stove'
+                name: Kitchen Cabinet Motion
+                state:
+                  - icon: 'mdi:stove'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 25%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:stove'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 25%
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: switch.office_lamp
+                icon: 'mdi:sofa'
+                name: Living Room Motion
+                state:
+                  - icon: 'mdi:sofa'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 25%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:sofa'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 25%
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: light.second_ceiling_lights
+                icon: 'mdi:bed-king-outline'
+                name: Bedroom Motion
+                state:
+                  - icon: 'mdi:bed-king-outline'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 25%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:bed-king-outline'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 25%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+            type: horizontal-stack
+          - cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+              - entity: light.second_ceiling_lights
+                icon: 'mdi:bed-king-outline'
+                name: Master Door Motion
+                state:
+                  - icon: 'mdi:bed-king-outline'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 25%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:bed-king-outline'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 25%
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: light.second_ceiling_lights
+                icon: 'mdi:desk'
+                name: Office Door Motion
+                state:
+                  - icon: 'mdi:desk'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 25%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:desk'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 25%
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+            type: horizontal-stack
+          - content: |
+              # Scenes 
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                    font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+              - entity: light.second_ceiling_lights
+                icon: 'mdi:weather-night'
+                name: Bedtime
+                state:
+                  - icon: 'mdi:weather-night'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 30%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:weather-night'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 30%
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: light.second_ceiling_lights
+                icon: 'mdi:gamepad-square'
+                name: Gaming
+                state:
+                  - icon: 'mdi:gamepad-square'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 30%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:gamepad-square'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 30%
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: switch.office_lamp
+                icon: 'mdi:netflix'
+                name: Netflix
+                state:
+                  - icon: 'mdi:netflix'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 30%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:netflix'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 30%
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+            type: horizontal-stack
+          - content: |
+              # Floors 
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                    font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+              - entity: light.second_ceiling_lights
+                icon: 'mdi:home-floor-g'
+                name: Ground
+                state:
+                  - icon: 'mdi:home-floor-g'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 30%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:home-floor-g'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 30%
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: light.second_ceiling_lights
+                icon: 'mdi:home-floor-1'
+                name: First
+                state:
+                  - icon: 'mdi:home-floor-1'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 30%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:home-floor-1'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 30%
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: switch.office_lamp
+                icon: 'mdi:home-floor-2'
+                name: Second
+                state:
+                  - icon: 'mdi:home-floor-2'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 30%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:home-floor-2'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 30%
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+            type: horizontal-stack
+          - content: |
+              # a
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 10px;
+                    color: rgba(0, 0, 0, 0.0);
+                    font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - type: vertical-stack
+            cards:
+              - type: vertical-stack
+                cards:
+                  - type: horizontal-stack
+                    cards:
+                      - cards:
+                          - color_type: blank-card
+                            icon: 'mdi:led-strip-variant'
+                            name: Floor
+                            styles:
+                              card:
+                                - width: 50px
+                            type: 'custom:button-card'
+                          - color_type: blank-card
+                            icon: 'mdi:led-strip-variant'
+                            name: Floor
+                            styles:
+                              card:
+                                - width: 50px
+                            type: 'custom:button-card'
+                          - entity: light.second_ceiling_lights
+                            icon: 'mdi:lightbulb-multiple-outline'
+                            name: Turn On All Lights
+                            state:
+                              - icon: 'mdi:lightbulb-multiple-outline'
+                                styles:
+                                  card:
+                                    - height: 100px
+                                  icon:
+                                    - width: 30%
+                                    - opacity: 0.5
+                                  name:
+                                    - padding: 5px 0px
+                                    - font-size: 15px
+                                    - text-overflow: unset
+                                    - white-space: unset
+                                    - word-break: break-word
+                                value: 'off'
+                              - color: white
+                                icon: 'mdi:lightbulb-multiple-outline'
+                                operator: default
+                                styles:
+                                  card:
+                                    - height: 100px
+                                  icon:
+                                    - width: 30%
+                                  name:
+                                    - padding: 5px 0px
+                                    - font-size: 15px
+                                    - text-overflow: unset
+                                    - white-space: unset
+                                    - word-break: break-word
+                            type: 'custom:button-card'
+                          - color_type: blank-card
+                            icon: 'mdi:led-strip-variant'
+                            name: Floor
+                            styles:
+                              card:
+                                - width: 50px
+                            type: 'custom:button-card'
+                          - color_type: blank-card
+                            icon: 'mdi:led-strip-variant'
+                            name: Floor
+                            styles:
+                              card:
+                                - width: 50px
+                            type: 'custom:button-card'
+                        type: horizontal-stack
+                  - cards:
+                      - color_type: blank-card
+                        icon: 'mdi:led-strip-variant'
+                        name: Floor
+                        styles:
+                          card:
+                            - width: 50px
+                        type: 'custom:button-card'
+                      - color_type: blank-card
+                        icon: 'mdi:led-strip-variant'
+                        name: Floor
+                        styles:
+                          card:
+                            - width: 50px
+                        type: 'custom:button-card'
+                      - entity: light.second_ceiling_lights
+                        icon: 'mdi:lightbulb-multiple-off-outline'
+                        name: Turn Off All Lights
+                        state:
+                          - icon: 'mdi:lightbulb-multiple-off-outline'
+                            styles:
+                              card:
+                                - height: 100px
+                              icon:
+                                - width: 30%
+                                - opacity: 0.5
+                              name:
+                                - padding: 5px 0px
+                                - font-size: 15px
+                                - text-overflow: unset
+                                - white-space: unset
+                                - word-break: break-word
+                            value: 'off'
+                          - color: white
+                            icon: 'mdi:lightbulb-multiple-off-outline'
+                            operator: default
+                            styles:
+                              card:
+                                - height: 100px
+                              icon:
+                                - width: 30%
+                              name:
+                                - padding: 5px 0px
+                                - font-size: 15px
+                                - text-overflow: unset
+                                - white-space: unset
+                                - word-break: break-word
+                        type: 'custom:button-card'
+                      - color_type: blank-card
+                        icon: 'mdi:led-strip-variant'
+                        name: Floor
+                        styles:
+                          card:
+                            - width: 50px
+                        type: 'custom:button-card'
+                      - color_type: blank-card
+                        icon: 'mdi:led-strip-variant'
+                        name: Floor
+                        styles:
+                          card:
+                            - width: 50px
+                        type: 'custom:button-card'
+                    type: horizontal-stack
+        type: vertical-stack
+    icon: 'mdi:lightbulb-group-outline'
+    path: lights
+    title: lights
