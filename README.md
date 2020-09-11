@@ -15,7 +15,7 @@ If you like what you've read ... Support me here on Buy Me a Coffee: https://www
 ### 04/09/2020 - Updated 'dashboards'
 
 #### Screenshots
-![System Dashboard](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/HA-System.png)![Light Dashboard](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/HA-Lights.png)![Security Dashboard](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/HA-Security.png)![Media Dashboard](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/HA-Media.png)
+![System Dashboard](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/HA-System.png)![Light Dashboard](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/HA-Lights.png)![Security Dashboard](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/HA-Security_new.png)![Media Dashboard](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/HA-Media.png)
 # Hardware
 
 
