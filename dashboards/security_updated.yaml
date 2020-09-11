@@ -1,0 +1,1893 @@
+  - icon: 'mdi:shield-home'
+    path: security
+    title: Security
+    badges: []
+    cards:
+      - cards:
+          - content: |
+              # Alarm Panel
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                    font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+              - entity: light.living_room
+                icon: 'mdi:home-lock'
+                name: Activate
+                lock:
+                  enabled: true
+                  duration: 10
+                  unlock: hold
+                state:
+                  - icon: 'mdi:home-lock'
+                    styles:
+                      card:
+                        - height: 80px
+                      icon:
+                        - width: 45%
+                      name:
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:home-lock'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 80px
+                      icon:
+                        - width: 45%
+                      name:
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: switch.office_lamp
+                icon: 'mdi:home-lock-open'
+                name: Disarm
+                lock:
+                  enabled: true
+                  duration: 10
+                  unlock: hold
+                state:
+                  - icon: 'mdi:home-lock-open'
+                    styles:
+                      card:
+                        - height: 80px
+                      icon:
+                        - width: 45%
+                      name:
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:home-lock-open'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 80px
+                      icon:
+                        - width: 45%
+                      name:
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+            type: horizontal-stack
+          - cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+              - entity: light.living_room
+                icon: 'mdi:home-circle'
+                name: Home
+                state:
+                  - icon: 'mdi:home-circle'
+                    styles:
+                      card:
+                        - height: 80px
+                      icon:
+                        - size: 45%
+                        - padding-top: 5px
+                      name:
+                        - padding: 10px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:home-circle'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 80px
+                      icon:
+                        - width: 45%
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: switch.office_lamp
+                icon: 'mdi:weather-night'
+                name: Night
+                state:
+                  - icon: 'mdi:weather-night'
+                    styles:
+                      card:
+                        - height: 80px
+                      icon:
+                        - size: 45%
+                        - padding-top: 5px
+                      name:
+                        - padding: 10px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:weather-night'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 80px
+                      icon:
+                        - width: 45%
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: light.office
+                icon: 'mdi:volume-mute'
+                name: Silent
+                state:
+                  - icon: 'mdi:volume-mute'
+                    styles:
+                      card:
+                        - height: 80px
+                      icon:
+                        - size: 45%
+                        - padding-top: 5px
+                      name:
+                        - padding: 10px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:volume-mute'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 80px
+                      icon:
+                        - opacity: 0.5
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: switch.office_lamp
+                icon: 'mdi:alarm-bell'
+                name: Panic
+                state:
+                  - icon: 'mdi:alarm-bell'
+                    styles:
+                      card:
+                        - height: 80px
+                      icon:
+                        - size: 45%
+                        - padding-top: 5px
+                      name:
+                        - padding: 10px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:alarm-bell'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 80px
+                      icon:
+                        - width: 45%
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+            type: horizontal-stack
+          - content: |
+              # Who's Home
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                    font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+              - entity: device_tracker.eml_l29
+                entity_picture: /local/facesam.png
+                show_entity_picture: true
+                name: Sam
+                state:
+                  - entity_picture: /local/facesam.png
+                    styles:
+                      card:
+                        - height: 100px
+                      entity_picture:
+                        - width: 45%
+                        - opacity: 0.5
+                        - padding-top: 10px
+                      name:
+                        - padding: 5px 15px 15px 15px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    entity_picture: /local/facesam.png
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      entity_picture:
+                        - width: 45%
+                        - padding-top: 10px
+                      name:
+                        - padding: 5px 15px 15px 15px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: device_tracker.iphone_2
+                entity_picture: /local/facenabz.png
+                show_entity_picture: true
+                name: Nabila
+                state:
+                  - entity_picture: /local/facenabz.png
+                    styles:
+                      card:
+                        - height: 100px
+                      entity_picture:
+                        - width: 45%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 15px 15px 15px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    entity_picture: /local/facenabz.png
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      entity_picture:
+                        - width: 45%
+                      name:
+                        - padding: 5px 15px 15px 15px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: light.office
+                entity_picture: /local/faceguest.png
+                show_entity_picture: true
+                name: Guests
+                state:
+                  - entity_picture: /local/faceguest.png
+                    styles:
+                      card:
+                        - height: 100px
+                      entity_picture:
+                        - width: 45%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 5px 15px 5px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    entity_picture: /local/faceguest.png
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      entity_picture:
+                        - width: 45%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 15px 15px 15px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+            type: horizontal-stack
+          - content: |
+              # Push Notifications
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                    font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+              - entities:
+                  - entity: automation.ground_pir_pushover
+                    icon: 'mdi:home-floor-g'
+                    name: Ground  Floor Motion
+                    secondary_info: last-changed
+                  - entity: automation.first_pir_pushover
+                    icon: 'mdi:home-floor-1'
+                    name: First Floor Motion
+                    secondary_info: last-changed
+                  - entity: automation.office_pir_pushover
+                    icon: 'mdi:home-floor-2'
+                    name: Second Floor Motion
+                    secondary_info: last-changed
+                show_header_toggle: false
+                title: false
+                type: entities
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+            type: horizontal-stack
+          - cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+              - entities:
+                  - entity: automation.pushover_letter_box
+                    icon: 'mdi:doorbell'
+                    name: Doorbell Alert
+                    secondary_info: last-changed
+                  - entity: automation.pushover_letter_box
+                    icon: 'mdi:mailbox'
+                    name: Letterbox Alert
+                    secondary_info: last-changed
+                  - entity: automation.pushover_letter_box
+                    icon: 'mdi:fridge-alert-outline'
+                    name: Fridge/Freezer Alert
+                    secondary_info: last-changed
+                show_header_toggle: false
+                title: false
+                type: entities
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+            type: horizontal-stack
+          - cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+              - entities:
+                  - entity: automation.pushover_front_door
+                    icon: 'mdi:door-closed'
+                    name: Front Door Alert
+                    secondary_info: last-changed
+                  - entity: automation.pushover_front_door
+                    icon: 'mdi:door-closed'
+                    name: Back Door Alert
+                    secondary_info: last-changed
+                  - entity: automation.pushover_front_door
+                    icon: 'mdi:garage'
+                    name: Garage Door Alert
+                    secondary_info: last-changed
+                show_header_toggle: false
+                title: false
+                type: entities
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+            type: horizontal-stack
+        type: vertical-stack
+      - cards:
+          - content: |
+              # Camera's
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                    font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - type: vertical-stack
+            cards:
+              - type: horizontal-stack
+                cards:
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 50px
+                    type: 'custom:button-card'
+                  - entity: camera.swk_cr_uniuvc2
+                    image: 'https://demo.home-assistant.io/stub_config/bedroom.png'
+                    show_name: false
+                    show_state: false
+                    type: picture-entity
+                    aspect_ratio: 45%
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 50px
+                    type: 'custom:button-card'
+              - type: horizontal-stack
+                cards:
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 50px
+                    type: 'custom:button-card'
+                  - entity: camera.swk_cr_uniuvc1
+                    image: 'https://demo.home-assistant.io/stub_config/bedroom.png'
+                    show_name: false
+                    show_state: false
+                    type: picture-entity
+                    aspect_ratio: 45%
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 50px
+                    type: 'custom:button-card'
+              - type: horizontal-stack
+                cards:
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 50px
+                    type: 'custom:button-card'
+                  - entity: camera.swk_cr_uniuvc3
+                    image: 'https://demo.home-assistant.io/stub_config/bedroom.png'
+                    show_name: false
+                    show_state: false
+                    type: picture-entity
+                    aspect_ratio: 45%
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 50px
+                    type: 'custom:button-card'
+          - content: |
+              # Cast Cameras
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                    font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - type: horizontal-stack
+            cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+              - entities:
+                  - entity: input_select.chromecast_tv
+                    icon: 'mdi:cast-connected'
+                  - entity: input_select.camera_select
+                    icon: 'mdi:cctv'
+                  - action_name: Stream
+                    entity: script.cameracast
+                    icon: 'mdi:play'
+                    name: Start Casting
+                title: false
+                type: entities
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+        type: vertical-stack
+      - cards:
+          - content: |
+              # Ground Floor
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                    font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+              - entity: binary_sensor.openclose_26
+                icon: 'mdi:doorbell'
+                name: Front
+                state:
+                  - icon: 'mdi:door-closed'
+                    styles:
+                      card:
+                        - height: 80px
+                      icon:
+                        - width: 45%
+                        - opacity: 0.5
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:door-open'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 80px
+                        - color: red
+                        - animation: blink 2s ease infinite
+                      icon:
+                        - width: 45%
+                        - opacity: 0.5
+                        - color: red
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: binary_sensor.openclose_30
+                icon: 'mdi:doorbell'
+                name: Snug
+                state:
+                  - icon: 'mdi:door-closed'
+                    styles:
+                      card:
+                        - height: 80px
+                      icon:
+                        - width: 45%
+                        - opacity: 0.5
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:door-open'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 80px
+                      icon:
+                        - width: 45%
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: binary_sensor.openclose_20
+                icon: 'mdi:doorbell'
+                name: Kitchen
+                state:
+                  - icon: 'mdi:door-closed'
+                    styles:
+                      card:
+                        - height: 80px
+                      icon:
+                        - width: 45%
+                        - opacity: 0.5
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:door-open'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 80px
+                      icon:
+                        - width: 45%
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: binary_sensor.openclose_19
+                icon: 'mdi:doorbell'
+                name: Back
+                state:
+                  - icon: 'mdi:door-closed'
+                    styles:
+                      card:
+                        - height: 80px
+                      icon:
+                        - width: 45%
+                        - opacity: 0.5
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:door-open'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 80px
+                        - color: red
+                        - animation: blink 2s ease infinite
+                      icon:
+                        - width: 45%
+                        - opacity: 0.5
+                        - color: red
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+            type: horizontal-stack
+          - cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+              - entity: binary_sensor.ground_hallway_motion
+                icon: 'mdi:motion-sensor'
+                name: Hallway
+                state:
+                  - icon: 'mdi:motion-sensor'
+                    styles:
+                      card:
+                        - height: 80px
+                      icon:
+                        - width: 45%
+                        - opacity: 0.5
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:motion-sensor'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 80px
+                        - color: yellow
+                        - opacity: 0.5
+                        - animation: blink 2s ease infinite
+                      icon:
+                        - width: 45%
+                        - color: yellow
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: binary_sensor.ground_hallway_motion
+                icon: 'mdi:motion-sensor'
+                name: Snug
+                state:
+                  - icon: 'mdi:motion-sensor'
+                    styles:
+                      card:
+                        - height: 80px
+                      icon:
+                        - width: 45%
+                        - opacity: 0.5
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:motion-sensor'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 80px
+                        - color: yellow
+                        - opacity: 0.5
+                        - animation: blink 2s ease infinite
+                      icon:
+                        - width: 45%
+                        - color: yellow
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: binary_sensor.kitchen_motion_sensor2
+                icon: 'mdi:motion-sensor'
+                name: Kitchen
+                state:
+                  - icon: 'mdi:motion-sensor'
+                    styles:
+                      card:
+                        - height: 80px
+                      icon:
+                        - width: 45%
+                        - opacity: 0.5
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:motion-sensor'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 80px
+                        - color: yellow
+                        - opacity: 0.5
+                        - animation: blink 2s ease infinite
+                      icon:
+                        - width: 45%
+                        - color: yellow
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+            type: horizontal-stack
+          - type: horizontal-stack
+            cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+              - cards:
+                  - card:
+                      show_icon: false
+                      type: entities
+                    filter:
+                      include:
+                        - entity_id: binary_sensor.openclose_30
+                          options:
+                            secondary_info: last-changed
+                        - entity_id: binary_sensor.openclose_26
+                          options:
+                            secondary_info: last-changed
+                        - entity_id: binary_sensor.openclose_19
+                          options:
+                            secondary_info: last-changed
+                        - entity_id: binary_sensor.openclose_20
+                          options:
+                            secondary_info: last-changed
+                    sort:
+                      count: 1
+                      method: last_changed
+                    type: 'custom:auto-entities'
+                  - card:
+                      type: entities
+                    filter:
+                      include:
+                        - entity_id: binary_sensor.kitchen_motion_sensor2
+                          options:
+                            secondary_info: last-changed
+                        - entity_id: binary_sensor.ground_hallway_motion
+                          options:
+                            secondary_info: last-changed
+                    sort:
+                      count: 1
+                      method: last_changed
+                    type: 'custom:auto-entities'
+                title: false
+                type: 'custom:vertical-stack-in-card'
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+          - content: |
+              # First Floor
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                    font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+              - entity: binary_sensor.window_door_sensor
+                icon: 'mdi:doorbell'
+                name: Living </br> Room
+                state:
+                  - icon: 'mdi:door-closed'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 5px 15px 5px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:door-open'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                      name:
+                        - padding: 5px 5px 15px 5px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: binary_sensor.window_door_sensor_2
+                icon: 'mdi:doorbell'
+                name: Bathroom
+                state:
+                  - icon: 'mdi:door-closed'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 5px 15px 5px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:door-open'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                      name:
+                        - padding: 5px 15px 15px 15px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: binary_sensor.openclose_22
+                icon: 'mdi:doorbell'
+                name: Bedroom
+                state:
+                  - icon: 'mdi:door-closed'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 15px 15px 15px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:door-open'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                      name:
+                        - padding: 5px 15px 15px 15px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+            type: horizontal-stack
+          - cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+              - entity: binary_sensor.first_hallway_motion
+                icon: 'mdi:motion-sensor'
+                name: Hallway
+                state:
+                  - icon: 'mdi:motion-sensor'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 25%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:motion-sensor'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 80px
+                        - color: yellow
+                        - opacity: 0.5
+                        - animation: blink 2s ease infinite
+                      icon:
+                        - width: 45%
+                        - color: yellow
+                        - padding-top: 10px
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: binary_sensor.living_room_tv_cabinet_pir_sensor
+                icon: 'mdi:motion-sensor'
+                name: Living Room
+                state:
+                  - icon: 'mdi:motion-sensor'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 25%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:motion-sensor'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 80px
+                        - color: yellow
+                        - opacity: 0.5
+                        - animation: blink 2s ease infinite
+                      icon:
+                        - width: 45%
+                        - color: yellow
+                        - padding-top: 10px
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+            type: horizontal-stack
+          - type: horizontal-stack
+            cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+              - cards:
+                  - card:
+                      show_icon: false
+                      type: entities
+                    filter:
+                      include:
+                        - entity_id: binary_sensor.window_door_sensor
+                          options:
+                            secondary_info: last-changed
+                        - entity_id: binary_sensor.window_door_sensor_2
+                          options:
+                            secondary_info: last-changed
+                        - entity_id: binary_sensor.openclose_22
+                          options:
+                            secondary_info: last-changed
+                    sort:
+                      count: 1
+                      method: last_changed
+                    type: 'custom:auto-entities'
+                  - card:
+                      type: entities
+                    filter:
+                      include:
+                        - entity_id: binary_sensor.living_room_tv_cabinet_pir_sensor
+                          options:
+                            secondary_info: last-changed
+                        - entity_id: binary_sensor.first_hallway_motion
+                          options:
+                            secondary_info: last-changed
+                    sort:
+                      count: 1
+                      method: last_changed
+                    type: 'custom:auto-entities'
+                title: false
+                type: 'custom:vertical-stack-in-card'
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+        type: vertical-stack
+      - cards:
+          - content: |
+              # Second Floor
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                    font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+              - entity: binary_sensor.window_door_sensor_4
+                icon: 'mdi:doorbell'
+                name: Bedroom
+                state:
+                  - icon: 'mdi:door-closed'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 15px 15px 15px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:door-open'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                      name:
+                        - padding: 5px 15px 15px 15px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: binary_sensor.window_door_sensor_3
+                icon: 'mdi:doorbell'
+                name: Ensuite
+                state:
+                  - icon: 'mdi:door-closed'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 15px 15px 15px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:door-open'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                      name:
+                        - padding: 5px 15px 15px 15px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: binary_sensor.openclose_21
+                icon: 'mdi:doorbell'
+                name: Office
+                state:
+                  - icon: 'mdi:door-closed'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 5px 15px 5px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:door-open'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                      name:
+                        - padding: 5px 15px 15px 15px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+            type: horizontal-stack
+          - cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+              - entity: binary_sensor.tradfri_motion_sensor
+                icon: 'mdi:motion-sensor'
+                name: Hallway
+                state:
+                  - icon: 'mdi:motion-sensor'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 25%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:motion-sensor'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 80px
+                        - color: yellow
+                        - opacity: 0.5
+                        - animation: blink 2s ease infinite
+                      icon:
+                        - width: 45%
+                        - color: yellow
+                        - padding-top: 10px
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: binary_sensor.tradfri_motion_sensor
+                icon: 'mdi:motion-sensor'
+                name: Bedroom
+                state:
+                  - icon: 'mdi:motion-sensor'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 25%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:motion-sensor'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 80px
+                        - color: yellow
+                        - opacity: 0.5
+                        - animation: blink 2s ease infinite
+                      icon:
+                        - width: 45%
+                        - color: yellow
+                        - padding-top: 10px
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: binary_sensor.tradfri_motion_sensor
+                icon: 'mdi:motion-sensor'
+                name: Office
+                state:
+                  - icon: 'mdi:motion-sensor'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 25%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:motion-sensor'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 80px
+                        - color: yellow
+                        - opacity: 0.5
+                        - animation: blink 2s ease infinite
+                      icon:
+                        - width: 45%
+                        - color: yellow
+                        - padding-top: 10px
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+            type: horizontal-stack
+          - type: horizontal-stack
+            cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+              - cards:
+                  - card:
+                      show_icon: false
+                      type: entities
+                    filter:
+                      include:
+                        - entity_id: binary_sensor.window_door_sensor_4
+                          options:
+                            secondary_info: last-changed
+                        - entity_id: binary_sensor.window_door_sensor_3
+                          options:
+                            secondary_info: last-changed
+                        - entity_id: binary_sensor.openclose_21
+                          options:
+                            secondary_info: last-changed
+                    sort:
+                      count: 1
+                      method: last_changed
+                    type: 'custom:auto-entities'
+                  - card:
+                      type: entities
+                    filter:
+                      include:
+                        - entity_id: binary_sensor.tradfri_motion_sensor
+                          options:
+                            secondary_info: last-changed
+                    sort:
+                      count: 1
+                      method: last_changed
+                    type: 'custom:auto-entities'
+                title: false
+                type: 'custom:vertical-stack-in-card'
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+          - content: |
+              # Fire/Water
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                    font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+              - entity: switch.office_lamp
+                icon: 'mdi:doorbell'
+                name: Ground
+                state:
+                  - icon: 'mdi:fire'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 15px 15px 15px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:fire'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 15px 15px 15px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: light.living_room
+                icon: 'mdi:doorbell'
+                name: First
+                state:
+                  - icon: 'mdi:fire'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 15px 15px 15px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:fire'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 15px 15px 15px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: light.office
+                icon: 'mdi:doorbell'
+                name: Second
+                state:
+                  - icon: 'mdi:fire'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 5px 15px 5px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:fire'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 15px 15px 15px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+            type: horizontal-stack
+          - cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+              - entity: switch.office_lamp
+                icon: 'mdi:water'
+                name: Kitchen
+                state:
+                  - icon: 'mdi:water'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:water'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 25%
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: light.second_ceiling_lights
+                icon: 'mdi:water'
+                name: Bathroom
+                state:
+                  - icon: 'mdi:water'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:water'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 25%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: light.second_ceiling_lights
+                icon: 'mdi:motion-sensor'
+                name: Garage
+                state:
+                  - icon: 'mdi:water'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:water'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 25%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+            type: horizontal-stack
+          - type: horizontal-stack
+            cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+              - cards:
+                  - card:
+                      show_icon: false
+                      type: entities
+                    filter:
+                      include:
+                        - entity_id: binary_sensor.fire_alarm
+                          options:
+                            secondary_info: last-changed
+                    sort:
+                      count: 1
+                      method: last_changed
+                    type: 'custom:auto-entities'
+                  - card:
+                      type: entities
+                    filter:
+                      include:
+                        - entity_id: binary_sensor.fire_alarm
+                          options:
+                            secondary_info: last-changed
+                    sort:
+                      count: 1
+                      method: last_changed
+                    type: 'custom:auto-entities'
+                title: false
+                type: 'custom:vertical-stack-in-card'
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+        type: vertical-stack
