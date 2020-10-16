@@ -12,10 +12,10 @@ Please note that some files, images, custom components and addons have been refe
 
 If you like what you've read ... Support me here on Buy Me a Coffee: https://www.buymeacoffee.com/swakes
 
-### 04/09/2020 - Updated 'dashboards'
+### 16/10/2020 - Updated 'dashboards' and Screenshots
 
 #### Screenshots
-![System Dashboard](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/HA-System_new.png)![Light Dashboard](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/HA-Lights.png)![Security Dashboard](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/HA-Security_new.png)![Media Dashboard](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/HA-Media.png)
+![System Dashboard](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/NEW_System_Dashboard.png)![Light Dashboard](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/NEW_Lights_Dashboard.png)![Security Dashboard](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/NEW_Security_Dashboard.png)![Media Dashboard](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/NEW_Media_Dashboard.png)
 # Hardware
 
 
