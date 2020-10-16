@@ -1,0 +1,1674 @@
+  - icon: 'mdi:home-assistant'
+    path: system
+    badges: []
+    cards:
+      - cards:
+          - content: >
+              # <img width="30" height="30" src='/local/halogo.png'
+              style='vertical-align:middle' /> Home Assistant 
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                   # font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - type: horizontal-stack
+            cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 25px
+                type: 'custom:button-card'
+              - entities:
+                  - entity: sensor.latest_version
+                    name: Version
+                show_icon: true
+                show_name: true
+                show_state: true
+                title: false
+                type: glance
+              - entities:
+                  - entity: sensor.last_successful_authentication
+                    name: Last Login
+                show_icon: true
+                show_name: true
+                show_state: true
+                title: false
+                type: glance
+              - columns: null
+                entities:
+                  - entity: sensor.supervisor_updates
+                    icon: 'mdi:download-network'
+                    name: Updates
+                show_icon: true
+                show_name: true
+                show_state: true
+                title: false
+                type: glance
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 25px
+                type: 'custom:button-card'
+          - cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 25px
+                type: 'custom:button-card'
+              - align_icon: left
+                align_state: center
+                entities:
+                  - sensor.processor_use
+                font_size: 75
+                icon: 'mdi:chip'
+                name: CPU
+                show:
+                  fill: false
+                type: 'custom:mini-graph-card'
+              - align_icon: left
+                align_state: center
+                entities:
+                  - sensor.memory_use_percent
+                font_size: 75
+                name: RAM
+                show:
+                  fill: false
+                type: 'custom:mini-graph-card'
+              - align_icon: left
+                align_state: center
+                entities:
+                  - sensor.disk_use_percent_home
+                font_size: 75
+                name: Disk
+                show:
+                  fill: false
+                type: 'custom:mini-graph-card'
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 25px
+                type: 'custom:button-card'
+            type: horizontal-stack
+          - type: vertical-stack
+            cards:
+              - type: horizontal-stack
+                cards:
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 25px
+                    type: 'custom:button-card'
+                  - type: glance
+                    entities:
+                      - entity: sensor.count_binary_sensors
+                        name: Binary Sensors
+                        icon: 'mdi:motion-sensor'
+                      - entity: sensor.count_sensors
+                        name: Sensors
+                        icon: 'mdi:home-thermometer'
+                      - entity: sensor.count_automations
+                        name: Automations
+                        icon: 'mdi:robot'
+                    show_icon: 'mdi:lamp'
+                    show_state: true
+                    state_color: false
+                    style: |
+                      ha-card {
+                        word-wrap: normal
+                      }
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 25px
+                    type: 'custom:button-card'
+              - type: horizontal-stack
+                cards:
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 25px
+                    type: 'custom:button-card'
+                  - type: glance
+                    entities:
+                      - entity: sensor.count_device_trackers
+                        name: Device Trackers
+                        icon: 'mdi:radar'
+                      - entity: sensor.count_switches
+                        name: Switches
+                        icon: 'mdi:light-switch'
+                      - entity: sensor.count_scripts
+                        name: Scripts
+                        icon: 'mdi:script-text'
+                    show_state: true
+                    state_color: false
+                    style: |
+                      ha-card {
+                        word-wrap: normal
+                      }
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 25px
+                    type: 'custom:button-card'
+          - cards:
+              - content: >
+                  # <img width="30" height="30" src='/local/dockerlogo.png'
+                  style='vertical-align:middle' /> Docker
+                style:
+                  .: |
+                    ha-card {
+                      background-color: transparent !important;
+                      box-shadow: none !important;
+                    }
+                  ha-markdown:
+                    $: |
+                      h1 {
+                        font-size: 25px;
+                       # font-weight: bold;
+                        text-align: center;
+                        letter-spacing: '-0.01em';
+                      }
+                type: markdown
+              - type: horizontal-stack
+                cards:
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 25px
+                    type: 'custom:button-card'
+                  - entities:
+                      - entity: sensor.swi_vus18_hass_docker_containers_running
+                        name: Running
+                    show_icon: true
+                    show_name: true
+                    show_state: true
+                    title: false
+                    type: glance
+                  - entities:
+                      - entity: sensor.swi_vus18_hass_docker_containers_stopped
+                        name: Stopped
+                    show_icon: true
+                    show_name: true
+                    show_state: true
+                    title: false
+                    type: glance
+                  - columns: null
+                    entities:
+                      - entity: sensor.swi_vus18_hass_docker_homeassistant_status_up
+                        name: Hassio
+                    show_icon: true
+                    show_name: true
+                    show_state: true
+                    title: false
+                    type: glance
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 25px
+                    type: 'custom:button-card'
+              - type: horizontal-stack
+                cards:
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 25px
+                    type: 'custom:button-card'
+                  - entities:
+                      - entity: >-
+                          sensor.swi_vus18_hass_docker_addon_core_mosquitto_status_up
+                        name: Mosquitto
+                    show_icon: true
+                    show_name: true
+                    show_state: true
+                    title: false
+                    type: glance
+                  - entities:
+                      - entity: >-
+                          sensor.swi_vus18_hass_docker_addon_a0d7b954_influxdb_status_up
+                        name: InfluxDB
+                    show_icon: true
+                    show_name: true
+                    show_state: true
+                    title: false
+                    type: glance
+                  - entities:
+                      - entity: >-
+                          sensor.swi_vus18_hass_docker_addon_fd74094e_zabbix_agent_status_up
+                        name: Zabbix
+                    show_icon: true
+                    show_name: true
+                    show_state: true
+                    title: false
+                    type: glance
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 25px
+                    type: 'custom:button-card'
+              - cards:
+                  - content: >
+                      # <img width="30" height="30" src='/local/halogo.png'
+                      style='vertical-align:middle' /> Restart Services
+                    style:
+                      .: |
+                        ha-card {
+                          background-color: transparent !important;
+                          box-shadow: none !important;
+                        }
+                      ha-markdown:
+                        $: |
+                          h1 {
+                            font-size: 25px;
+                           # font-weight: bold;
+                            text-align: center;
+                            letter-spacing: '-0.01em';
+                          }
+                    type: markdown
+                  - type: horizontal-stack
+                    cards:
+                      - color_type: blank-card
+                        icon: 'mdi:led-strip-variant'
+                        name: Floor
+                        styles:
+                          card:
+                            - width: 25px
+                        type: 'custom:button-card'
+                      - entities:
+                          - entity: zone.home
+                            icon: 'mdi:home-assistant'
+                            name: Hassio
+                            tap_action:
+                              action: call-service
+                              confirmation: Are you sure?
+                              service: homeassistant.restart
+                        show_header_toggle: false
+                        show_state: false
+                        style: |
+                          ha-card {
+                            text-align: center;
+                                }    
+                        title: false
+                        type: glance
+                      - entities:
+                          - entity: zone.home
+                            icon: 'mdi:robot'
+                            name: Automation
+                            tap_action:
+                              action: call-service
+                              confirmation: Are you sure?
+                              service: automation.reload
+                        show_header_toggle: false
+                        show_state: false
+                        style: |
+                          ha-card {
+                            text-align: center;
+                                }    
+                        title: false
+                        type: glance
+                      - entities:
+                          - entity: zone.home
+                            icon: 'mdi:cogs'
+                            name: Core Config
+                            tap_action:
+                              action: call-service
+                              confirmation: Are you sure?
+                              service: homeassistant.reload_core_config
+                        show_header_toggle: false
+                        show_state: false
+                        style: |
+                          ha-card {
+                            text-align: center;
+                                }    
+                        title: false
+                        type: glance
+                      - color_type: blank-card
+                        icon: 'mdi:led-strip-variant'
+                        name: Floor
+                        styles:
+                          card:
+                            - width: 25px
+                        type: 'custom:button-card'
+                  - type: horizontal-stack
+                    cards:
+                      - color_type: blank-card
+                        icon: 'mdi:led-strip-variant'
+                        name: Floor
+                        styles:
+                          card:
+                            - width: 25px
+                        type: 'custom:button-card'
+                      - entities:
+                          - entity: zone.home
+                            icon: 'mdi:script-text'
+                            name: Script
+                            tap_action:
+                              action: call-service
+                              confirmation: Are you sure?
+                              service: script.reload
+                        show_header_toggle: false
+                        show_state: false
+                        style: |
+                          ha-card {
+                            text-align: center;
+                                }    
+                        title: false
+                        type: glance
+                      - entities:
+                          - entity: zone.home
+                            icon: 'mdi:group'
+                            name: Groups
+                            tap_action:
+                              action: call-service
+                              confirmation: Are you sure?
+                              service: group.reload
+                        show_header_toggle: false
+                        show_state: false
+                        style: |
+                          ha-card {
+                            text-align: center;
+                                }    
+                        title: false
+                        type: glance
+                      - entities:
+                          - entity: zone.home
+                            icon: 'mdi:format-paint'
+                            name: Frontend
+                            tap_action:
+                              action: call-service
+                              confirmation: Are you sure?
+                              service: frontend.reload_themes
+                        show_header_toggle: false
+                        show_state: false
+                        style: |
+                          ha-card {
+                            text-align: center;
+                                }    
+                        title: false
+                        type: glance
+                      - color_type: blank-card
+                        icon: 'mdi:led-strip-variant'
+                        name: Floor
+                        styles:
+                          card:
+                            - width: 25px
+                        type: 'custom:button-card'
+                type: vertical-stack
+            type: vertical-stack
+        type: vertical-stack
+      - cards:
+          - content: >
+              # <img width="30" height="30" src='/local/zigbeelogo.png'
+              style='vertical-align:middle' /> Sensor Network
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                   # font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                    }
+                  img {
+                    vertical-align: middle;
+                      }
+            type: markdown
+          - cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 25px
+                type: 'custom:button-card'
+              - entities:
+                  - entity: sensor.deconz_online
+                    name: Zigbee
+                  - entity: sensor.sonoff_rf_bridge_online
+                    name: 433Mhz RF
+                  - entity: sensor.esphome_online
+                    name: ESPHome
+                  - entity: sensor.unifi_online
+                    name: WiFi
+                style: |
+                  ha-card {
+                    text-align: center;
+                    
+                        }    
+                title: false
+                type: glance
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 25px
+                type: 'custom:button-card'
+            type: horizontal-stack
+          - content: >
+              # <img width="30" height="30" src='/local/pir.png'
+              style='vertical-align:middle' /> Sensors
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                   # font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                    }
+                  img {
+                    vertical-align: middle;
+                      }
+            type: markdown
+          - cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 25px
+                type: 'custom:button-card'
+              - columns: 6
+                entities:
+                  - entity: sensor.dws_sensor_check_status
+                    name: Door
+                  - entity: sensor.pir_sensor_check_status
+                    name: PIR
+                  - entity: sensor.light_sensor_check_status
+                    name: Lights
+                  - entity: sensor.temp_sensor_check_status
+                    name: Temp
+                  - entity: sensor.433_sensor_check_status
+                    name: 433 RF
+                  - entity: sensor.camera_sensor_check_status
+                    name: Camera
+                type: glance
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 25px
+                type: 'custom:button-card'
+            type: horizontal-stack
+          - content: >
+              # <img width="30" height="30" src='/local/batterylogo.png'
+              style='vertical-align:middle' /> Battery Levels
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                   # font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                    }
+                  img {
+                    vertical-align: middle;
+                      }
+            type: markdown
+          - cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 25px
+                type: 'custom:button-card'
+              - collapse: 3
+                entities:
+                  - sensor.back_door_battery_level
+                  - sensor.first_floor_temp_battery_level
+                  - sensor.ground_floor_temp_battery_level
+                  - sensor.multi_sensor_2_battery_level
+                  - sensor.openclose_20_battery_level
+                  - sensor.openclose_21_battery_level
+                  - sensor.openclose_22_battery_level
+                  - sensor.openclose_26_battery_level
+                  - sensor.openclose_30_battery_level
+                  - sensor.openclose_31_battery_level
+                  - sensor.window_door_sensor_battery_level
+                  - sensor.tradfri_motion_sensor_battery_level
+                  - sensor.tradfri_remote_control_battery_level
+                  - sensor.window_door_sensor_2_battery_level
+                  - sensor.window_door_sensor_3_battery_level
+                  - sensor.window_door_sensor_4_battery_level
+                  - sensor.window_door_sensor_5_battery_level
+                sort_by_level: asc
+                title: false
+                type: 'custom:battery-state-card'
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 25px
+                type: 'custom:button-card'
+            type: horizontal-stack
+          - content: >
+              # <img width="30" height="30" src='/local/auto.png'
+              style='vertical-align:middle' /> Automations
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                   # font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                    }
+                  img {
+                    vertical-align: middle;
+                      }
+            type: markdown
+          - type: vertical-stack
+            cards:
+              - cards:
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 25px
+                    type: 'custom:button-card'
+                  - entities:
+                      - entities:
+                          - entity: automation.reset_ground_hallway_pir
+                            icon: 'mdi:home-floor-g'
+                            name: false
+                            tap_action:
+                              action: call-service
+                              confirmation: Are you sure?
+                              service: automation.trigger
+                              service_data:
+                                entity_id: automation.reset_ground_hallway_pir
+                          - entity: automation.reset_first_hallway_pir
+                            icon: 'mdi:home-floor-1'
+                            name: false
+                            tap_action:
+                              action: call-service
+                              confirmation: Are you sure?
+                              service: automation.trigger
+                              service_data:
+                                entity_id: automation.reset_first_hallway_pir
+                          - entity: automation.reset_letter_box
+                            icon: 'mdi:mailbox'
+                            name: false
+                            tap_action:
+                              action: call-service
+                              confirmation: Are you sure?
+                              service: automation.trigger
+                              service_data:
+                                entity_id: automation.reset_letter_box
+                          - entity: automation.reset_front_doorbell
+                            icon: 'mdi:doorbell'
+                            name: false
+                            tap_action:
+                              action: call-service
+                              confirmation: Are you sure?
+                              service: automation.trigger
+                              service_data:
+                                entity_id: automation.reset_front_doorbell
+                        entity: automation.ground_pir_pushover
+                        icon: 'mdi:radio-tower'
+                        name: 433Mhz Resets
+                        secondary_info: last-changed
+                        toggle: false
+                        show_state: false
+                        type: 'custom:multiple-entity-row'
+                    show_header_toggle: false
+                    title: false
+                    type: entities
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 25px
+                    type: 'custom:button-card'
+                type: horizontal-stack
+              - cards:
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 25px
+                    type: 'custom:button-card'
+                  - entities:
+                      - entities: null
+                        entity: automation.pushover_letter_box
+                        icon: 'mdi:motion-sensor'
+                        name: Kitchen RGB
+                        secondary_info: last-changed
+                        toggle: true
+                        show_icon: false
+                        show_state: true
+                        type: 'custom:multiple-entity-row'
+                      - entities: null
+                        entity: automation.pushover_letter_box
+                        icon: 'mdi:motion-sensor'
+                        name: Ground Hallway Light
+                        secondary_info: last-changed
+                        toggle: true
+                        show_state: true
+                        type: 'custom:multiple-entity-row'
+                      - entities: null
+                        entity: automation.pushover_letter_box
+                        icon: 'mdi:motion-sensor'
+                        name: Living Room RGB
+                        secondary_info: last-changed
+                        toggle: true
+                        show_state: true
+                        type: 'custom:multiple-entity-row'
+                      - entities: null
+                        entity: automation.pushover_letter_box
+                        icon: 'mdi:motion-sensor'
+                        name: Second Floor Hallway
+                        secondary_info: last-changed
+                        toggle: true
+                        show_state: true
+                        type: 'custom:multiple-entity-row'
+                    show_header_toggle: false
+                    title: false
+                    type: entities
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 25px
+                    type: 'custom:button-card'
+                type: horizontal-stack
+        type: vertical-stack
+      - type: vertical-stack
+        cards:
+          - content: >
+              # <img width="30" height="30"  src='/local/pushb.png'
+              style='vertical-align:middle' /> Push Notifications
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                   # font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                    vertical-align: middle;
+
+                  }
+            type: markdown
+          - cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 25px
+                type: 'custom:button-card'
+              - entities:
+                  - entities:
+                      - entity: group.groundfloor_push_notifications_automations
+                        icon: 'mdi:home-floor-g'
+                        name: false
+                        tap_action:
+                          action: call-service
+                          service: homeassistant.toggle
+                          service_data:
+                            entity_id: group.groundfloor_push_notifications_automations
+                      - entity: group.firstfloor_push_notifications_automations
+                        icon: 'mdi:home-floor-1'
+                        name: false
+                        tap_action:
+                          action: call-service
+                          service: homeassistant.toggle
+                          service_data:
+                            entity_id: group.firstfloor_push_notifications_automations
+                      - entity: group.secondfloor_push_notifications_automations
+                        icon: 'mdi:home-floor-2'
+                        name: false
+                        tap_action:
+                          action: call-service
+                          service: homeassistant.toggle
+                          service_data:
+                            entity_id: group.secondfloor_push_notifications_automations
+                    entity: group.office_watch_automations
+                    icon: 'mdi:home'
+                    name: House Alerts
+                    toggle: true
+                    show_state: true
+                    type: 'custom:multiple-entity-row'
+                show_header_toggle: false
+                show_name: false
+                title: false
+                type: entities
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 25px
+                type: 'custom:button-card'
+            type: horizontal-stack
+          - color_type: blank-card
+            icon: 'mdi:led-strip-variant'
+            name: Floor
+            styles:
+              card:
+                - height: 5px
+            type: 'custom:button-card'
+          - type: vertical-stack
+            cards:
+              - type: horizontal-stack
+                cards:
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 25px
+                    type: 'custom:button-card'
+                  - entity: automation.ground_pir_pushover
+                    icon: 'mdi:doorbell'
+                    name: Ground Floor<br> Hallway Motion
+                    state:
+                      - icon: 'mdi:motion-sensor'
+                        styles:
+                          card:
+                            - height: 100px
+                          icon:
+                            - width: 45%
+                            - opacity: 0.5
+                            - padding-top: 10px
+                          name:
+                            - padding: 10px
+                            - font-size: 11px
+                            - text-overflow: unset
+                        value: 'off'
+                      - color: white
+                        icon: 'mdi:motion-sensor'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 100px
+                          icon:
+                            - width: 45%
+                            - padding-top: 10px
+                          name:
+                            - padding: 10px
+                            - font-size: 11px
+                            - text-overflow: unset
+                    type: 'custom:button-card'
+                  - entity: automation.kitchen_motion
+                    icon: 'mdi:doorbell'
+                    name: Kitchen<br> Motion
+                    state:
+                      - icon: 'mdi:motion-sensor'
+                        styles:
+                          card:
+                            - height: 100px
+                          icon:
+                            - width: 45%
+                            - opacity: 0.5
+                            - padding-top: 10px
+                          name:
+                            - padding: 10px
+                            - font-size: 11px
+                            - text-overflow: unset
+                        value: 'off'
+                      - color: white
+                        icon: 'mdi:motion-sensor'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 100px
+                          icon:
+                            - width: 45%
+                            - padding-top: 10px
+                          name:
+                            - padding: 10px
+                            - font-size: 11px
+                            - text-overflow: unset
+                    type: 'custom:button-card'
+                  - entity: automation.first_pir_pushover
+                    icon: 'mdi:doorbell'
+                    name: First Floor<br> Hallway Motion
+                    state:
+                      - icon: 'mdi:motion-sensor'
+                        styles:
+                          card:
+                            - height: 100px
+                          icon:
+                            - width: 45%
+                            - opacity: 0.5
+                            - padding-top: 10px
+                          name:
+                            - padding: 10px
+                            - font-size: 11px
+                            - text-overflow: unset
+                        value: 'off'
+                      - color: white
+                        icon: 'mdi:motion-sensor'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 100px
+                          icon:
+                            - width: 45%
+                            - padding-top: 10px
+                          name:
+                            - padding: 10px
+                            - font-size: 11px
+                            - text-overflow: unset
+                    type: 'custom:button-card'
+                  - entity: automation.pushover_living_room_motion
+                    icon: 'mdi:doorbell'
+                    name: Living<br>Room Motion
+                    state:
+                      - icon: 'mdi:motion-sensor'
+                        styles:
+                          card:
+                            - height: 100px
+                          icon:
+                            - width: 45%
+                            - opacity: 0.5
+                            - padding-top: 10px
+                          name:
+                            - padding: 10px
+                            - font-size: 11px
+                            - text-overflow: unset
+                        value: 'off'
+                      - color: white
+                        icon: 'mdi:motion-sensor'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 100px
+                          icon:
+                            - width: 45%
+                            - padding-top: 10px
+                          name:
+                            - padding: 10px
+                            - font-size: 11px
+                            - text-overflow: unset
+                    type: 'custom:button-card'
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 25px
+                    type: 'custom:button-card'
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - height: 5px
+                type: 'custom:button-card'
+              - type: horizontal-stack
+                cards:
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 25px
+                    type: 'custom:button-card'
+                  - entity: automation.office_pir_pushover
+                    icon: 'mdi:doorbell'
+                    name: Second Floor<br>Hallway Motion
+                    state:
+                      - icon: 'mdi:motion-sensor'
+                        styles:
+                          card:
+                            - height: 100px
+                          icon:
+                            - width: 45%
+                            - opacity: 0.5
+                            - padding-top: 10px
+                          name:
+                            - padding: 10px
+                            - font-size: 12px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                        value: 'off'
+                      - color: white
+                        icon: 'mdi:motion-sensor'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 100px
+                          icon:
+                            - width: 45%
+                            - padding-top: 10px
+                          name:
+                            - padding: 10px
+                            - font-size: 12px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - entity: automation.office_pir_pushover
+                    icon: 'mdi:doorbell'
+                    name: Master Bedroom<br>Motion
+                    state:
+                      - icon: 'mdi:motion-sensor'
+                        styles:
+                          card:
+                            - height: 100px
+                          icon:
+                            - width: 45%
+                            - opacity: 0.5
+                            - padding-top: 10px
+                          name:
+                            - padding: 10px
+                            - font-size: 12px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                        value: 'off'
+                      - color: white
+                        icon: 'mdi:motion-sensor'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 100px
+                          icon:
+                            - width: 45%
+                            - padding-top: 10px
+                          name:
+                            - padding: 10px
+                            - font-size: 12px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - entity: automation.office_pir_pushover
+                    icon: 'mdi:doorbell'
+                    name: Office<br>Motion
+                    state:
+                      - icon: 'mdi:motion-sensor'
+                        styles:
+                          card:
+                            - height: 100px
+                          icon:
+                            - width: 45%
+                            - opacity: 0.5
+                            - padding-top: 10px
+                          name:
+                            - padding: 10px
+                            - font-size: 12px
+                        value: 'off'
+                      - color: white
+                        icon: 'mdi:motion-sensor'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 100px
+                          icon:
+                            - width: 45%
+                            - padding-top: 10px
+                          name:
+                            - padding: 10px
+                            - font-size: 12px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 25px
+                    type: 'custom:button-card'
+          - type: horizontal-stack
+            cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - height: 5px
+                type: 'custom:button-card'
+          - type: horizontal-stack
+            cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 25px
+                type: 'custom:button-card'
+              - entity: group.frontdoor_automations
+                icon: 'mdi:doorbell'
+                name: Front<br>Door
+                state:
+                  - icon: 'mdi:door-closed'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                        - opacity: 0.5
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:door-open'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: group.backdoor_automations
+                icon: 'mdi:doorbell'
+                name: Back<br>Door
+                state:
+                  - icon: 'mdi:door-closed'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                        - opacity: 0.5
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:door-open'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: group.snugdoor_automations
+                icon: 'mdi:doorbell'
+                name: Snug<br>Door
+                state:
+                  - icon: 'mdi:door-closed'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                        - opacity: 0.5
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:door-open'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: group.kitchendoor_automations
+                icon: 'mdi:doorbell'
+                name: Kitchen<br>Door
+                state:
+                  - icon: 'mdi:door-closed'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                        - opacity: 0.5
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:door-open'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 25px
+                type: 'custom:button-card'
+          - type: horizontal-stack
+            cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - height: 5px
+                type: 'custom:button-card'
+          - type: horizontal-stack
+            cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 25px
+                type: 'custom:button-card'
+              - entity: group.livingroomdoor_automations
+                extra_styles: |
+                  @keyframes mymove {
+                    50% {box-shadow: 0 0 20px red;}
+                    }
+                icon: 'mdi:doorbell'
+                name: Living Room<br>Door
+                state:
+                  - icon: 'mdi:door-closed'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                        - opacity: 0.5
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:door-open'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: group.guestbathroomdoor_automations
+                icon: 'mdi:doorbell'
+                name: Guest Bathroom<br>Door
+                state:
+                  - icon: 'mdi:door-closed'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                        - opacity: 0.5
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:door-open'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: group.guestbedroomdoor_automations
+                icon: 'mdi:doorbell'
+                name: Guest Bedroom<br>Door
+                state:
+                  - icon: 'mdi:door-closed'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                        - opacity: 0.5
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 12px
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:door-open'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 25px
+                type: 'custom:button-card'
+          - color_type: blank-card
+            icon: 'mdi:led-strip-variant'
+            name: Floor
+            styles:
+              card:
+                - height: 5px
+            type: 'custom:button-card'
+          - type: horizontal-stack
+            cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 25px
+                type: 'custom:button-card'
+              - entity: group.masterbedroomdoor_automations
+                icon: 'mdi:doorbell'
+                name: Master Bedroom<br>Door
+                state:
+                  - icon: 'mdi:door-closed'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                        - opacity: 0.5
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:door-open'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: group.ensuitedoor_automations
+                icon: 'mdi:doorbell'
+                name: Ensuite<br/>Door
+                state:
+                  - icon: 'mdi:door-closed'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                        - opacity: 0.5
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:door-open'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: group.officedoor_automations
+                icon: 'mdi:doorbell'
+                name: Office<br/>Door
+                state:
+                  - icon: 'mdi:door-closed'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                        - opacity: 0.5
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 12px
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:door-open'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 25px
+                type: 'custom:button-card'
+          - color_type: blank-card
+            icon: 'mdi:led-strip-variant'
+            name: Floor
+            styles:
+              card:
+                - height: 5px
+            type: 'custom:button-card'
+          - type: horizontal-stack
+            cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 25px
+                type: 'custom:button-card'
+              - entity: automation.pushover_door_bell_alert
+                icon: 'mdi:doorbell'
+                name: Door<br>Bell
+                state:
+                  - icon: 'mdi:doorbell'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                        - opacity: 0.5
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:doorbell'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: automation.pushover_letter_box
+                extra_styles: |
+                  @keyframes mymove {
+                    50% {box-shadow: 0 0 20px red;}
+                    }
+                icon: 'mdi:mailbox'
+                name: Letter<br>Box
+                state:
+                  - icon: 'mdi:mailbox'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                        - opacity: 0.5
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:mailbox'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: automation.fridge_door
+                icon: 'mdi:doorbell'
+                name: Fridge<br>Door
+                state:
+                  - icon: 'mdi:fridge'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                        - opacity: 0.5
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:fridge'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: automation.flight_entry_notification
+                extra_styles: |
+                  @keyframes mymove {
+                    50% {box-shadow: 0 0 20px red;}
+                    }
+                icon: 'mdi:doorbell'
+                name: Planes<br>Overhead
+                state:
+                  - icon: 'mdi:airplane'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                        - opacity: 0.5
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 12px
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:airplane'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                        - padding-top: 10px
+                      name:
+                        - padding: 10px
+                        - font-size: 12px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 25px
+                type: 'custom:button-card'
