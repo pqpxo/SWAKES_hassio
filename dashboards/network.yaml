@@ -1,0 +1,451 @@
+ - title: Network
+    path: network
+    icon: 'mdi:wan'
+    badges: []
+    cards:
+      - cards:
+          - content: >
+              # <img width="30" height="30" src='/local/unifilogo.png'
+              style='vertical-align:middle' /> UniFi Network
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                   # font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 25px
+                type: 'custom:button-card'
+              - entities:
+                  - entity: sensor.unifickg2
+                    name: CKG2+
+                  - entity: sensor.unifiusg
+                    name: USG
+                  - entity: sensor.unifiswitch
+                    name: Switch
+                  - entity: sensor.unifiap
+                    name: AP
+                  - entity: sensor.unifi_protect_online
+                    name: Protect
+                style: |
+                  ha-card {
+                    text-align: center;
+                    
+                        }    
+                        
+                title: false
+                type: glance
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 25px
+                type: 'custom:button-card'
+            type: horizontal-stack
+          - cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 25px
+                type: 'custom:button-card'
+              - cards:
+                  - align_icon: left
+                    align_state: center
+                    entities:
+                      - sensor.unifi_gateway_wan_cpu
+                    font_size: 75
+                    icon: 'mdi:chip'
+                    name: CPU
+                    show:
+                      fill: false
+                    type: 'custom:mini-graph-card'
+                  - align_icon: left
+                    align_state: center
+                    entities:
+                      - sensor.unifi_gateway_wan_mem
+                    font_size: 75
+                    icon: 'mdi:memory'
+                    name: Memory
+                    show:
+                      fill: false
+                    type: 'custom:mini-graph-card'
+                  - align_icon: left
+                    align_state: center
+                    entities:
+                      - sensor.unifi_gateway_3_packets_s_sent
+                      - sensor.unifi_gateway_3_packets_s_received
+                    font_size: 75
+                    name: Traffic
+                    show:
+                      fill: false
+                      legend: false
+                    type: 'custom:mini-graph-card'
+                type: horizontal-stack
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 25px
+                type: 'custom:button-card'
+            type: horizontal-stack
+          - content: |
+              # Who's Home
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                  height: 2px;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 5px;
+                    font-weight: bold;
+                    text-align: center;
+                    opacity: 0.0;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 25px
+                type: 'custom:button-card'
+              - entities:
+                  - entity: sensor.local_ip
+                    name: Local IP
+                  - entity: sensor.myip
+                    name: External IP
+                type: entities
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 25px
+                type: 'custom:button-card'
+            type: horizontal-stack
+          - cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 25px
+                type: 'custom:button-card'
+              - entities:
+                  - entity: sensor.speedtest_download
+                  - entity: sensor.speedtest_upload
+                type: entities
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 25px
+                type: 'custom:button-card'
+            type: horizontal-stack
+        type: vertical-stack
+      - type: vertical-stack
+        cards:
+          - content: >
+              # <img width="30" height="30" src='/local/unifilogo.png'
+              style='vertical-align:middle' /> Client Stats
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                   # font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - type: horizontal-stack
+            cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 25px
+                type: 'custom:button-card'
+              - type: iframe
+                id: graf1
+                url: >-
+                  http://YOUR_GRAFANA_URL
+                aspect_ratio: 80%
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 25px
+                type: 'custom:button-card'
+          - type: horizontal-stack
+            cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 25px
+                type: 'custom:button-card'
+              - type: iframe
+                id: graf1
+                url: >-
+                  http://YOUR_GRAFANA_URL
+                aspect_ratio: 80%
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 25px
+                type: 'custom:button-card'
+      - cards:
+          - content: >
+              # <img width="30" height="30" src='/local/adg.png'
+              style='vertical-align:middle' /> AdGuard Home
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                   # font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 25px
+                type: 'custom:button-card'
+              - align_icon: left
+                align_state: center
+                entities:
+                  - sensor.adguard_dns_queries
+                font_size: 75
+                icon: 'mdi:dns'
+                name: DNS Queries
+                show:
+                  fill: false
+                type: 'custom:mini-graph-card'
+              - align_icon: left
+                align_state: center
+                entities:
+                  - sensor.adguard_dns_queries_blocked_ratio
+                font_size: 75
+                icon: 'mdi:cancel'
+                name: Blocked Ratio
+                show:
+                  fill: false
+                  legend: false
+                type: 'custom:mini-graph-card'
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 25px
+                type: 'custom:button-card'
+            type: horizontal-stack
+          - cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 25px
+                type: 'custom:button-card'
+              - entity: switch.adguard_protection
+                icon: 'mdi:shield-check'
+                name: Protection
+                state:
+                  - icon: 'mdi:shield-check'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 35%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:shield-check'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 35%
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: switch.adguard_safe_search
+                icon: 'mdi:sheild-search'
+                name: Safe Search
+                state:
+                  - icon: 'mdi:shield-search'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 35%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:mdi:shield-search'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 35%
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: switch.adguard_safe_browsing
+                icon: 'mdi:shield-sync'
+                name: Safe Browsing
+                state:
+                  - icon: 'mdi:shield-sync'
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 35%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    icon: 'mdi:shield-sync'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      icon:
+                        - width: 45%
+                      name:
+                        - padding: 5px 0px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 25px
+                type: 'custom:button-card'
+            type: horizontal-stack
+          - content: >
+              # <img height="30" src='/local/bqm.png'
+              style='vertical-align:middle' /> Broadband Quality Monitor
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 20px;
+                   # font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 25px
+                type: 'custom:button-card'
+              - type: picture
+                image: >-
+                  https://www.thinkbroadband.com/broadband/monitoring/quality/share/[YOUR_URL].png
+                style: |
+                  ha-card {
+                    border-radius: 25px;
+                    outline: 25px solid transparent;
+                    outline-offset: -4px;;
+                  }  
+                tap_action:
+                  action: none
+                hold_action:
+                  action: none
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 25px
+                type: 'custom:button-card'
+            type: horizontal-stack
+        type: vertical-stack
