@@ -1,0 +1,194 @@
+cards:
+
+####################################
+#### == Left - Android Card  == ####
+####################################
+
+  - type: 'custom:button-card'
+    entity: sensor.pixel_4_xl_battery_level
+    entity_picture: /local/google_pixel_4xl.png
+    show_entity_picture: true
+    aspect_ratio: 1/1
+    name: Pixel 4XL
+    styles:
+      card:
+        - background-color: '#2b374e'
+        - border-radius: 10%
+        - padding: 7%
+        - color: ivory
+        - font-size: 10px
+        - text-shadow: 0px 0px 5px black
+        - text-transform: capitalize
+      grid:
+        - grid-template-areas: '"i temp" "n n" "cpu cpu" "ram ram" "sd sd"'
+        - grid-template-columns: 1fr 1fr
+        - grid-template-rows: 1fr min-content min-content min-content min-content
+      name:
+        - font-weight: bold
+        - font-size: 15px
+        - color: white
+        - align-self: middle
+        - justify-self: start
+        - padding-bottom: 6px
+      img_cell:
+        - justify-content: start
+        - align-items: start
+        - margin: none
+      icon:
+        - width: 70%
+      custom_fields:
+        temp:
+          - align-self: start
+          - justify-self: end
+          - font-size: 13px
+        cpu:
+          - padding-bottom: 2px
+          - align-self: middle
+          - justify-self: start
+          - font-size: 11px
+          - '--text-color-sensor': >-
+              [[[ if (states['binary_sensor.pixel_4_xl_bluetooth_state'].state
+              !== 'on') return "red"; ]]] 
+        ram:
+          - padding-bottom: 2px
+          - align-self: middle
+          - justify-self: start
+          - font-size: 11px
+          - '--text-color-sensor': >-
+              [[[ if (states["binary_sensor.pixel_4_xl_wifi_state"].state !==
+              'on') return "red"; ]]] 
+        sd:
+          - align-self: middle
+          - padding-bottom: 2px
+          - justify-self: start
+          - font-size: 11px
+          - '--text-color-sensor': >-
+              [[[ if (states['sensor.pixelcharging'].state == 'Not Charging')
+              return "red"; ]]]          
+    custom_fields:
+      temp: |
+        [[[
+          return `<ha-icon
+            icon="mdi:battery-high"
+            style="width: 22px; height: 22px; color: white;">
+            </ha-icon><span>${entity.state}%</span>`
+        ]]]
+      cpu: |
+        [[[
+          return `<ha-icon
+            icon="mdi:bluetooth"
+            style="width: 20px; height: 20px; color: white;">
+            </ha-icon><span>  Bluetooth: <span style="color: var(--text-color-sensor);">${states['binary_sensor.pixel_4_xl_bluetooth_state'].state}</span></span>`
+        ]]]
+      ram: |
+        [[[
+          return `<ha-icon
+            icon="mdi:wifi"
+            style="width: 20px; height: 20px; color: white;">
+            </ha-icon><span>  WiFi: <span style="color: var(--text-color-sensor);">${states['binary_sensor.pixel_4_xl_wifi_state'].state}</span></span>`
+        ]]]
+      sd: |
+        [[[
+          return `<ha-icon
+            icon="mdi:battery-charging"
+            style="width: 20px; height: 20px; color: white;">
+            </ha-icon><span>  Charging: <span style="color: var(--text-color-sensor);">${states['sensor.pixelcharging'].state}</span></span>`
+        ]]]
+        
+
+####################################
+#### == Right - iPhone Card  == ####
+####################################
+      
+        
+  - type: 'custom:button-card'
+    entity: sensor.iphone_battery_level
+    entity_picture: /local/iphone.png
+    show_entity_picture: true
+    aspect_ratio: 1/1
+    name: iPhone 7
+    styles:
+      card:
+        - background-color: '#2b374e'
+        - border-radius: 10%
+        - padding: 7%
+        - color: ivory
+        - font-size: 10px
+        - text-shadow: 0px 0px 5px black
+        - text-transform: capitalize
+      grid:
+        - grid-template-areas: '"i temp" "n n" "cpu cpu" "ram ram" "sd sd"'
+        - grid-template-columns: 1fr 1fr
+        - grid-template-rows: 1fr min-content min-content min-content min-content
+      name:
+        - font-weight: bold
+        - font-size: 15px
+        - color: white
+        - align-self: middle
+        - justify-self: start
+        - padding-bottom: 6px
+      img_cell:
+        - justify-content: start
+        - align-items: start
+        - margin: none
+      icon:
+        - width: 70%
+      custom_fields:
+        temp:
+          - align-self: start
+          - justify-self: end
+          - font-size: 13px
+        cpu:
+          - padding-bottom: 2px
+          - align-self: middle
+          - justify-self: start
+          - font-size: 11px
+          - '--text-color-sensor': >-
+              [[[ if (states['binary_sensor.pixel_4_xl_bluetooth_state'].state
+              !== 'on') return "red"; ]]] 
+        ram:
+          - padding-bottom: 2px
+          - align-self: middle
+          - justify-self: start
+          - font-size: 11px
+          - '--text-color-sensor': >-
+              [[[ if (states["sensor.iphonewifi"].state !== 'on') return "red";
+              ]]] 
+        sd:
+          - align-self: middle
+          - padding-bottom: 2px
+          - justify-self: start
+          - font-size: 11px
+          - '--text-color-sensor': >-
+              [[[ if (states['sensor.iphone_battery_state'].state !== 'ac')
+              return "red"; ]]]          
+    custom_fields:
+      temp: |
+        [[[
+          return `<ha-icon
+            icon="mdi:battery-high"
+            style="width: 22px; height: 22px; color: white;">
+            </ha-icon><span>${entity.state}%</span>`
+        ]]]
+      cpu: |
+        [[[
+          return `<ha-icon
+            icon="mdi:bluetooth"
+            style="width: 20px; height: 20px; color: white;">
+            </ha-icon><span>  Bluetooth: <span style="color: var(--text-color-sensor);">${states['binary_sensor.pixel_4_xl_bluetooth_state'].state}</span></span>`
+        ]]]
+      ram: |
+        [[[
+          return `<ha-icon
+            icon="mdi:wifi"
+            style="width: 20px; height: 20px; color: white;">
+            </ha-icon><span>  WiFi: <span style="color: var(--text-color-sensor);">${states['sensor.iphonewifi'].state}</span></span>`
+        ]]]
+      sd: |
+        [[[
+          return `<ha-icon
+            icon="mdi:battery-charging"
+            style="width: 20px; height: 20px; color: white;">
+            </ha-icon><span>  Charging: <span style="color: var(--text-color-sensor);">${states['sensor.iphone_battery_state'].state}</span></span>`
+        ]]]
+        
