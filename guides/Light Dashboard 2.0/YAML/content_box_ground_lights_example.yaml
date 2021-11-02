@@ -1,0 +1,1430 @@
+type: custom:state-switch
+entity: input_select.chr_light_menu_select
+states:  
+
+  ...
+  
+  Ground:
+    type: vertical-stack
+    cards:
+      - type: horizontal-stack
+        cards:
+          - color_type: blank-card
+            styles:
+              card:
+                - width: 10px
+            type: custom:button-card
+          - type: custom:button-card
+            color: transparent
+            name: Lights
+            styles:
+              card:
+                - height: 60px
+                - padding: 3%
+                - background-color: transparent
+              name:
+                - font-size: 23px
+                - font-weight: 300
+                - justify-self: start
+          - color_type: blank-card
+            styles:
+              card:
+                - width: 10px
+            type: custom:button-card
+      - cards:
+          - type: horizontal-stack
+            cards:
+              - color_type: blank-card
+                styles:
+                  card:
+                    - width: 10px
+                type: custom:button-card
+              - type: horizontal-stack
+                cards:
+                  - type: custom:button-card
+                    icon: phu:table-shade
+                    show_icon: false
+                    name: false
+                    label: false
+                    show_label: false
+                    show_state: false
+                    show_name: false
+                    styles:
+                      card:
+                        - background-color: rgb(43, 55, 78)
+                        - border-radius: 5%
+                        - padding: 5%
+                        - box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+                      grid:
+                        - grid-template-areas: '"ln r1 r2 r3" "rm rm rm rm"'
+                        - grid-template-columns: 55% 15% 15% 15%
+                        - grid-template-rows: min-content 1fr
+                        - gap: 15px 1px
+                    custom_fields:
+                      r1:
+                        card:
+                          type: custom:button-card
+                          entity: input_select.chr_light_room_select_ground
+                          name: false
+                          show_name: false
+                          aspect_ratio: 1/1
+                          icon: phu:rooms-hallway
+                          state:
+                            - icon: phu:rooms-hallway
+                              styles:
+                                card:
+                                  - background-color: '#242e42'
+                                icon:
+                                  - color: white
+                                  - width: 25px
+                              value: Hallway
+                            - icon: phu:rooms-hallway
+                              styles:
+                                card: null
+                                icon:
+                                  - color: white
+                                  - width: 25px
+                                  - opacity: 0.6
+                              operator: default
+                          styles:
+                            icon: null
+                          tap_action:
+                            action: call-service
+                            service: input_select.select_option
+                            service_data:
+                              entity_id: input_select.chr_light_room_select_ground
+                              option: Hallway
+                      r2:
+                        card:
+                          type: custom:button-card
+                          entity: input_select.chr_light_room_select_ground
+                          name: false
+                          show_name: false
+                          aspect_ratio: 1/1
+                          icon: phu:rooms-porch
+                          state:
+                            - icon: phu:rooms-porch
+                              styles:
+                                card:
+                                  - background-color: '#242e42'
+                                icon:
+                                  - color: white
+                                  - width: 25px
+                              value: Snug
+                            - icon: phu:rooms-porch
+                              styles:
+                                card: null
+                                icon:
+                                  - color: white
+                                  - width: 25px
+                                  - opacity: 0.5
+                              operator: default
+                          styles:
+                            icon: null
+                          tap_action:
+                            action: call-service
+                            service: input_select.select_option
+                            service_data:
+                              entity_id: input_select.chr_light_room_select_ground
+                              option: Snug
+                      r3:
+                        card:
+                          type: custom:button-card
+                          entity: input_select.chr_light_room_select_ground
+                          name: false
+                          show_name: false
+                          aspect_ratio: 1/1
+                          icon: phu:rooms-kitchen
+                          state:
+                            - icon: phu:rooms-kitchen
+                              styles:
+                                card:
+                                  - background-color: '#242e42'
+                                icon:
+                                  - color: white
+                                  - width: 25px
+                              value: Kitchen
+                            - icon: phu:rooms-kitchen
+                              styles:
+                                icon:
+                                  - color: white
+                                  - width: 25px
+                                  - opacity: 0.6
+                              operator: default
+                          styles:
+                            icon: null
+                          tap_action:
+                            action: call-service
+                            service: input_select.select_option
+                            service_data:
+                              entity_id: input_select.chr_light_room_select_ground
+                              option: Kitchen
+                      rm:
+                        card:
+                          type: custom:state-switch
+                          entity: input_select.chr_light_room_select_ground
+                          states:
+                            Hallway:
+                              type: vertical-stack
+                              cards:
+                                - type: horizontal-stack
+                                  cards:
+                                    - type: custom:button-card
+                                      entity: light.ground_hallway_lamp
+                                      icon: phu:table-shade
+                                      show_icon: true
+                                      aspect_ratio: 1/1
+                                      hold_action:
+                                        action: more-info
+                                      tap_action:
+                                        action: toggle
+                                      name: Lamp
+                                      show_state: true
+                                      state:
+                                        - styles:
+                                            card:
+                                              - background-color: '#242e42'
+                                              - border-radius: 10%
+                                              - padding: 12%
+                                              - color: ivory
+                                              - opacity: 0.7
+                                              - font-size: 10px
+                                              - text-shadow: 0px 0px 5px black
+                                              - text-transform: capitalize
+                                            grid:
+                                              - grid-template-areas: '"i bright" "n n" "s s"'
+                                              - grid-template-columns: 1fr 1fr
+                                              - grid-template-rows: 1fr min-content min-content
+                                            name:
+                                              - font-weight: 300
+                                              - font-size: 10px
+                                              - color: white
+                                              - opacity: 0.7
+                                              - align-self: middle
+                                              - justify-self: start
+                                            state:
+                                              - font-weight: bold
+                                              - font-size: px
+                                              - opacity: 0.7
+                                              - color: white
+                                              - align-self: middle
+                                              - justify-self: start
+                                            img_cell:
+                                              - justify-content: start
+                                              - align-items: start
+                                              - margin: none
+                                            icon:
+                                              - width: 100%
+                                              - opacity: 0.2
+                                              - color: white
+                                            custom_fields:
+                                              bright:
+                                                - align-self: start
+                                                - justify-self: end
+                                                - border-radius: 20px
+                                                - border-style: solid
+                                                - border-width: 1px
+                                                - font-size: 10px
+                                                - font-weight: 300
+                                                - box-shadow: 2px 2px rgba(0,0,0,0.7)
+                                                - border-color: '#67727e'
+                                                - padding: 15%
+                                          value: 'off'
+                                        - styles:
+                                            card:
+                                              - background-color: '#242e42'
+                                              - border-radius: 10%
+                                              - padding: 12%
+                                              - color: ivory
+                                              - font-size: 10px
+                                              - text-shadow: 0px 0px 5px black
+                                              - text-transform: capitalize
+                                              - box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+                                            grid:
+                                              - grid-template-areas: '"i bright" "n n" "s s"'
+                                              - grid-template-columns: 1fr 1fr
+                                              - grid-template-rows: 1fr min-content min-content
+                                            name:
+                                              - font-weight: 300
+                                              - font-size: 10px
+                                              - color: white
+                                              - align-self: middle
+                                              - justify-self: start
+                                            state:
+                                              - font-weight: bold
+                                              - font-size: px
+                                              - color: white
+                                              - align-self: middle
+                                              - justify-self: start
+                                            img_cell:
+                                              - justify-content: start
+                                              - align-items: start
+                                              - margin: none
+                                            icon:
+                                              - width: 100%
+                                              - color: white
+                                            custom_fields:
+                                              bright:
+                                                - align-self: start
+                                                - justify-self: end
+                                                - border-radius: 20px
+                                                - border-style: solid
+                                                - border-width: 1px
+                                                - font-size: 10px
+                                                - font-weight: 300
+                                                - box-shadow: 2px 2px rgba(0,0,0,0.7)
+                                                - border-color: '#67727e'
+                                                - padding: 15%
+                                          value: 'on'
+                                        - styles:
+                                            card:
+                                              - background-color: '#242e42'
+                                              - border-radius: 10%
+                                              - padding: 12%
+                                              - color: ivory
+                                              - opacity: 0.7
+                                              - font-size: 10px
+                                              - text-shadow: 0px 0px 5px black
+                                              - text-transform: capitalize
+                                              - box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+                                            grid:
+                                              - grid-template-areas: '"i bright" "n n" "s s"'
+                                              - grid-template-columns: 1fr 1fr
+                                              - grid-template-rows: 1fr min-content min-content
+                                            name:
+                                              - font-weight: 300
+                                              - font-size: 10px
+                                              - opacity: 0.7
+                                              - color: white
+                                              - align-self: middle
+                                              - justify-self: start
+                                            state:
+                                              - font-weight: bold
+                                              - opacity: 0.7
+                                              - font-size: 9px
+                                              - color: white
+                                              - align-self: middle
+                                              - justify-self: start
+                                            img_cell:
+                                              - justify-content: start
+                                              - align-items: start
+                                              - margin: none
+                                            icon:
+                                              - width: 100%
+                                              - opacity: 0.2
+                                              - color: white
+                                            custom_fields:
+                                              bright:
+                                                - align-self: start
+                                                - justify-self: end
+                                                - border-radius: 20px
+                                                - border-style: solid
+                                                - border-width: 1px
+                                                - font-size: 10px
+                                                - font-weight: 300
+                                                - box-shadow: 2px 2px rgba(0,0,0,0.7)
+                                                - border-color: '#67727e'
+                                                - padding: 15%
+                                          value: unavailable
+                                    - type: custom:button-card
+                                      entity: light.front_door_ceiling_light
+                                      icon: phu:bulbs-spot
+                                      show_icon: true
+                                      aspect_ratio: 1/1
+                                      hold_action:
+                                        action: more-info
+                                      tap_action:
+                                        action: toggle
+                                      name: Floor Door
+                                      show_state: true
+                                      state:
+                                        - styles:
+                                            card:
+                                              - background-color: '#242e42'
+                                              - border-radius: 10%
+                                              - padding: 12%
+                                              - color: ivory
+                                              - opacity: 0.7
+                                              - font-size: 10px
+                                              - text-shadow: 0px 0px 5px black
+                                              - text-transform: capitalize
+                                            grid:
+                                              - grid-template-areas: '"i bright" "n n" "s s"'
+                                              - grid-template-columns: 1fr 1fr
+                                              - grid-template-rows: 1fr min-content min-content
+                                            name:
+                                              - font-weight: 300
+                                              - font-size: 10px
+                                              - opacity: 0.7
+                                              - color: white
+                                              - align-self: middle
+                                              - justify-self: start
+                                            state:
+                                              - font-weight: bold
+                                              - opacity: 0.7
+                                              - font-size: 9px
+                                              - color: white
+                                              - align-self: middle
+                                              - justify-self: start
+                                            img_cell:
+                                              - justify-content: start
+                                              - align-items: start
+                                              - margin: none
+                                            icon:
+                                              - width: 100%
+                                              - opacity: 0.2
+                                              - color: white
+                                            custom_fields:
+                                              bright:
+                                                - align-self: start
+                                                - justify-self: end
+                                                - border-radius: 20px
+                                                - border-style: solid
+                                                - border-width: 1px
+                                                - font-size: 10px
+                                                - font-weight: 300
+                                                - box-shadow: 2px 2px rgba(0,0,0,0.7)
+                                                - border-color: '#67727e'
+                                                - padding: 15%
+                                          value: 'off'
+                                        - styles:
+                                            card:
+                                              - background-color: '#242e42'
+                                              - border-radius: 10%
+                                              - padding: 12%
+                                              - color: ivory
+                                              - opacity: 0.7
+                                              - font-size: 10px
+                                              - text-shadow: 0px 0px 5px black
+                                              - text-transform: capitalize
+                                              - box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+                                            grid:
+                                              - grid-template-areas: '"i bright" "n n" "s s"'
+                                              - grid-template-columns: 1fr 1fr
+                                              - grid-template-rows: 1fr min-content min-content
+                                            name:
+                                              - font-weight: 300
+                                              - font-size: 10px
+                                              - opacity: 0.7
+                                              - color: white
+                                              - align-self: middle
+                                              - justify-self: start
+                                            state:
+                                              - font-weight: bold
+                                              - opacity: 0.7
+                                              - font-size: 9px
+                                              - color: white
+                                              - align-self: middle
+                                              - justify-self: start
+                                            img_cell:
+                                              - justify-content: start
+                                              - align-items: start
+                                              - margin: none
+                                            icon:
+                                              - width: 100%
+                                              - opacity: 0.2
+                                              - color: white
+                                            custom_fields:
+                                              bright:
+                                                - align-self: start
+                                                - justify-self: end
+                                                - border-radius: 20px
+                                                - border-style: solid
+                                                - border-width: 1px
+                                                - font-size: 10px
+                                                - font-weight: 300
+                                                - box-shadow: 2px 2px rgba(0,0,0,0.7)
+                                                - border-color: '#67727e'
+                                                - padding: 15%
+                                          value: unavailable
+                                        - styles:
+                                            card:
+                                              - background-color: '#242e42'
+                                              - border-radius: 10%
+                                              - padding: 12%
+                                              - color: ivory
+                                              - font-size: 10px
+                                              - text-shadow: 0px 0px 5px black
+                                              - text-transform: capitalize
+                                              - box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+                                            grid:
+                                              - grid-template-areas: '"i bright" "n n" "s s"'
+                                              - grid-template-columns: 1fr 1fr
+                                              - grid-template-rows: 1fr min-content min-content
+                                            name:
+                                              - font-weight: 300
+                                              - font-size: 10px
+                                              - color: white
+                                              - align-self: middle
+                                              - justify-self: start
+                                            state:
+                                              - font-weight: bold
+                                              - font-size: 9px
+                                              - color: white
+                                              - align-self: middle
+                                              - justify-self: start
+                                            img_cell:
+                                              - justify-content: start
+                                              - align-items: start
+                                              - margin: none
+                                            icon:
+                                              - width: 100%
+                                              - color: white
+                                            custom_fields:
+                                              bright:
+                                                - opacity: 0
+                                                - align-self: start
+                                                - justify-self: end
+                                                - border-radius: 20px
+                                                - border-style: solid
+                                                - border-width: 1px
+                                                - font-size: 10px
+                                                - font-weight: 300
+                                                - box-shadow: 2px 2px rgba(0,0,0,0.7)
+                                                - border-color: '#67727e'
+                                                - padding: 15%
+                                          value: 'on'
+                                    - type: custom:button-card
+                                      entity: light.ground_floor_hallway
+                                      icon: phu:pendant-round
+                                      show_icon: true
+                                      hold_action:
+                                        action: more-info
+                                      tap_action:
+                                        action: toggle
+                                      aspect_ratio: 1/1
+                                      name: Ceiling
+                                      show_state: true
+                                      state:
+                                        - styles:
+                                            card:
+                                              - background-color: '#242e42'
+                                              - border-radius: 10%
+                                              - padding: 12%
+                                              - color: ivory
+                                              - opacity: 0.7
+                                              - font-size: 10px
+                                              - text-shadow: 0px 0px 5px black
+                                              - text-transform: capitalize
+                                            grid:
+                                              - grid-template-areas: '"i bright" "n n" "s s"'
+                                              - grid-template-columns: 1fr 1fr
+                                              - grid-template-rows: 1fr min-content min-content
+                                            name:
+                                              - font-weight: 300
+                                              - font-size: 10px
+                                              - opacity: 0.7
+                                              - color: white
+                                              - align-self: middle
+                                              - justify-self: start
+                                            state:
+                                              - font-weight: bold
+                                              - opacity: 0.7
+                                              - font-size: 9px
+                                              - color: white
+                                              - align-self: middle
+                                              - justify-self: start
+                                            img_cell:
+                                              - justify-content: start
+                                              - align-items: start
+                                              - margin: none
+                                            icon:
+                                              - width: 100%
+                                              - opacity: 0.2
+                                              - color: white
+                                            custom_fields:
+                                              bright:
+                                                - align-self: start
+                                                - justify-self: end
+                                                - border-radius: 20px
+                                                - border-style: solid
+                                                - border-width: 1px
+                                                - font-size: 10px
+                                                - font-weight: 300
+                                                - box-shadow: 2px 2px rgba(0,0,0,0.7)
+                                                - border-color: '#67727e'
+                                                - padding: 15%
+                                          value: unavailable
+                                        - styles:
+                                            card:
+                                              - background-color: '#242e42'
+                                              - border-radius: 10%
+                                              - padding: 12%
+                                              - color: ivory
+                                              - opacity: 0.7
+                                              - font-size: 10px
+                                              - text-shadow: 0px 0px 5px black
+                                              - text-transform: capitalize
+                                            grid:
+                                              - grid-template-areas: '"i bright" "n n" "s s"'
+                                              - grid-template-columns: 1fr 1fr
+                                              - grid-template-rows: 1fr min-content min-content
+                                            name:
+                                              - font-weight: 300
+                                              - font-size: 10px
+                                              - color: white
+                                              - opacity: 0.7
+                                              - align-self: middle
+                                              - justify-self: start
+                                            state:
+                                              - font-weight: bold
+                                              - font-size: 9px
+                                              - opacity: 0.7
+                                              - color: white
+                                              - align-self: middle
+                                              - justify-self: start
+                                            img_cell:
+                                              - justify-content: start
+                                              - align-items: start
+                                              - margin: none
+                                            icon:
+                                              - width: 100%
+                                              - color: white
+                                              - opacity: 0.2
+                                            custom_fields:
+                                              bright:
+                                                - opacity: 0
+                                                - align-self: start
+                                                - justify-self: end
+                                                - border-radius: 20px
+                                                - border-style: solid
+                                                - border-width: 1px
+                                                - font-size: 10px
+                                                - font-weight: 300
+                                                - box-shadow: 2px 2px rgba(0,0,0,0.7)
+                                                - border-color: '#67727e'
+                                                - padding: 15%
+                                          value: 'off'
+                                        - styles:
+                                            card:
+                                              - background-color: '#242e42'
+                                              - border-radius: 10%
+                                              - padding: 12%
+                                              - color: ivory
+                                              - font-size: 10px
+                                              - text-shadow: 0px 0px 5px black
+                                              - text-transform: capitalize
+                                              - box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+                                            grid:
+                                              - grid-template-areas: '"i bright" "n n" "s s"'
+                                              - grid-template-columns: 1fr 1fr
+                                              - grid-template-rows: 1fr min-content min-content
+                                            name:
+                                              - font-weight: 300
+                                              - font-size: 10px
+                                              - color: white
+                                              - align-self: middle
+                                              - justify-self: start
+                                            state:
+                                              - font-weight: bold
+                                              - font-size: 9px
+                                              - color: white
+                                              - align-self: middle
+                                              - justify-self: start
+                                            img_cell:
+                                              - justify-content: start
+                                              - align-items: start
+                                              - margin: none
+                                            icon:
+                                              - width: 100%
+                                              - color: white
+                                            custom_fields:
+                                              bright:
+                                                - align-self: start
+                                                - justify-self: end
+                                                - border-radius: 20px
+                                                - border-style: solid
+                                                - border-width: 1px
+                                                - font-size: 10px
+                                                - font-weight: 300
+                                                - box-shadow: 2px 2px rgba(0,0,0,0.7)
+                                                - border-color: '#67727e'
+                                                - padding: 15%
+                                          value: 'on'
+                                      custom_fields:
+                                        bright: |
+                                          [[[
+                                            var b = states['light.snug_ceiling'].attributes.brightness;
+                                            return parseInt(b ? b/2.55 : '0') + '%';
+                                          ]]]
+                                - type: horizontal-stack
+                                  cards:
+                                    - type: custom:button-card
+                                      entity: switch.office_lamp_2
+                                      icon: phu:bulbs-spot
+                                      show_icon: true
+                                      aspect_ratio: 1/1
+                                      hold_action:
+                                        action: more-info
+                                      tap_action:
+                                        action: toggle
+                                      name: Porch
+                                      show_state: true
+                                      state:
+                                        - styles:
+                                            card:
+                                              - background-color: '#242e42'
+                                              - border-radius: 10%
+                                              - padding: 12%
+                                              - color: ivory
+                                              - opacity: 0.7
+                                              - font-size: 10px
+                                              - text-shadow: 0px 0px 5px black
+                                              - text-transform: capitalize
+                                            grid:
+                                              - grid-template-areas: '"i bright" "n n" "s s"'
+                                              - grid-template-columns: 1fr 1fr
+                                              - grid-template-rows: 1fr min-content min-content
+                                            name:
+                                              - font-weight: 300
+                                              - font-size: 10px
+                                              - color: white
+                                              - opacity: 0.7
+                                              - align-self: middle
+                                              - justify-self: start
+                                            state:
+                                              - font-weight: bold
+                                              - font-size: px
+                                              - opacity: 0.7
+                                              - color: white
+                                              - align-self: middle
+                                              - justify-self: start
+                                            img_cell:
+                                              - justify-content: start
+                                              - align-items: start
+                                              - margin: none
+                                            icon:
+                                              - width: 100%
+                                              - opacity: 0.2
+                                              - color: white
+                                            custom_fields:
+                                              bright:
+                                                - align-self: start
+                                                - justify-self: end
+                                                - border-radius: 20px
+                                                - border-style: solid
+                                                - border-width: 1px
+                                                - font-size: 10px
+                                                - font-weight: 300
+                                                - box-shadow: 2px 2px rgba(0,0,0,0.7)
+                                                - border-color: '#67727e'
+                                                - padding: 15%
+                                          value: 'off'
+                                        - styles:
+                                            card:
+                                              - background-color: '#242e42'
+                                              - border-radius: 10%
+                                              - padding: 12%
+                                              - color: ivory
+                                              - font-size: 10px
+                                              - text-shadow: 0px 0px 5px black
+                                              - text-transform: capitalize
+                                              - box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+                                            grid:
+                                              - grid-template-areas: '"i bright" "n n" "s s"'
+                                              - grid-template-columns: 1fr 1fr
+                                              - grid-template-rows: 1fr min-content min-content
+                                            name:
+                                              - font-weight: 300
+                                              - font-size: 10px
+                                              - color: white
+                                              - align-self: middle
+                                              - justify-self: start
+                                            state:
+                                              - font-weight: bold
+                                              - font-size: px
+                                              - color: white
+                                              - align-self: middle
+                                              - justify-self: start
+                                            img_cell:
+                                              - justify-content: start
+                                              - align-items: start
+                                              - margin: none
+                                            icon:
+                                              - width: 100%
+                                              - color: white
+                                            custom_fields:
+                                              bright:
+                                                - align-self: start
+                                                - justify-self: end
+                                                - border-radius: 20px
+                                                - border-style: solid
+                                                - border-width: 1px
+                                                - font-size: 10px
+                                                - font-weight: 300
+                                                - box-shadow: 2px 2px rgba(0,0,0,0.7)
+                                                - border-color: '#67727e'
+                                                - padding: 15%
+                                          value: 'on'
+                                    - type: custom:button-card
+                                      color_type: blank-card
+                                    - type: custom:button-card
+                                      color_type: blank-card
+                            Snug:
+                              type: vertical-stack
+                              cards:
+                                - type: horizontal-stack
+                                  cards:
+                                    - type: custom:button-card
+                                      entity: switch.sonoff_10004008d2
+                                      icon: phu:floor-shade
+                                      show_icon: true
+                                      aspect_ratio: 1/1
+                                      hold_action:
+                                        action: more-info
+                                      tap_action:
+                                        action: toggle
+                                      name: Floor Lamp
+                                      show_state: true
+                                      state:
+                                        - styles:
+                                            card:
+                                              - background-color: '#242e42'
+                                              - border-radius: 10%
+                                              - padding: 12%
+                                              - color: ivory
+                                              - opacity: 0.7
+                                              - font-size: 10px
+                                              - text-shadow: 0px 0px 5px black
+                                              - text-transform: capitalize
+                                            grid:
+                                              - grid-template-areas: '"i bright" "n n" "s s"'
+                                              - grid-template-columns: 1fr 1fr
+                                              - grid-template-rows: 1fr min-content min-content
+                                            name:
+                                              - font-weight: 300
+                                              - font-size: 10px
+                                              - color: white
+                                              - opacity: 0.7
+                                              - align-self: middle
+                                              - justify-self: start
+                                            state:
+                                              - font-weight: bold
+                                              - font-size: px
+                                              - opacity: 0.7
+                                              - color: white
+                                              - align-self: middle
+                                              - justify-self: start
+                                            img_cell:
+                                              - justify-content: start
+                                              - align-items: start
+                                              - margin: none
+                                            icon:
+                                              - width: 100%
+                                              - opacity: 0.2
+                                              - color: white
+                                            custom_fields:
+                                              bright:
+                                                - align-self: start
+                                                - justify-self: end
+                                                - border-radius: 20px
+                                                - border-style: solid
+                                                - border-width: 1px
+                                                - font-size: 10px
+                                                - font-weight: 300
+                                                - box-shadow: 2px 2px rgba(0,0,0,0.7)
+                                                - border-color: '#67727e'
+                                                - padding: 15%
+                                          value: 'off'
+                                        - styles:
+                                            card:
+                                              - background-color: '#242e42'
+                                              - border-radius: 10%
+                                              - padding: 12%
+                                              - color: ivory
+                                              - font-size: 10px
+                                              - text-shadow: 0px 0px 5px black
+                                              - text-transform: capitalize
+                                              - box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+                                            grid:
+                                              - grid-template-areas: '"i bright" "n n" "s s"'
+                                              - grid-template-columns: 1fr 1fr
+                                              - grid-template-rows: 1fr min-content min-content
+                                            name:
+                                              - font-weight: 300
+                                              - font-size: 10px
+                                              - color: white
+                                              - align-self: middle
+                                              - justify-self: start
+                                            state:
+                                              - font-weight: bold
+                                              - font-size: px
+                                              - color: white
+                                              - align-self: middle
+                                              - justify-self: start
+                                            img_cell:
+                                              - justify-content: start
+                                              - align-items: start
+                                              - margin: none
+                                            icon:
+                                              - width: 100%
+                                              - color: white
+                                            custom_fields:
+                                              bright:
+                                                - align-self: start
+                                                - justify-self: end
+                                                - border-radius: 20px
+                                                - border-style: solid
+                                                - border-width: 1px
+                                                - font-size: 10px
+                                                - font-weight: 300
+                                                - box-shadow: 2px 2px rgba(0,0,0,0.7)
+                                                - border-color: '#67727e'
+                                                - padding: 15%
+                                          value: 'on'
+                                        - styles:
+                                            card:
+                                              - background-color: '#242e42'
+                                              - border-radius: 10%
+                                              - padding: 12%
+                                              - color: ivory
+                                              - opacity: 0.7
+                                              - font-size: 10px
+                                              - text-shadow: 0px 0px 5px black
+                                              - text-transform: capitalize
+                                              - box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+                                            grid:
+                                              - grid-template-areas: '"i bright" "n n" "s s"'
+                                              - grid-template-columns: 1fr 1fr
+                                              - grid-template-rows: 1fr min-content min-content
+                                            name:
+                                              - font-weight: 300
+                                              - font-size: 10px
+                                              - opacity: 0.7
+                                              - color: white
+                                              - align-self: middle
+                                              - justify-self: start
+                                            state:
+                                              - font-weight: bold
+                                              - opacity: 0.7
+                                              - font-size: 9px
+                                              - color: white
+                                              - align-self: middle
+                                              - justify-self: start
+                                            img_cell:
+                                              - justify-content: start
+                                              - align-items: start
+                                              - margin: none
+                                            icon:
+                                              - width: 100%
+                                              - opacity: 0.2
+                                              - color: white
+                                            custom_fields:
+                                              bright:
+                                                - align-self: start
+                                                - justify-self: end
+                                                - border-radius: 20px
+                                                - border-style: solid
+                                                - border-width: 1px
+                                                - font-size: 10px
+                                                - font-weight: 300
+                                                - box-shadow: 2px 2px rgba(0,0,0,0.7)
+                                                - border-color: '#67727e'
+                                                - padding: 15%
+                                          value: unavailable
+                                    - type: custom:button-card
+                                      entity: light.snug_ceiling
+                                      icon: phu:ceiling-lamp-round
+                                      show_icon: true
+                                      aspect_ratio: 1/1
+                                      hold_action:
+                                        action: more-info
+                                      tap_action:
+                                        action: toggle
+                                      name: Ceiling
+                                      show_state: true
+                                      state:
+                                        - styles:
+                                            card:
+                                              - background-color: '#242e42'
+                                              - border-radius: 10%
+                                              - padding: 12%
+                                              - color: ivory
+                                              - opacity: 0.7
+                                              - font-size: 10px
+                                              - text-shadow: 0px 0px 5px black
+                                              - text-transform: capitalize
+                                            grid:
+                                              - grid-template-areas: '"i bright" "n n" "s s"'
+                                              - grid-template-columns: 1fr 1fr
+                                              - grid-template-rows: 1fr min-content min-content
+                                            name:
+                                              - font-weight: 300
+                                              - font-size: 10px
+                                              - opacity: 0.7
+                                              - color: white
+                                              - align-self: middle
+                                              - justify-self: start
+                                            state:
+                                              - font-weight: bold
+                                              - opacity: 0.7
+                                              - font-size: 9px
+                                              - color: white
+                                              - align-self: middle
+                                              - justify-self: start
+                                            img_cell:
+                                              - justify-content: start
+                                              - align-items: start
+                                              - margin: none
+                                            icon:
+                                              - width: 100%
+                                              - opacity: 0.2
+                                              - color: white
+                                            custom_fields:
+                                              bright:
+                                                - align-self: start
+                                                - justify-self: end
+                                                - border-radius: 20px
+                                                - border-style: solid
+                                                - border-width: 1px
+                                                - font-size: 10px
+                                                - font-weight: 300
+                                                - box-shadow: 2px 2px rgba(0,0,0,0.7)
+                                                - border-color: '#67727e'
+                                                - padding: 15%
+                                          value: 'off'
+                                        - styles:
+                                            card:
+                                              - background-color: '#242e42'
+                                              - border-radius: 10%
+                                              - padding: 12%
+                                              - color: ivory
+                                              - opacity: 0.7
+                                              - font-size: 10px
+                                              - text-shadow: 0px 0px 5px black
+                                              - text-transform: capitalize
+                                              - box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+                                            grid:
+                                              - grid-template-areas: '"i bright" "n n" "s s"'
+                                              - grid-template-columns: 1fr 1fr
+                                              - grid-template-rows: 1fr min-content min-content
+                                            name:
+                                              - font-weight: 300
+                                              - font-size: 10px
+                                              - opacity: 0.7
+                                              - color: white
+                                              - align-self: middle
+                                              - justify-self: start
+                                            state:
+                                              - font-weight: bold
+                                              - opacity: 0.7
+                                              - font-size: 9px
+                                              - color: white
+                                              - align-self: middle
+                                              - justify-self: start
+                                            img_cell:
+                                              - justify-content: start
+                                              - align-items: start
+                                              - margin: none
+                                            icon:
+                                              - width: 100%
+                                              - opacity: 0.2
+                                              - color: white
+                                            custom_fields:
+                                              bright:
+                                                - align-self: start
+                                                - justify-self: end
+                                                - border-radius: 20px
+                                                - border-style: solid
+                                                - border-width: 1px
+                                                - font-size: 10px
+                                                - font-weight: 300
+                                                - box-shadow: 2px 2px rgba(0,0,0,0.7)
+                                                - border-color: '#67727e'
+                                                - padding: 15%
+                                          value: unavailable
+                                        - styles:
+                                            card:
+                                              - background-color: '#242e42'
+                                              - border-radius: 10%
+                                              - padding: 12%
+                                              - color: ivory
+                                              - font-size: 10px
+                                              - text-shadow: 0px 0px 5px black
+                                              - text-transform: capitalize
+                                              - box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+                                            grid:
+                                              - grid-template-areas: '"i bright" "n n" "s s"'
+                                              - grid-template-columns: 1fr 1fr
+                                              - grid-template-rows: 1fr min-content min-content
+                                            name:
+                                              - font-weight: 300
+                                              - font-size: 10px
+                                              - color: white
+                                              - align-self: middle
+                                              - justify-self: start
+                                            state:
+                                              - font-weight: bold
+                                              - font-size: 9px
+                                              - color: white
+                                              - align-self: middle
+                                              - justify-self: start
+                                            img_cell:
+                                              - justify-content: start
+                                              - align-items: start
+                                              - margin: none
+                                            icon:
+                                              - width: 100%
+                                              - color: white
+                                            custom_fields:
+                                              bright:
+                                                - opacity: 0
+                                                - align-self: start
+                                                - justify-self: end
+                                                - border-radius: 20px
+                                                - border-style: solid
+                                                - border-width: 1px
+                                                - font-size: 10px
+                                                - font-weight: 300
+                                                - box-shadow: 2px 2px rgba(0,0,0,0.7)
+                                                - border-color: '#67727e'
+                                                - padding: 15%
+                                          value: 'on'
+                                    - type: custom:button-card
+                                      color_type: blank-card
+                            Kitchen:
+                              type: vertical-stack
+                              cards:
+                                - type: horizontal-stack
+                                  cards:
+                                    - type: custom:button-card
+                                      entity: light.kitchen_rgb_lights
+                                      icon: phu:light-strip
+                                      show_icon: true
+                                      aspect_ratio: 1/1
+                                      hold_action:
+                                        action: more-info
+                                      tap_action:
+                                        action: toggle
+                                      name: RGB Cabinets
+                                      show_state: true
+                                      state:
+                                        - styles:
+                                            card:
+                                              - background-color: '#242e42'
+                                              - border-radius: 10%
+                                              - padding: 12%
+                                              - color: ivory
+                                              - opacity: 0.7
+                                              - font-size: 10px
+                                              - text-shadow: 0px 0px 5px black
+                                              - text-transform: capitalize
+                                            grid:
+                                              - grid-template-areas: '"i bright" "n n" "s s"'
+                                              - grid-template-columns: 1fr 1fr
+                                              - grid-template-rows: 1fr min-content min-content
+                                            name:
+                                              - font-weight: 300
+                                              - font-size: 10px
+                                              - color: white
+                                              - opacity: 0.7
+                                              - align-self: middle
+                                              - justify-self: start
+                                            state:
+                                              - font-weight: bold
+                                              - font-size: px
+                                              - opacity: 0.7
+                                              - color: white
+                                              - align-self: middle
+                                              - justify-self: start
+                                            img_cell:
+                                              - justify-content: start
+                                              - align-items: start
+                                              - margin: none
+                                            icon:
+                                              - width: 100%
+                                              - opacity: 0.2
+                                              - color: white
+                                            custom_fields:
+                                              bright:
+                                                - align-self: start
+                                                - justify-self: end
+                                                - border-radius: 20px
+                                                - border-style: solid
+                                                - border-width: 1px
+                                                - font-size: 10px
+                                                - font-weight: 300
+                                                - box-shadow: 2px 2px rgba(0,0,0,0.7)
+                                                - border-color: '#67727e'
+                                                - padding: 15%
+                                          value: 'off'
+                                        - styles:
+                                            card:
+                                              - background-color: '#242e42'
+                                              - border-radius: 10%
+                                              - padding: 12%
+                                              - color: ivory
+                                              - font-size: 10px
+                                              - text-shadow: 0px 0px 5px black
+                                              - text-transform: capitalize
+                                              - box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+                                            grid:
+                                              - grid-template-areas: '"i bright" "n n" "s s"'
+                                              - grid-template-columns: 1fr 1fr
+                                              - grid-template-rows: 1fr min-content min-content
+                                            name:
+                                              - font-weight: 300
+                                              - font-size: 10px
+                                              - color: white
+                                              - align-self: middle
+                                              - justify-self: start
+                                            state:
+                                              - font-weight: bold
+                                              - font-size: px
+                                              - color: white
+                                              - align-self: middle
+                                              - justify-self: start
+                                            img_cell:
+                                              - justify-content: start
+                                              - align-items: start
+                                              - margin: none
+                                            icon:
+                                              - width: 100%
+                                              - color: white
+                                            custom_fields:
+                                              bright:
+                                                - align-self: start
+                                                - justify-self: end
+                                                - border-radius: 20px
+                                                - border-style: solid
+                                                - border-width: 1px
+                                                - font-size: 10px
+                                                - font-weight: 300
+                                                - box-shadow: 2px 2px rgba(0,0,0,0.7)
+                                                - border-color: '#67727e'
+                                                - padding: 15%
+                                          value: 'on'
+                                        - styles:
+                                            card:
+                                              - background-color: '#242e42'
+                                              - border-radius: 10%
+                                              - padding: 12%
+                                              - color: ivory
+                                              - opacity: 0.7
+                                              - font-size: 10px
+                                              - text-shadow: 0px 0px 5px black
+                                              - text-transform: capitalize
+                                              - box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+                                            grid:
+                                              - grid-template-areas: '"i bright" "n n" "s s"'
+                                              - grid-template-columns: 1fr 1fr
+                                              - grid-template-rows: 1fr min-content min-content
+                                            name:
+                                              - font-weight: 300
+                                              - font-size: 10px
+                                              - opacity: 0.7
+                                              - color: white
+                                              - align-self: middle
+                                              - justify-self: start
+                                            state:
+                                              - font-weight: bold
+                                              - opacity: 0.7
+                                              - font-size: 9px
+                                              - color: white
+                                              - align-self: middle
+                                              - justify-self: start
+                                            img_cell:
+                                              - justify-content: start
+                                              - align-items: start
+                                              - margin: none
+                                            icon:
+                                              - width: 100%
+                                              - opacity: 0.2
+                                              - color: white
+                                            custom_fields:
+                                              bright:
+                                                - align-self: start
+                                                - justify-self: end
+                                                - border-radius: 20px
+                                                - border-style: solid
+                                                - border-width: 1px
+                                                - font-size: 10px
+                                                - font-weight: 300
+                                                - box-shadow: 2px 2px rgba(0,0,0,0.7)
+                                                - border-color: '#67727e'
+                                                - padding: 15%
+                                          value: unavailable
+                                    - type: custom:button-card
+                                      entity: light.kitchen_lights_2
+                                      icon: phu:bulbs-spot
+                                      show_icon: true
+                                      aspect_ratio: 1/1
+                                      hold_action:
+                                        action: more-info
+                                      tap_action:
+                                        action: toggle
+                                      name: Ceiling
+                                      show_state: true
+                                      state:
+                                        - styles:
+                                            card:
+                                              - background-color: '#242e42'
+                                              - border-radius: 10%
+                                              - padding: 12%
+                                              - color: ivory
+                                              - opacity: 0.7
+                                              - font-size: 10px
+                                              - text-shadow: 0px 0px 5px black
+                                              - text-transform: capitalize
+                                            grid:
+                                              - grid-template-areas: '"i bright" "n n" "s s"'
+                                              - grid-template-columns: 1fr 1fr
+                                              - grid-template-rows: 1fr min-content min-content
+                                            name:
+                                              - font-weight: 300
+                                              - font-size: 10px
+                                              - opacity: 0.7
+                                              - color: white
+                                              - align-self: middle
+                                              - justify-self: start
+                                            state:
+                                              - font-weight: bold
+                                              - opacity: 0.7
+                                              - font-size: 9px
+                                              - color: white
+                                              - align-self: middle
+                                              - justify-self: start
+                                            img_cell:
+                                              - justify-content: start
+                                              - align-items: start
+                                              - margin: none
+                                            icon:
+                                              - width: 100%
+                                              - opacity: 0.2
+                                              - color: white
+                                            custom_fields:
+                                              bright:
+                                                - align-self: start
+                                                - justify-self: end
+                                                - border-radius: 20px
+                                                - border-style: solid
+                                                - border-width: 1px
+                                                - font-size: 10px
+                                                - font-weight: 300
+                                                - box-shadow: 2px 2px rgba(0,0,0,0.7)
+                                                - border-color: '#67727e'
+                                                - padding: 15%
+                                          value: 'off'
+                                        - styles:
+                                            card:
+                                              - background-color: '#242e42'
+                                              - border-radius: 10%
+                                              - padding: 12%
+                                              - color: ivory
+                                              - opacity: 0.7
+                                              - font-size: 10px
+                                              - text-shadow: 0px 0px 5px black
+                                              - text-transform: capitalize
+                                              - box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+                                            grid:
+                                              - grid-template-areas: '"i bright" "n n" "s s"'
+                                              - grid-template-columns: 1fr 1fr
+                                              - grid-template-rows: 1fr min-content min-content
+                                            name:
+                                              - font-weight: 300
+                                              - font-size: 10px
+                                              - opacity: 0.7
+                                              - color: white
+                                              - align-self: middle
+                                              - justify-self: start
+                                            state:
+                                              - font-weight: bold
+                                              - opacity: 0.7
+                                              - font-size: 9px
+                                              - color: white
+                                              - align-self: middle
+                                              - justify-self: start
+                                            img_cell:
+                                              - justify-content: start
+                                              - align-items: start
+                                              - margin: none
+                                            icon:
+                                              - width: 100%
+                                              - opacity: 0.2
+                                              - color: white
+                                            custom_fields:
+                                              bright:
+                                                - align-self: start
+                                                - justify-self: end
+                                                - border-radius: 20px
+                                                - border-style: solid
+                                                - border-width: 1px
+                                                - font-size: 10px
+                                                - font-weight: 300
+                                                - box-shadow: 2px 2px rgba(0,0,0,0.7)
+                                                - border-color: '#67727e'
+                                                - padding: 15%
+                                          value: unavailable
+                                        - styles:
+                                            card:
+                                              - background-color: '#242e42'
+                                              - border-radius: 10%
+                                              - padding: 12%
+                                              - color: ivory
+                                              - font-size: 10px
+                                              - text-shadow: 0px 0px 5px black
+                                              - text-transform: capitalize
+                                              - box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+                                            grid:
+                                              - grid-template-areas: '"i bright" "n n" "s s"'
+                                              - grid-template-columns: 1fr 1fr
+                                              - grid-template-rows: 1fr min-content min-content
+                                            name:
+                                              - font-weight: 300
+                                              - font-size: 10px
+                                              - color: white
+                                              - align-self: middle
+                                              - justify-self: start
+                                            state:
+                                              - font-weight: bold
+                                              - font-size: 9px
+                                              - color: white
+                                              - align-self: middle
+                                              - justify-self: start
+                                            img_cell:
+                                              - justify-content: start
+                                              - align-items: start
+                                              - margin: none
+                                            icon:
+                                              - width: 100%
+                                              - color: white
+                                            custom_fields:
+                                              bright:
+                                                - opacity: 0
+                                                - align-self: start
+                                                - justify-self: end
+                                                - border-radius: 20px
+                                                - border-style: solid
+                                                - border-width: 1px
+                                                - font-size: 10px
+                                                - font-weight: 300
+                                                - box-shadow: 2px 2px rgba(0,0,0,0.7)
+                                                - border-color: '#67727e'
+                                                - padding: 15%
+                                          value: 'on'
+                                    - type: custom:button-card
+                                      color_type: blank-card
+                      ln:
+                        card:
+                          type: custom:button-card
+                          color: transparent
+                          name: |
+                            [[[
+                              return states['input_select.chr_light_room_select_ground'].state;
+                            ]]]
+                          styles:
+                            card:
+                              - background-color: transparent
+                            name:
+                              - font-size: 18px
+                              - font-weight: 300
+                              - justify-self: left
+                              - padding-left: 2%
+                              - padding-top: 3%
+                              - padding-bottom: 3%
+              - color_type: blank-card
+                styles:
+                  card:
+                    - width: 10px
+                type: custom:button-card
+        type: vertical-stack
