@@ -26,11 +26,11 @@ I’ve used this combination of ‘**custom:state-switch**’ and ‘**input_sel
 
 Anywho, into the nitty gritty stuff, the card basically consists of three parts which are all housed within a ‘vertical-stack’ card …
 
--   **Header \[Red\]** \- You’ve guessed it. It’s the header for this dashboard and simple shows the title, icon and label, which changes to menu options selected below (In this case ‘Overview’ should be ‘Ground’ in the image below). Created with a single ‘custom:button-card’ whilst using the ‘grid’ option to define the cards layout
+-   ![#FF0000](https://via.placeholder.com/15/FF0000/000000?text=+) **Header** \- You’ve guessed it. It’s the header for this dashboard and simple shows the title, icon and label, which changes to menu options selected below (In this case ‘Overview’ should be ‘Ground’ in the image below). Created with a single ‘custom:button-card’ whilst using the ‘grid’ option to define the cards layout
     
--   **Menu \[Yellow\]** \- Another ‘**custom:button-card**’ but this time including an ‘**input\_select**’ into the mix which will set a predetermined state for the ‘**input\_select**’ entity when pressed.
+-  ![#c5f015](https://via.placeholder.com/15/FFFF00/000000?text=+)  **Menu** \- Another ‘**custom:button-card**’ but this time including an ‘**input\_select**’ into the mix which will set a predetermined state for the ‘**input\_select**’ entity when pressed.
     
--   **Content \[Green\]** \- This is where the magic happens. Depending on the button pressed above and thus changing the ‘**input_select**’ state, we can use the ‘**custom:state-switch**’ to only display set bunch of stuff depending on the state.
+-  ![#1589F0](https://via.placeholder.com/15/00FF00/000000?text=+)  **Content** \- This is where the magic happens. Depending on the button pressed above and thus changing the ‘**input_select**’ state, we can use the ‘**custom:state-switch**’ to only display set bunch of stuff depending on the state.
     
 
 ![enter image description here](https://i.imgur.com/aRB10pG.jpg)
