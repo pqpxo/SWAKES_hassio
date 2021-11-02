@@ -1,0 +1,144 @@
+type: horizontal-stack
+cards:
+  - type: custom:button-card
+    color: transparent
+    entity: input_select.chr_light_menu_select
+    show_name: true
+    color_type: label-card
+    name: Overview
+    icon: mdi:home-lightbulb-outline
+    state:
+      - icon: mdi:home-lightbulb-outline
+        styles:
+          icon:
+            - color: white
+            - width: 40px
+          name:
+            - color: white
+            - font-size: 12px
+            - padding-top: 5px
+        value: Overview
+      - icon: mdi:home-lightbulb-outline
+        styles:
+          icon:
+            - color: white
+            - opacity: 0.5
+            - width: 40px
+          name:
+            - color: white
+            - font-size: 12px
+            - padding-top: 5px
+        operator: default
+    styles:
+      icon: null
+    tap_action:
+      action: call-service
+      service: input_select.select_option
+      service_data:
+        entity_id: input_select.chr_light_menu_select
+        option: Overview
+  - type: custom:button-card
+    color: transparent
+    entity: input_select.chr_light_menu_select
+    show_name: true
+    color_type: label-card
+    name: Ground
+    icon: mdi:home-floor-g
+    state:
+      - icon: mdi:home-floor-g
+        styles:
+          icon:
+            - color: white
+            - width: 40px
+          name:
+            - color: white
+            - font-size: 12px
+            - padding-top: 5px
+        value: Ground
+      - icon: mdi:home-floor-g
+        styles:
+          icon:
+            - color: white
+            - opacity: 0.5
+            - width: 40px
+          name:
+            - color: white
+            - font-size: 12px
+            - padding-top: 5px
+        operator: default
+    tap_action:
+      action: call-service
+      service: input_select.select_option
+      service_data:
+        entity_id: input_select.chr_light_menu_select
+        option: Ground
+  - type: custom:button-card
+    color: transparent
+    entity: input_select.chr_light_menu_select
+    show_name: true
+    color_type: label-card
+    name: First
+    icon: mdi:home-floor-1
+    state:
+      - icon: mdi:home-floor-1
+        styles:
+          icon:
+            - color: white
+            - width: 40px
+          name:
+            - color: white
+            - font-size: 12px
+            - padding-top: 5px
+        value: First
+      - icon: mdi:home-floor-1
+        styles:
+          icon:
+            - color: white
+            - opacity: 0.5
+            - width: 40px
+          name:
+            - color: white
+            - font-size: 12px
+            - padding-top: 5px
+        operator: default
+    tap_action:
+      action: call-service
+      service: input_select.select_option
+      service_data:
+        entity_id: input_select.chr_light_menu_select
+        option: First
+  - type: custom:button-card
+    color: transparent
+    entity: input_select.chr_light_menu_select
+    show_name: true
+    color_type: label-card
+    name: Second
+    icon: mdi:home-floor-2
+    state:
+      - icon: mdi:home-floor-2
+        styles:
+          icon:
+            - color: white
+            - width: 40px
+          name:
+            - color: white
+            - font-size: 12px
+            - padding-top: 5px
+        value: Second
+      - icon: mdi:home-floor-2
+        styles:
+          icon:
+            - color: white
+            - opacity: 0.5
+            - width: 40px
+          name:
+            - color: white
+            - font-size: 12px
+            - padding-top: 5px
+        operator: default
+    tap_action:
+      action: call-service
+      service: input_select.select_option
+      service_data:
+        entity_id: input_select.chr_light_menu_select
+        option: Second
