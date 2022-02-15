@@ -32,41 +32,50 @@ If you like what you've read ... Support me here on Buy Me a Coffee: https://www
 #### Add-Ons
   - ESPHome
   - File Editor
-  - File Editor
-  - JupyterLab Lite
+  - AppDaemon 4
   - MariaDB
   - Mosquitto Broker
   - Node-RED
   - Terminal & SSH
+  - Frigate NVR
+  - Network UPS Tools
+  - TasmoAdmin
+  - zabbix-agent
 
 #### Integrations
-- Alexa Media Player
-- Belkin WeMo
+- AdGuard
+- Alarmo
+- Broadlink
+- Browser Mod
 - Certificate Expiry
 - deCONZ
+- myip
 - ESPHome
 - ESXi Stats
-- Fontawesome icons
+- Frigate
 - Garbage Collection
-- Glances
 - Google Cast
 - HACS
-- Internet Printing Protocol
-- Local IP Address
-- Meteorologisk Institutt
+- Holidays
+- Hyperion
+- local_ip
 - Mobile App
+- Mopidy
 - MQTT
-- OwnTracks
-- Pi-Hole
-- Plex Meda Server
-- Samsung Smart TV
+- Nest
+- OpenWeatherMap
+- Plex Media Server
 - Sonarr
-- Sony Playstation 4
-- Speedtest.net
+- SpeedTest
+- Spotify
+- Tasmota
+- TP-Link Kasa Smart
 - Transmission
-- Ubiquiti UniFi
+- UniFi Network
 - UniFi Protect
-- UPnP  
+- Waze Travel Time
+- WLED
+- Xbox 
 
 #### HACS (Integrations)
 - Authenticated
