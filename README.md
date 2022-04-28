@@ -30,43 +30,44 @@ If you like what you've read ... Support me here on Buy Me a Coffee: https://www
  - Docker Image
 
 #### Add-Ons
-  - ESPHome
-  - File Editor
-  - AppDaemon 4
-  - MariaDB
-  - Mosquitto Broker
-  - Node-RED
-  - Terminal & SSH
-  - Frigate NVR
-  - Network UPS Tools
-  - TasmoAdmin
-  - zabbix-agent
+- AppDaemon
+- Dasshio
+- ESPHome
+- File editor
+- Frigate NVR
+- Home Assistant Google Drive Backup
+- MariaDB
+- Mosquitto broker
+- Network UPS Tools
+- SSH & Web Terminal
+- TasmoAdmin
 
 #### Integrations
-- AdGuard
 - Alarmo
 - Broadlink
-- Browser Mod
-- Certificate Expiry
+- Browser mod
+- Google Cast
+- Coronavirus (COVID-19)
 - deCONZ
-- myip
 - ESPHome
 - ESXi Stats
-- Frigate
+- Fully Kiosk Browser
 - Garbage Collection
-- Google Cast
+- Google Calendars
+- Google Assistant
 - HACS
-- Holidays
 - Hyperion
-- local_ip
+- Meteorologisk institutt (Met.no)
 - Mobile App
+- Monitor Docker
 - Mopidy
 - MQTT
 - Nest
 - OpenWeatherMap
 - Plex Media Server
+- Radarr
 - Sonarr
-- SpeedTest
+- Speedtest.net
 - Spotify
 - Tasmota
 - TP-Link Kasa Smart
@@ -75,108 +76,146 @@ If you like what you've read ... Support me here on Buy Me a Coffee: https://www
 - UniFi Protect
 - Waze Travel Time
 - WLED
-- Xbox 
+- Xbox
+- Yeelight 
 
 #### HACS (Integrations)
+- Alarmo
+- Anniversary
 - Authenticated
-- Bad Nest
+- Auto Areas
+- browser_mod
 - ESXi Stats
-- fontawesome
-- Garage Collection
+- Event sensor
+- Frigate
+- Fully Kiosk Browser
+- Garbage Collection
+- Google Home
+- Holidays
 - Monitor Docker
+- Mopidy Media Player component
 - Plex Recently Added
 - Radarr Upcoming Media
-- Samsung Multi Room
-- simpleicons
 - Sonarr Upcoming Media
-- Sonoff LAN
-- UniFi Gateway
-- UniFi Protect Integration for Home Assistant
+- Spotcast
+- Spotify Playlist Sensor
 
 #### HACS (Frontend)
-- Animated Weather Card
-- Atomic Calendar
-- auto-entities
-- Banner Card
-- Battery State Card
-- Button Entity Card
+- Alarmo
+- Battery State Card / Entity Row
 - Button Text Card
 - button-card
-- card-mod
-- card-tools
-- Climate Thermostat Card
-- Custom Header
-- Custom Slidebar
-- fold-entity-row
-- gap-card
+- Custom Animated Weather Card
+- Custom brand icons
+- Dark Thermostat
+- ESXi Stats
+- Flexible Horseshoe Card for Lovelace
 - Garbage Collection Card
-- hui-element
-- kibibit Theme
+- HA Dashboard
 - layout-card
-- Lightalarm Card
-- Mini Graph Card
-- Mini Media Card
-- Multiple Entity Row
-- Nord Theme
-- Paper Button Row
-- RGB Light Card
-- Search Card
-- Select List Card
+- Light Entity Card
+- Number Box
+- Select list Card
 - Simple Thermostat
+- Slider Button Card
 - slider-entity-row
-- Spotify Lovelace Card
-- Stack In Card
 - state-switch
-- Swipe Card
+- Switch popup card
 - Text Divider Row
-- TV Remote Card
-- Upcoming Media Card
-- Vertical Stack in Card
-- Weather Card
+- Toggle Control Button Row
 
-#### Custom Components
-- PS4 Waker
-- browser_mod
-- HASS-sonoff-ewelink
+## Devices
+### Lights
 
-## Devices/Sensors
+|  **Device** | Connectivity  | Amount  |
+| - | ------------ |  :------------: |
+| TRADFRI bulb E27  | Zigbee (deCONZ)  | 5 |
+| TRADFRI bulb GU10 | Zigbee (deCONZ) | 21 |
+| Lidl HG06106C | Zigbee (deCONZ) | 2 |
+| WS2812b RGB Strip  | WiFi (ESPHome/WLED)  | 10 |
+| Sonoff Basic R2  | WiFi (Tasmota)  | 2 |
+| Hyperion (Raspberry Pi)  | WiFi (Integration)  | 2 |
 
-#### ZigBee - deCONZ ConBee II (Raspberry Pi 3B)
-   - Xiaomi Door/Windows Contact Sensor [18]
-   - Xiaomi Temperate/Humidity Sensor [4]
-   - Xiaomi Water Leak Sensor [1]
-   - IKEA TRADFRI LED Bulb E27 [2]
-   - IKEA TRADFRI LED Bulb GU10 [3]
-   - IKEA TRADFRI Remote Control [1]
-   - IKEA TRADFRI Wireless Motion Sensor [1]
-   - IKEA TRADFRI Dimmer Switch [2]
+### Sensors
 
-#### 433Mhz RF - Sonoff RF Bridge (Tasmota)
-- KERUI PIR Motion Sensor [3]
-- Sonoff DW1 Door/Window Contact Sensor [4]
-- eTIGER Fire/Smoke Detector [1]
-- fashionhome Wall Panel Remote Control [1]   
+|  Device | Connectivity  | Amount  |
+| - | ------------ |  :------------: |
+| Aqara Contact Sensor  | Zigbee (deCONZ)  | 15  |
+| Aqara Temp/Humidity Sensor  | Zigbee (deCONZ)  | 5  |
+| IKEA TRADFRI Motion Sensor | Zigbee (deCONZ)  | 3 |
+| Sonoff Motion Sensor (SNZB-03)  | Zigbee (deCONZ)  | 1  |
+| KERUI Motion Sensor  | 433Mhz (Tasmota)  | 3  |
+| KERUI Contact Sensor  | 433Mhz (Tasmota)  | 1  |
+| Philips Hue Motion/Temp/Light  Sensor  | Zigbee (deCONZ)  | 1  |
+| IKEA VINDRIKTNING (Air Quality Sensor)  | WiFi (ESPHome)   | 1  |
+| HC-S501/S505 Motion Sensor | WiFi (ESPHome)  | 8  |
+| DHT22/DS18B20 Temp/Humidity Sensor | WiFi (ESPHome)  | 5  |
+| Weight Sensor (HX711) | WiFi (ESPHome)  | 1  |
+| Fingerprint Sensor (R503) | WiFi (MQTT)  | 1  |
+| EMASTIFF Smoke Alarm  | 433Mhz (Tasmota)  | 1  |
 
-#### ESPHome - ESP8266/ESP32 nodeMCU
-- WS2818b RGB LED Strip [5]
-- DHT22 Temperature/Humidity Sensor [3]
-- AM312 PIR Motion Sensor [5]
-- LDR Sensor [1]  
+### Switches
 
-#### Lights
-- Yeelight Smart LED Bulb [2]
+|  Device | Connectivity  | Amount  |
+| - | ------------ |  :------------: |
+| Heiman Smart Plug (TS011F)   | Zigbee (deCONZ)  | 2  |
+| SmartThings Smart Plug (D0005)   | Zigbee (deCONZ)  | 2  |
+| TP-Link Smart Plug (KP105/KP303)   | WiFi (HA Integration)  | 3  |
+| 5V Relay Module (SRD-05VDC-SL-C)   | WiFi (ESPHome)  | 3  |
+| Sonoff Basic R2  | WiFi (Tasmota)  | 3 |
+| Electric Blinds  | 433Mhz (Tasmota)  | 1 |
+| Smart Air Freshener  | WiFi (ESPHome)  | 1 |
+| LEGO Train  | WiFi (MQTT)  | 1 |
 
-#### Switches
-- Sonoff Basic R2 [2]
-- Sonoff Dual R2 [2]
- 
-#### Security Cameras - Ubiquiti UVC (CloudKey Gen2+ - UniFi Protect)
-- Ubiquiti UVC-G3 [2]
-- Ubiquiti UVC-Flex [1]  
+### Remotes
 
-#### Media Players
-- Samsung M5 Speaker [1]
-- Google Home Mini [2]
-- Google ChromeCast [2]
-- Sony Playstation 4 [1]   
+|  Device | Connectivity  | Amount  |
+| - | ------------ |  :------------: |
+| IKEA TRADFRI Remote Control | Zigbee (deCONZ)  | 2 |
+| IKEA TRADFRI Dimmer | Zigbee (deCONZ)  | 1 |
+| 3 Button Remote | 433Mhz (Tasmota)  | 1 |
+| Broadlink R3 Mini | WiFi (Integration)  | 1 |
 
+### Cameras
+
+|  Device | Connectivity  | Amount  |
+| - | ------------ |  :------------: |
+| Ubiquiti G3 Bullet (UVC-G3-BULLET) | LAN (UniFi Protect)  | 2 |
+| Ubiquiti G3 Flex (UVC-G3-FLEX) | LAN (UniFi Protect)  | 1 |
+| ESP32-CAM (OV2640) | WiFi (ESPHome)  | 1 |
+| Amazon Fire Tablet 7 (Onboard) | WiFi (Integration)  | 1 |
+
+### Media
+
+|  Device | Connectivity  | Amount  |
+| - | ------------ |  :------------: |
+| Google Home Mini Speaker  | WiFi (Integration)  | 3 |
+| Google Home Speaker  | WiFi (Integration)  | 1 |
+| Google Nest Hub  | WiFi (Integration)  | 1 |
+| Google Chromecast  | WiFi (Integration)  | 1 |
+| Raspberry Pi (Mopidy) | WiFi (LAN)  | 2 |
+| Xbox Series S | WiFi (LAN)  | 1 |
+
+### Network
+
+|  Device | Connectivity  | Amount  |
+| - | ------------ |  :------------: |
+| Ubiquiti Dream Machine Pro (UDM-PRO)  | LAN (Integration)  | 1 |
+| Ubiquiti UniFi 16-Port PoE Switch (USW-16-POE)  | LAN (Integration)  | 1 |
+| Ubiquiti UniFi 5-Port PoE Switch (USW-Flex-Mini)  | LAN (Integration)  | 1 |
+| Ubiquiti UniFi AP AC LR (UAP-AC-LR)  | LAN (Integration)  | 2 |
+| AdGuard (Raspberry Pi) | LAN (Integration)  | 1 |
+| Sonoff RF Bridge (Tasmota) | WiFi (MQTT)  | 1 |
+| Raspberry Pi (deCONZ - Conbee II) | WiFi (Integration)  | 1 |
+
+### Others
+
+|  Device | Connectivity  | Amount  |
+| - | ------------ |  :------------: |
+| APC Smart-UPS (1000va)  | USB (Addon)  | 1 |
+| Pi-KVM (Raspberry Pi)  | LAN (MQTT)  | 1 |
+| Epson XP-4100 Printer (XP-4100)  | WiFi (Integration)  | 1 |
+| Fire Tablet 7 (Fully Kiosk Browser)  | WiFi (Integration)  | 1 |
+| Touchscreen Display (Raspberry Pi)  | WiFi (Dashboard)  | 1 |
+| Dell PowerEdge T330 (ESXi)  | LAN (Integration)  | 1 |
+| Lenovo ThinkCenter PC (Windows 11)  | LAN (MQTT)  | 1 |
