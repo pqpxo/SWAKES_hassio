@@ -16,6 +16,13 @@ If you like what you've read ... Support me here on Buy Me a Coffee: https://www
 
 #### Screenshots
 ![System Dashboard](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/NEW_System_Dashboard.png)![Light Dashboard](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/NEW_Lights_Dashboard.png)![Security Dashboard](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/NEW_Security_Dashboard.png)![Media Dashboard](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/NEW_Media_Dashboard.png)
+
+## **Security Dashboard (Mobile)**
+![enter image description here](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/sec1.jpg?raw=true)
+![enter image description here](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/sec2.jpg?raw=true)
+![enter image description here](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/sec3.jpg?raw=true)![enter image description here](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/sec4.jpg?raw=true)
+
+
 # Hardware
 
 
