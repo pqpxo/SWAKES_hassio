@@ -22,7 +22,7 @@ If you like what you've read ... Support me here on Buy Me a Coffee: https://www
 ![enter image description here](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/sec2.jpg?raw=true)
 ![enter image description here](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/sec3.jpg?raw=true)![enter image description here](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/sec4.jpg?raw=true)
 
-## **Dashboards In Progress
+## **Dashboards In Progress**
 ![enter image description here](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/temp1.jpg?raw=true)![enter image description here](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/temp2.jpg?raw=true)
 
 
