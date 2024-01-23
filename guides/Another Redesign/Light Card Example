@@ -1,4 +1,11 @@
 
+Light card example shown on this screenshot:      https://i.imgur.com/avOt2l5.png
+
+Two cards are placed within a 'horizontal-card' which includes a blank 'custom:button-card' to create a gap. Card will distort if used seperately (needs to be two cards per row)
+
+Please note that measurements may require tweaking as this has been customised for Google Pixel 6 Pro display size
+
+
 type: custom:button-card
 name: Lights
 entity: light.livings
