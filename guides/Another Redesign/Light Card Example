@@ -1,3 +1,4 @@
+
 type: custom:button-card
 name: Lights
 entity: light.livings
