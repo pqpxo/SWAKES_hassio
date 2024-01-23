@@ -1,0 +1,146 @@
+type: custom:button-card
+name: Lights
+entity: light.livings
+aspect_ratio: 1/1
+styles:
+  card:
+    - background-color: '#4B5975'
+    - border-radius: 25px
+    - padding: 8px
+    - border: transparent
+    - box-shadow: |-
+        rgba(0, 0, 0, 0.2) 0px 2px 4px, rgba(0, 0, 0, 0.2) 0px 7px 13px -3px,
+         rgba(0, 0, 0, 0.2) 0px -3px 0px inset
+  name:
+    - font-weight: bold
+    - font-size: 30px
+    - align-self: middle
+    - justify-self: start
+    - padding-left: 9px
+    - padding-top: 9px
+    - padding-bottom: 13px
+    - letter-spacing: '-1.0px'
+  grid:
+    - grid-template-areas: '"n i1" "i i2" "i i3"'
+    - grid-template-columns: 72% 28%
+    - grid-template-rows: 1fr 1fr 1fr
+  custom_fields:
+    logo:
+      - position: absolute
+      - left: '-12%'
+      - top: 33%
+custom_fields:
+  logo:
+    card:
+      type: custom:button-card
+      color: transparent
+      show_name: false
+      name: false
+      entity_picture: /local/allhouselights.png
+      show_entity_picture: true
+      styles:
+        card:
+          - background-color: transparent
+          - border-style: none
+        icon:
+          - width: 110px
+          - height: 110px
+          - color: white
+          - padding: 28px
+          - align-self: start
+          - text-align: start
+          - background-color: '#717a92'
+          - border-radius: 95px
+  i1:
+    card:
+      type: custom:button-card
+      color: transparent
+      icon: mdi:power
+      tap_action:
+        action: call-service
+        service: light.toggle
+        data: {}
+        target:
+          entity_id:
+            - light.living_room_lights_all_2
+      styles:
+        card:
+          - background-color: '#717a92'
+          - border-radius: 55px
+          - border-style: none
+          - box-shadow: >-
+              rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px
+              -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset
+        icon:
+          - width: 30px
+          - height: 30px
+          - color: white
+          - align-self: start
+          - text-align: start
+          - padding: 12px
+        img_cell:
+          - justify-content: middle
+          - align-self: middle
+          - margin: none
+  i2:
+    card:
+      type: custom:button-card
+      icon: phu:floor-lamp
+      tap_action:
+        action: call-service
+        service: light.toggle
+        data: {}
+        target:
+          entity_id:
+            - light.floor_lamp
+            - light.living_room_floor_wall_lamp
+      styles:
+        card:
+          - background-color: '#717a92'
+          - border-radius: 55px
+          - border-style: none
+          - box-shadow: >-
+              rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px
+              -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset
+        icon:
+          - width: 28px
+          - height: 28px
+          - color: white
+          - align-self: start
+          - text-align: start
+          - padding: 13px
+        img_cell:
+          - justify-content: middle
+          - align-self: middle
+          - margin: none
+  i3:
+    card:
+      type: custom:button-card
+      color: transparent
+      icon: phu:spot-bulb-top
+      tap_action:
+        action: call-service
+        service: light.toggle
+        data: {}
+        target:
+          entity_id:
+            - light.living_room_ceiling_downlights
+      styles:
+        card:
+          - background-color: '#717a92'
+          - border-radius: 55px
+          - border-style: none
+          - box-shadow: >-
+              rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px
+              -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset
+        icon:
+          - width: 28px
+          - height: 28px
+          - color: white
+          - align-self: start
+          - text-align: start
+          - padding: 13px
+        img_cell:
+          - justify-content: middle
+          - align-self: middle
+          - margin: none
