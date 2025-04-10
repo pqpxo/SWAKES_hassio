@@ -6,9 +6,6 @@ label: >-
   "2-digit", month: "short" }; return now.toLocaleString("en-GB",
   options).replace(",", "") + "&nbsp;&nbsp;" + now.toLocaleTimeString("en-GB", {
   hour: "2-digit", minute: "2-digit", hour12: true }); ]]]
-double_tap_action:
-  action: navigate
-  navigation_path: /dashboard-v2/overview?disable_km
 styles:
   card:
     - background-color: transparent
@@ -38,7 +35,7 @@ custom_fields:
     card:
       type: custom:button-card
       color: transparent
-      entity: person.human1
+      entity: person.human1              #### Add your first 'person.xxx' entity 
       show_entity_picture: true
       tap_action:
         action: none
@@ -74,7 +71,7 @@ custom_fields:
           card:
             type: custom:button-card
             icon: mdi:home
-            entity: person.human1
+            entity: person.human1              #### Add your first 'person.xxx' entity 
             show_name: false
             state:
               - styles:
@@ -127,7 +124,7 @@ custom_fields:
     card:
       type: custom:button-card
       color: transparent
-      entity: person.human2
+      entity: person.human2              #### Add your second 'person.xxx' entity 
       show_entity_picture: true
       tap_action:
         action: none
@@ -163,7 +160,7 @@ custom_fields:
           card:
             type: custom:button-card
             icon: mdi:home
-            entity: person.human2
+            entity: person.human2              #### Add your second 'person.xxx' entity 
             show_name: false
             state:
               - styles:
