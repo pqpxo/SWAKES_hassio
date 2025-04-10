@@ -1,5 +1,6 @@
 type: custom:button-card
-name: Welcome Human
+name: >
+  [[[ return `Welcome ${user.name}`; ]]]
 show_label: true
 label: >-
   [[[ const now = new Date(); const options = { weekday: "short", day:
