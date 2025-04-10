@@ -1,0 +1,207 @@
+#### This navigation card is built for the initial/home dashboard.
+#### On each dashboard/page the 'opacity' setting/value under 'icon' needs to changed ... Going forward some sort of 'logic' would be used to change the opacity instead of manually changing for each dashboard navigation card
+
+type: custom:button-card
+show_label: false
+show_state: false
+show_name: false
+styles:
+  card:
+    - background-color: transparent
+    - border-style: none
+    - height: 80px
+    - margin-top: "-10px"
+    - margin-bottom: "-5px"
+  grid:
+    - grid-template-areas: "\"bt1 bt2 bt3 bt4 bt5 bta bt6\" \"bt1 bt2 bt3 bt4 bt5 bta bt7\""
+    - grid-template-columns: auto auto auto auto auto auto auto 1%
+    - grid-template-rows: 50% 50%
+    - gap: 7px 1px
+custom_fields:
+  bta:
+    card:
+      type: custom:button-card
+      name: Remote
+      icon: mdi:remote-tv
+      show_name: false
+      show_icon: false
+      styles:
+        card:
+          - background-color: transparent
+          - border-style: none
+          - width: px
+  bt1:
+    card:
+      type: custom:button-card
+      name: Remote
+      icon: mdi:home-circle
+      show_name: false
+      show_icon: true
+      tap_action:
+        action: navigate
+        navigation_path: /dashboard/1
+      styles:
+        card:
+          - background-color: transparent
+          - border-style: none
+          - height: 60px
+        icon:
+          - border-radius: 18px
+          - width: 26px
+          - height: 26px
+          - color: white
+          - padding: 12px
+          - background-color: "#35425c"
+          - box-shadow: >-
+              0 2px 4px rgba(0, 0, 0, 0.15), inset 0 -1px 1px rgba(255, 255,
+              255, 0.05)
+  bt2:
+    card:
+      type: custom:button-card
+      name: Remote
+      icon: mdi:door
+      show_name: false
+      show_icon: true
+      tap_action:
+        action: navigate
+        navigation_path: /dashboard/2
+      styles:
+        card:
+          - background-color: transparent
+          - border-style: none
+          - height: 60px
+        icon:
+          - border-radius: 18px
+          - width: 26px
+          - height: 26px
+          - color: white
+          - padding: 12px
+          - background-color: "#35425c"
+          - opacity: 0.5
+  bt3:
+    card:
+      type: custom:button-card
+      name: Remote
+      icon: mdi:shield-account
+      show_name: false
+      show_icon: true
+      tap_action:
+        action: navigate
+        navigation_path: /dashboard/3
+      styles:
+        card:
+          - background-color: transparent
+          - border-style: none
+          - height: 60px
+        icon:
+          - border-radius: 18px
+          - width: 26px
+          - height: 26px
+          - color: white
+          - padding: 12px
+          - background-color: "#35425c"
+          - opacity: 0.5
+  bt4:
+    card:
+      type: custom:button-card
+      name: Remote
+      icon: mdi:server
+      show_name: false
+      show_icon: true
+      tap_action:
+        action: navigate
+        navigation_path: /dashboard/4
+      styles:
+        card:
+          - background-color: transparent
+          - border-style: none
+          - height: 60px
+        icon:
+          - border-radius: 18px
+          - width: 26px
+          - height: 26px
+          - color: white
+          - padding: 12px
+          - background-color: "#35425c"
+          - opacity: 0.5
+  bt5:
+    card:
+      type: custom:button-card
+      name: Remote
+      icon: mdi:cog
+      show_name: false
+      show_icon: true
+      tap_action:
+        action: navigate
+        navigation_path: /dashboard/5
+      styles:
+        card:
+          - background-color: transparent
+          - border-style: none
+          - height: 60px
+        icon:
+          - border-radius: 18px
+          - width: 26px
+          - height: 26px
+          - color: white
+          - padding: 12px
+          - background-color: "#35425c"
+          - opacity: 0.5
+  bt6:
+    card:
+      type: custom:button-card
+      name: Remote
+      layout: icon_state
+      entity: sensor.indoor_temperature
+      icon: mdi:home-thermometer-outline
+      show_name: false
+      show_state: true
+      show_icon: true
+      styles:
+        card:
+          - background-color: transparent
+          - border-style: none
+          - height: 60px
+          - padding-left: 12px
+        state:
+          - justify-self: start
+          - font-size: 16px
+          - text-align: justify
+          - font-weight: bold
+          - letter-spacing: "-0.5px"
+        icon:
+          - border-radius: 18px
+          - width: 22px
+          - height: 22px
+          - color: white
+          - background-color: transparent
+          - padding-right: 4px
+  bt7:
+    card:
+      type: custom:button-card
+      name: Remote
+      layout: icon_state
+      entity: sensor.outdoor_temperature
+      icon: mdi:sun-thermometer-outline
+      show_name: false
+      show_state: true
+      show_icon: true
+      styles:
+        card:
+          - background-color: transparent
+          - border-style: none
+          - height: 60px
+          - padding-left: 12px
+        state:
+          - justify-self: start
+          - font-size: 16px
+          - text-align: justify
+          - font-weight: bold
+          - letter-spacing: "-0.5px"
+        icon:
+          - border-radius: 18px
+          - width: 22px
+          - height: 22px
+          - color: white
+          - background-color: transparent
+          - padding-right: 4px
