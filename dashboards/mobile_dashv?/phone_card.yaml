@@ -1,0 +1,140 @@
+type: custom:button-card
+name: Google Pixel
+show_state: true
+show_name: true
+show_icon: true
+entity_picture: /local/gogglepixelfold.png
+show_entity_picture: true
+styles:
+  grid:
+    - grid-template-areas: "\"i n n n\" \"i n n n\" \"i batt wifi blue\""
+    - grid-template-columns: min-content 20% 20% 20%
+    - grid-template-rows: min-content min-content min-content
+    - gap: 15px 5px
+  card:
+    - padding: 12px
+    - border-radius: 25px
+    - box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15), 0 8px 16px rgba(0, 0, 0, 0.2)
+  name:
+    - font-weight: bold
+    - letter-spacing: "-1.02px"
+    - font-size: 18px
+    - justify-self: center
+    - align-self: center
+    - padding-right: 25px
+  label:
+    - letter-spacing: "-1.02px"
+    - font-size: 14px
+  state:
+    - justify-self: start
+    - align-self: start
+    - letter-spacing: "-1.02px"
+    - font-size: 20px
+    - padding-left: 32px
+    - padding-top: px
+  icon:
+    - background-color: transparent
+    - color: white
+    - width: 65px
+    - justify-content: center
+    - align-items: center
+    - z-index: 9999
+custom_fields:
+  batt:
+    card:
+      type: custom:button-card
+      show_name: false
+      show_state: true
+      show_icon: true
+      show_label: false
+      entity: sensor.battery_level
+      icon: mdi:battery
+      state:
+        - operator: ">="
+          value: 80
+          icon: mdi:battery-high
+        - operator: ">="
+          value: 30
+          icon: mdi:battery-medium
+        - operator: ">="
+          value: 1
+          icon: mdi:battery-low
+      styles:
+        card:
+          - background-color: transparent
+          - border-style: none
+        state:
+          - justify-self: center
+          - font-size: 14px
+          - font-weight: 400
+          - font-color: white
+          - padding-top: 8px
+        icon:
+          - width: 25px
+          - height: 25px
+        img_cell:
+          - justify-content: middle
+          - align-self: middle
+          - margin: none
+  blue:
+    card:
+      type: custom:button-card
+      show_name: false
+      show_state: true
+      show_icon: true
+      show_label: false
+      entity: binary_sensor.bluetooth_state
+      icon: mdi:bluetooth
+      state:
+        - value: "on"
+          icon: mdi:bluetooth
+        - value: "off"
+          icon: mdi:bluetooth-off
+      styles:
+        card:
+          - background-color: transparent
+          - border-style: none
+        state:
+          - justify-self: center
+          - font-size: 14px
+          - font-weight: 400
+          - font-color: white
+          - padding-top: 8px
+        icon:
+          - width: 25px
+          - height: 25px
+        img_cell:
+          - justify-content: middle
+          - align-self: middle
+          - margin: none
+  wifi:
+    card:
+      type: custom:button-card
+      show_name: false
+      show_state: true
+      show_icon: true
+      show_label: false
+      entity: binary_sensor.wi_fi_state
+      icon: mdi:wifi
+      state:
+        - value: "on"
+          icon: mdi:wifi
+        - value: "off"
+          icon: mdi:wifi-off
+      styles:
+        card:
+          - background-color: transparent
+          - border-style: none
+        state:
+          - justify-self: center
+          - font-size: 14px
+          - font-weight: 400
+          - font-color: white
+          - padding-top: 8px
+        icon:
+          - width: 25px
+          - height: 25px
+        img_cell:
+          - justify-content: middle
+          - align-self: middle
+          - margin: none
