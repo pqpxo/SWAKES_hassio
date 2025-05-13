@@ -1,0 +1,146 @@
+      type: custom:button-card
+      color: transparent
+      entity: media_player.living_room_media_devices
+      tap_action:
+        action: fire-dom-event
+        honeycomb_menu:
+          autoclose: true
+          spacing: 4
+          buttons:
+            - show_entity_picture: true
+              entity_picture: /local/hdmi4.png
+              color_type: card
+              color: transparent
+              styles:
+                card:
+                  - box-shadow: none
+                  - border: none
+                icon:
+                  - width: 38px
+                  - padding: 10px
+                  - background-color: rgba(53, 66, 92, 1)
+                  - border-radius: 50px
+                  - box-shadow: >-
+                      0 2px 4px rgba(0, 0, 0, 0.15), inset 0 -1px 1px rgba(255,
+                      255, 255, 0.05)          
+              tap_action:
+                action: call-service
+                service: media_player.select_source
+                target:
+                  entity_id: media_player.samsung
+                data:
+                  source: 2| HDMI
+            - show_entity_picture: true
+              entity_picture: /local/tv3.png
+              color_type: card
+              color: transparent
+              styles:
+                card:
+                  - box-shadow: none
+                  - border: none
+                icon:
+                  - width: 38px
+                  - padding: 10px
+                  - background-color: rgba(53, 66, 92, 1)
+                  - border-radius: 50px
+                  - box-shadow: >-
+                      0 2px 4px rgba(0, 0, 0, 0.15), inset 0 -1px 1px rgba(255,
+                      255, 255, 0.05)             
+              tap_action:
+                action: call-service
+                service: media_player.select_source
+                target:
+                  entity_id: media_player.samsung
+                data:
+                  source: 4| TV
+            - show_entity_picture: true
+              entity_picture: /local/netflix4.png
+              color_type: card
+              color: transparent
+              styles:
+                card:
+                  - box-shadow: none
+                  - border: none
+                icon:
+                  - width: 38px
+                  - padding: 10px
+                  - background-color: rgba(53, 66, 92, 1)
+                  - border-radius: 50px
+                  - box-shadow: >-
+                      0 2px 4px rgba(0, 0, 0, 0.15), inset 0 -1px 1px rgba(255,
+                      255, 255, 0.05)             
+              tap_action:
+                action: call-service
+                service: media_player.select_source
+                service_data:
+                  entity_id: media_player.samsung
+                  source: 1| Netflix
+            - show_entity_picture: true
+              entity_picture: /local/hmdi4.png
+              color_type: card
+              color: transparent
+              styles:
+                card:
+                  - box-shadow: none
+                  - border: none
+                icon:
+                  - width: 38px
+                  - padding: 10px
+                  - background-color: rgba(53, 66, 92, 1)
+                  - border-radius: 50px
+                  - box-shadow: >-
+                      0 2px 4px rgba(0, 0, 0, 0.15), inset 0 -1px 1px rgba(255,
+                      255, 255, 0.05)             
+              tap_action:
+                action: call-service
+                service: media_player.select_source
+                target:
+                  entity_id: media_player.samsung
+                data:
+                  source: 4| Plex
+            - show_entity_picture: true
+              entity_picture: /local/yotube4.png
+              color_type: card
+              color: transparent
+              styles:
+                card:
+                  - box-shadow: none
+                  - border: none
+                icon:
+                  - width: 38px
+                  - padding: 10px
+                  - background-color: rgba(53, 66, 92, 1)
+                  - border-radius: 50px
+                  - box-shadow: >-
+                      0 2px 4px rgba(0, 0, 0, 0.15), inset 0 -1px 1px rgba(255,
+                      255, 255, 0.05)             
+              tap_action:
+                action: call-service
+                service: media_player.select_source
+                target:
+                  entity_id: media_player.samsung
+                data:
+                  source: 2| YouTube
+            - show_entity_picture: true
+              entity_picture: /local/bbc3.png
+              color_type: card
+              color: transparent
+              styles:
+                card:
+                  - box-shadow: none
+                  - border: none
+                icon:
+                  - width: 38px
+                  - padding: 10px
+                  - background-color: rgba(53, 66, 92, 1)
+                  - border-radius: 50px
+                  - box-shadow: >-
+                      0 2px 4px rgba(0, 0, 0, 0.15), inset 0 -1px 1px rgba(255,
+                      255, 255, 0.05)             
+              tap_action:
+                action: call-service
+                service: media_player.select_source
+                target:
+                  entity_id: media_player.samsung
+                data:
+                  source: 5| iPlayer
