@@ -349,7 +349,7 @@ Also I've you've enjoyed this guide and want to show your appreciation some how,
     
 -   Reddit - [https://old.reddit.com/user/swake88/submitted/](https://old.reddit.com/user/swake88/submitted/)
     
--   Blog - [https://hmas.swakes.co.uk](https://hmas.swakes.co.uk/?fbclid=IwAR2C_NhUkD9BoStN323iteVV36vM665RzfQYAS8BplibtuTl-dT28h2thPM)
+-   Blog - [https://makes.swakes.co.uk](https://makes.swakes.co.uk/?fbclid=IwAR2C_NhUkD9BoStN323iteVV36vM665RzfQYAS8BplibtuTl-dT28h2thPM)
     
 -   Pastebin - [https://pastebin.com/u/pqpxoxa](https://pastebin.com/u/pqpxoxa?fbclid=IwAR38cCRP1sUIKekn6e8RAer11AkLDKm-eTOGOLhQGK5ieFWaaFDZ6g1QdEw)
     
