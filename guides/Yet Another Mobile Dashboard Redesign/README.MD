@@ -541,7 +541,6 @@ For a more detailed guide [check out this post](https://old.reddit.com/r/homeass
 </p>
 <b>Required</b>: custom:button-card 
 <p>&nbsp;</p>
-
     type: horizontal-stack
     cards:
       - type: custom:button-card
