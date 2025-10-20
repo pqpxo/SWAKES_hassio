@@ -13,6 +13,7 @@
 <p>
   <img src="https://raw.githubusercontent.com/pqpxo/SWAKES_hassio/refs/heads/master/guides/Yet%20Another%20Mobile%20Dashboard%20Redesign/Images/titleheader.png" />
 </p>
+<b>Required</b>: custom:button-card
 
     type: custom:button-card
     name: |
@@ -236,6 +237,7 @@
 <p>
   <img src="https://raw.githubusercontent.com/pqpxo/SWAKES_hassio/refs/heads/master/guides/Yet%20Another%20Mobile%20Dashboard%20Redesign/Images/Screenshot_20251020-145249.png" />
 </p>
+<b>Required</b>: custom:button-card / custom:mod-card
 
 For a more detailed guide [check out this post](https://old.reddit.com/r/homeassistant/comments/1mvck5r/stacked_notifications/).
 
@@ -534,6 +536,7 @@ For a more detailed guide [check out this post](https://old.reddit.com/r/homeass
 <p>
   <img src="https://raw.githubusercontent.com/pqpxo/SWAKES_hassio/refs/heads/master/guides/Yet%20Another%20Mobile%20Dashboard%20Redesign/Images/Screenshot%202025-10-20%20144404.png" />
 </p>
+<b>Required</b>: custom:button-card 
 
     type: horizontal-stack
     cards:
@@ -781,7 +784,7 @@ For a more detailed guide [check out this post](https://old.reddit.com/r/homeass
 </p>
 
 **Required**: *input_select* entity for room selection (In my instance I have 'Living Room', 'Kitchen' and 'Bedroom')
-
+<b>Required</b>: custom:button-card / custom:bubble-card
 
 
     type: vertical-stack
@@ -1248,7 +1251,7 @@ For a more detailed guide [check out this post](https://old.reddit.com/r/homeass
 <p>
   <img src="https://raw.githubusercontent.com/pqpxo/SWAKES_hassio/refs/heads/master/guides/Yet%20Another%20Mobile%20Dashboard%20Redesign/Images/Screenshot_20251020-144321.png" />
 </p>
-
+<b>Required</b>: custom:button-card , custom:bubble-card
 
 
     type: vertical-stack
@@ -1998,6 +2001,9 @@ For a more detailed guide [check out this post](https://old.reddit.com/r/homeass
 <p>
   <img src="https://raw.githubusercontent.com/pqpxo/SWAKES_hassio/refs/heads/master/guides/Yet%20Another%20Mobile%20Dashboard%20Redesign/Images/Screenshot_20251020-151455(1).png" />
 </p>
+<b>Required</b>: custom:button-card
+
+Example shown is the 'Lights' card/row
 
     type: custom:button-card
     name: Lights
