@@ -10,7 +10,6 @@
 6) [**Button Rows**](#button-rows)
 
 ## Title / Header Card
-<p>&nbsp;</p>
 <p>
   <img src="https://raw.githubusercontent.com/pqpxo/SWAKES_hassio/refs/heads/master/guides/Yet%20Another%20Mobile%20Dashboard%20Redesign/Images/titleheader.png" />
 </p>
@@ -237,7 +236,7 @@
 
 
 ## Stacked Notifications
-<p>&nbsp;</p>
+
 <p>
   <img src="https://raw.githubusercontent.com/pqpxo/SWAKES_hassio/refs/heads/master/guides/Yet%20Another%20Mobile%20Dashboard%20Redesign/Images/Screenshot_20251020-145249.png" />
 </p>
@@ -536,7 +535,7 @@ For a more detailed guide [check out this post](https://old.reddit.com/r/homeass
 
 
 ## Status Row
-<p>&nbsp;</p>
+
 <p>
   <img src="https://raw.githubusercontent.com/pqpxo/SWAKES_hassio/refs/heads/master/guides/Yet%20Another%20Mobile%20Dashboard%20Redesign/Images/Screenshot%202025-10-20%20144404.png" />
 </p>
@@ -783,12 +782,13 @@ For a more detailed guide [check out this post](https://old.reddit.com/r/homeass
 
 
 ## Broadcast Message
-<p>&nbsp;</p>
+
 <p>
   <img src="https://raw.githubusercontent.com/pqpxo/SWAKES_hassio/refs/heads/master/guides/Yet%20Another%20Mobile%20Dashboard%20Redesign/Images/Screenshot_20251020-144346.png" />
 </p>
 
 **Required**: *input_select* entity for room selection (In my instance I have 'Living Room', 'Kitchen' and 'Bedroom')
+<p>&nbsp;</p>
 <b>Required</b>: custom:button-card / custom:bubble-card
 <p>&nbsp;</p>
 
@@ -1252,7 +1252,6 @@ For a more detailed guide [check out this post](https://old.reddit.com/r/homeass
 
 
 ## TV Remote
-<p>&nbsp;</p>
 <p>
   <img src="https://raw.githubusercontent.com/pqpxo/SWAKES_hassio/refs/heads/master/guides/Yet%20Another%20Mobile%20Dashboard%20Redesign/Images/Screenshot_20251020-144321.png" />
 </p>
@@ -2002,12 +2001,11 @@ For a more detailed guide [check out this post](https://old.reddit.com/r/homeass
                           - padding: 6px
 
 ## Button Rows
-<p>&nbsp;</p>
 <p>
   <img src="https://raw.githubusercontent.com/pqpxo/SWAKES_hassio/refs/heads/master/guides/Yet%20Another%20Mobile%20Dashboard%20Redesign/Images/Screenshot_20251020-151455(1).png" />
 </p>
 <b>Required</b>: custom:button-card
-<p>&nbsp;</p>
+
 Example shown is the 'Lights' card/row
 <p>&nbsp;</p>
 
