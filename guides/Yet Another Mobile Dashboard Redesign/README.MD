@@ -15,7 +15,7 @@
 </p>
 <b>Required</b>: custom:button-card
   
-<br>
+<p>&nbsp;</p>
 
     type: custom:button-card
     name: |
