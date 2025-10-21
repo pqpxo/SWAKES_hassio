@@ -254,6 +254,7 @@ Also I've you've enjoyed this guide and want to show your appreciation some how,
                         - z-index: 9999
                     operator: default
 
+<br>
 
 ## Stacked Notifications
 <p>
