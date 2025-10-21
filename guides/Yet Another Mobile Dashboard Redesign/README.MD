@@ -2,6 +2,11 @@
 
 # Yet Another Mobile Dashboard Redesign
 
+<p>
+  <img src="https://raw.githubusercontent.com/pqpxo/SWAKES_hassio/refs/heads/master/guides/Yet%20Another%20Mobile%20Dashboard%20Redesign/Images/screen-20251015-222045-ezgif.com-video-to-gif-converter.gif" />
+</p>
+
+
 1) [**Title / Header Card**](#title--header-card)  
 2) [**Stacked Notifications**](#stacked-notifications)  
 3) [**Status Row**](#status-row)  
