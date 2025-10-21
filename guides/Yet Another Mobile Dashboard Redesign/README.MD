@@ -305,6 +305,7 @@ Install these custom components via HACS:
                         - z-index: 9999
                     operator: default
 
+<br />
 
 ## Stacked Notifications
 <p>
@@ -603,6 +604,7 @@ For a more detailed guide [check out this post](https://old.reddit.com/r/homeass
             
           }
 
+<br />
 
 ## Status Row
 
@@ -849,6 +851,7 @@ For a more detailed guide [check out this post](https://old.reddit.com/r/homeass
           card:
             - width: px
 
+<br />
 
 ## Broadcast Message
 
@@ -1318,6 +1321,7 @@ For a more detailed guide [check out this post](https://old.reddit.com/r/homeass
                               - align-items: center
                               - z-index: 9999
 
+<br />
 
 ## TV Remote
 
@@ -2068,6 +2072,8 @@ For a more detailed guide [check out this post](https://old.reddit.com/r/homeass
                           - color: white
                           - background-color: transparent
                           - padding: 6px
+
+<br />
 
 ## Button Rows
 
