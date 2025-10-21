@@ -61,7 +61,8 @@ Install these custom components via HACS:
 
 ---
 
-
+> [!IMPORTANT]
+> Key information users need to know to achieve their goal.
 
 ### Please Note: 
 
