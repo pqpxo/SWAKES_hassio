@@ -84,7 +84,7 @@ Install these custom components via HACS:
 <p>
   <img src="https://raw.githubusercontent.com/pqpxo/SWAKES_hassio/refs/heads/master/guides/Yet%20Another%20Mobile%20Dashboard%20Redesign/Images/titleheader.png" />
 </p>
-<b>Required</b>: custom:button-card  
+
 
   
 
