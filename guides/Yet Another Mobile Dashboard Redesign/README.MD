@@ -2,7 +2,7 @@
 
 # Yet Another Mobile Dashboard Redesign (2025)
 
-<p>
+<p style="text-align:center;">
   <img src="https://raw.githubusercontent.com/pqpxo/SWAKES_hassio/refs/heads/master/guides/Yet%20Another%20Mobile%20Dashboard%20Redesign/Images/screen-20251015-222045-ezgif.com-video-to-gif-converter.gif" width="400" />
 </p>
   
@@ -53,11 +53,17 @@ Install these custom components via HACS:
 
 ---
 
-<br>
 
-**Please Note:** All of these cards are contained within a single **vertical-stack** card on the dashboard, rather than being placed in separate sections.
+### Please Note: 
 
-<br>
+ - All of these cards are contained within a single **vertical-stack** card on the dashboard, rather than being placed in separate sections.
+ 
+ - You might notice that some elements appear misaligned or display incorrectly, as certain variables (such as padding, item/card width or height etc) have been adjusted to suit my mobile display size (Google Pixel Fold).
+ - As the title suggests, this dashboard is designed specifically for mobile display and viewing. It may appear misaligned or out of place when viewed on a desktop. All testing and adjustments should therefore be done on a mobile device rather than through a desktop view.
+<br />
+
+
+
 
 ## Title / Header Card
 <p>
