@@ -61,7 +61,7 @@ Install these custom components via HACS:
 
 ---
 
-<br />
+
 
 ### Please Note: 
 
