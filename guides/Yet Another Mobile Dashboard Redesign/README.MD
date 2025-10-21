@@ -28,7 +28,6 @@ Also I've you've enjoyed this guide and want to show your appreciation some how,
     
 -   Pastebin - [https://pastebin.com/u/pqpxoxa](https://pastebin.com/u/pqpxoxa?fbclid=IwAR38cCRP1sUIKekn6e8RAer11AkLDKm-eTOGOLhQGK5ieFWaaFDZ6g1QdEw)
     
--   BMAC - [https://www.buymeacoffee.com/swakes](https://www.buymeacoffee.com/swakes?fbclid=IwAR2C0bO2Ag_xclFUWKKHTU2TTmgFTnfBex8O8tJrV8YUXCcnp-LrGLUPgfY)
 - HA Community - https://community.home-assistant.io/u/pqpxd
 
 ---
