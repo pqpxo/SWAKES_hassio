@@ -3,7 +3,7 @@
 # Yet Another Mobile Dashboard Redesign
 
 <p>
-  <img src="https://raw.githubusercontent.com/pqpxo/SWAKES_hassio/refs/heads/master/guides/Yet%20Another%20Mobile%20Dashboard%20Redesign/Images/screen-20251015-222045-ezgif.com-video-to-gif-converter.gif" />
+  <img src="https://raw.githubusercontent.com/pqpxo/SWAKES_hassio/refs/heads/master/guides/Yet%20Another%20Mobile%20Dashboard%20Redesign/Images/screen-20251015-222045-ezgif.com-video-to-gif-converter.gif" style="width:50%;" />
 </p>
 
 
