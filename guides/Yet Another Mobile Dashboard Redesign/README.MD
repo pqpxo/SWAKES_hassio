@@ -2,10 +2,13 @@
 
 # Yet Another Mobile Dashboard Redesign (2025)
 
+<br />
+
 <p style="text-align:center;">
   <img src="https://raw.githubusercontent.com/pqpxo/SWAKES_hassio/refs/heads/master/guides/Yet%20Another%20Mobile%20Dashboard%20Redesign/Images/screen-20251015-222045-ezgif.com-video-to-gif-converter.gif" width="400" />
 </p>
-  
+
+<br />
 
 1) [**Title / Header Card**](#title--header-card)  
 2) [**Stacked Notifications**](#stacked-notifications)  
@@ -33,6 +36,7 @@ Also I've you've enjoyed this guide and want to show your appreciation some how,
     
 - **HA Community** - https://community.home-assistant.io/u/pqpxd
 
+<br />
 
 ## Custom Components Required
 Install these custom components via HACS:
