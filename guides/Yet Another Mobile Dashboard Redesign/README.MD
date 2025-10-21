@@ -57,8 +57,11 @@ Install these custom components via HACS:
 3. Click **Explore & Add Repositories**
 4. Search for and install each component
 
+<br />
+
 ---
 
+<br />
 
 ### Please Note: 
 
