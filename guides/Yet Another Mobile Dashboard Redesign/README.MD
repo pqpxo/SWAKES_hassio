@@ -13,6 +13,19 @@
 
 **Please Note:** All of these cards are contained within a single **vertical-stack** card on the dashboard, rather than being placed in separate sections.
 
+This whole process/setup took me several weeks/months to create so if you spot any errors or 'better ways of working' (thinking of custom:button-card templates maybe), please let me know by dropping me a message on Reddit, Facebook or the Home Assistant Community forum.
+
+Also I've you've enjoyed this guide and want to show your appreciation some how, please [Buy Me A Coffee here](https://www.buymeacoffee.com/swakes)!
+    
+-   Reddit - [https://old.reddit.com/user/swake88/submitted/](https://old.reddit.com/user/swake88/submitted/)
+    
+-   Blog - [https://makes.swakes.co.uk](https://makes.swakes.co.uk/?fbclid=IwAR2C_NhUkD9BoStN323iteVV36vM665RzfQYAS8BplibtuTl-dT28h2thPM)
+    
+-   Pastebin - [https://pastebin.com/u/pqpxoxa](https://pastebin.com/u/pqpxoxa?fbclid=IwAR38cCRP1sUIKekn6e8RAer11AkLDKm-eTOGOLhQGK5ieFWaaFDZ6g1QdEw)
+    
+-   BMAC - [https://www.buymeacoffee.com/swakes](https://www.buymeacoffee.com/swakes?fbclid=IwAR2C0bO2Ag_xclFUWKKHTU2TTmgFTnfBex8O8tJrV8YUXCcnp-LrGLUPgfY)
+- HA Community - https://community.home-assistant.io/u/pqpxd
+
 ---
 
 ## Title / Header Card
@@ -2216,17 +2229,4 @@ Example shown is the 'Lights' card/row
             card:
               - width: 5px
 <br>
-This whole process/setup took me a fair few weeks to create so if you spot any errors or 'better ways of working' (thinking of custom:button-card templates maybe), please let me know by dropping me a message on Reddit, Facebook or the Home Assistant Community forum.
 
-Also I've you've enjoyed this guide and want to show your appreciation some how, please [Buy Me A Coffee here](https://www.buymeacoffee.com/swakes)!
-
-
-    
--   Reddit - [https://old.reddit.com/user/swake88/submitted/](https://old.reddit.com/user/swake88/submitted/)
-    
--   Blog - [https://makes.swakes.co.uk](https://makes.swakes.co.uk/?fbclid=IwAR2C_NhUkD9BoStN323iteVV36vM665RzfQYAS8BplibtuTl-dT28h2thPM)
-    
--   Pastebin - [https://pastebin.com/u/pqpxoxa](https://pastebin.com/u/pqpxoxa?fbclid=IwAR38cCRP1sUIKekn6e8RAer11AkLDKm-eTOGOLhQGK5ieFWaaFDZ6g1QdEw)
-    
--   BMAC - [https://www.buymeacoffee.com/swakes](https://www.buymeacoffee.com/swakes?fbclid=IwAR2C0bO2Ag_xclFUWKKHTU2TTmgFTnfBex8O8tJrV8YUXCcnp-LrGLUPgfY)
-- HA Community - https://community.home-assistant.io/u/pqpxd
