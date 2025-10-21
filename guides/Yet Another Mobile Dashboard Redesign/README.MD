@@ -2081,7 +2081,7 @@ For a more detailed guide [check out this post](https://old.reddit.com/r/homeass
 </p>
 
 
-**<br>**
+
 
 Example shown is the 'Lights' card/row
 **<br>**
