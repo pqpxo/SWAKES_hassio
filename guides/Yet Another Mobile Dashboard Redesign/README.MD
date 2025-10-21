@@ -55,10 +55,8 @@ Install these custom components via HACS:
 
 
 **Please Note:** All of these cards are contained within a single **vertical-stack** card on the dashboard, rather than being placed in separate sections.
+
 <br>
-
-
-
 
 ## Title / Header Card
 <p>
