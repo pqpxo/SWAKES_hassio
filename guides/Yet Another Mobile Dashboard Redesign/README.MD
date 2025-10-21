@@ -27,6 +27,7 @@ Also I've you've enjoyed this guide and want to show your appreciation some how,
 ---
 
 **Please Note:** All of these cards are contained within a single **vertical-stack** card on the dashboard, rather than being placed in separate sections.
+<br>
 
 ## Title / Header Card
 <p>
