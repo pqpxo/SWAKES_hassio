@@ -12,12 +12,15 @@ Please note that some files, images, custom components and addons have been refe
 
 If you like what you've read ... Support me here on Buy Me a Coffee: https://www.buymeacoffee.com/swakes
 
-<br>
+---
 
-### 13/02/2023 - Added 'Refresh 2.0' under 'guides' and included 'mini_bar' breakdown.
+**21/10/2025**  - 'Yet Another Mobile Dashboard Redesign' guide can be found [here](https://github.com/pqpxo/SWAKES_hassio/tree/master/guides/Yet%20Another%20Mobile%20Dashboard%20Redesign)
 
- 16/10/2020 - Updated 'dashboards' and Screenshots
+**13/02/2023** - 'Refresh 2.0' under 'guides' and included 'mini_bar' breakdown can be found [here](https://github.com/pqpxo/SWAKES_hassio/tree/master/guides/Refresh%202.0)
 
+**16/10/2020** - 'dashboards' and Screenshots can be found [here](https://github.com/pqpxo/SWAKES_hassio/tree/master/dashboards)
+
+---
 
 #### Screenshots
 ![System Dashboard](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/NEW_System_Dashboard.png)![Light Dashboard](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/NEW_Lights_Dashboard.png)![Security Dashboard](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/NEW_Security_Dashboard.png)![Media Dashboard](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/NEW_Media_Dashboard.png)
