@@ -61,7 +61,7 @@ Install these custom components via HACS:
 
 ---
 
-> [!IMPORTANT] Please Note:
+> [!IMPORTANT] 
 > All of these cards are contained within a single **vertical-stack** card on the dashboard, rather than being placed in separate sections  
 >  
 > You might notice that some elements appear misaligned or display incorrectly, as certain variables (such as padding, item/card width or height etc) have been adjusted to suit my mobile display size (Google Pixel Fold).
