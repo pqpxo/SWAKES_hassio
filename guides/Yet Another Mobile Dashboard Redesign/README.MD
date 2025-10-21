@@ -9,13 +9,17 @@
 5) [**TV Remote**](#tv-remote)
 6) [**Button Rows**](#button-rows)
 
+---
+
+**Please Note:** All of these cards are contained within a single **vertical-stack** card on the dashboard, rather than being placed in separate sections.
+
+---
+
 ## Title / Header Card
 <p>
   <img src="https://raw.githubusercontent.com/pqpxo/SWAKES_hassio/refs/heads/master/guides/Yet%20Another%20Mobile%20Dashboard%20Redesign/Images/titleheader.png" />
 </p>
 <b>Required</b>: custom:button-card
-  
-<p>&nbsp;</p>
 
     type: custom:button-card
     name: |
@@ -236,7 +240,6 @@
 
 
 ## Stacked Notifications
-
 <p>
   <img src="https://raw.githubusercontent.com/pqpxo/SWAKES_hassio/refs/heads/master/guides/Yet%20Another%20Mobile%20Dashboard%20Redesign/Images/Screenshot_20251020-145249.png" />
 </p>
@@ -540,7 +543,6 @@ For a more detailed guide [check out this post](https://old.reddit.com/r/homeass
   <img src="https://raw.githubusercontent.com/pqpxo/SWAKES_hassio/refs/heads/master/guides/Yet%20Another%20Mobile%20Dashboard%20Redesign/Images/Screenshot%202025-10-20%20144404.png" />
 </p>
 <b>Required</b>: custom:button-card 
-<p>&nbsp;</p>
 
     type: horizontal-stack
     cards:
@@ -788,9 +790,8 @@ For a more detailed guide [check out this post](https://old.reddit.com/r/homeass
 </p>
 
 **Required**: *input_select* entity for room selection (In my instance I have 'Living Room', 'Kitchen' and 'Bedroom')
-  
 <b>Required</b>: custom:button-card / custom:bubble-card
-<p>&nbsp;</p>
+
 
     type: vertical-stack
     cards:
@@ -1252,11 +1253,12 @@ For a more detailed guide [check out this post](https://old.reddit.com/r/homeass
 
 
 ## TV Remote
+
 <p>
   <img src="https://raw.githubusercontent.com/pqpxo/SWAKES_hassio/refs/heads/master/guides/Yet%20Another%20Mobile%20Dashboard%20Redesign/Images/Screenshot_20251020-144321.png" />
 </p>
 <b>Required</b>: custom:button-card , custom:bubble-card
-<p>&nbsp;</p>
+
 
     type: vertical-stack
     cards:
@@ -2001,13 +2003,16 @@ For a more detailed guide [check out this post](https://old.reddit.com/r/homeass
                           - padding: 6px
 
 ## Button Rows
+
 <p>
   <img src="https://raw.githubusercontent.com/pqpxo/SWAKES_hassio/refs/heads/master/guides/Yet%20Another%20Mobile%20Dashboard%20Redesign/Images/Screenshot_20251020-151455(1).png" />
 </p>
 <b>Required</b>: custom:button-card
 
+**<br>**
+
 Example shown is the 'Lights' card/row
-<p>&nbsp;</p>
+**<br>**
 
     type: custom:button-card
     name: Lights
@@ -2210,4 +2215,18 @@ Example shown is the 'Lights' card/row
           styles:
             card:
               - width: 5px
+<br>
+This whole process/setup took me a fair few weeks to create so if you spot any errors or 'better ways of working' (thinking of custom:button-card templates maybe), please let me know by dropping me a message on Reddit, Facebook or the Home Assistant Community forum.
 
+Also I've you've enjoyed this guide and want to show your appreciation some how, please [Buy Me A Coffee here](https://www.buymeacoffee.com/swakes)!
+
+
+    
+-   Reddit - [https://old.reddit.com/user/swake88/submitted/](https://old.reddit.com/user/swake88/submitted/)
+    
+-   Blog - [https://makes.swakes.co.uk](https://makes.swakes.co.uk/?fbclid=IwAR2C_NhUkD9BoStN323iteVV36vM665RzfQYAS8BplibtuTl-dT28h2thPM)
+    
+-   Pastebin - [https://pastebin.com/u/pqpxoxa](https://pastebin.com/u/pqpxoxa?fbclid=IwAR38cCRP1sUIKekn6e8RAer11AkLDKm-eTOGOLhQGK5ieFWaaFDZ6g1QdEw)
+    
+-   BMAC - [https://www.buymeacoffee.com/swakes](https://www.buymeacoffee.com/swakes?fbclid=IwAR2C0bO2Ag_xclFUWKKHTU2TTmgFTnfBex8O8tJrV8YUXCcnp-LrGLUPgfY)
+- HA Community - https://community.home-assistant.io/u/pqpxd
