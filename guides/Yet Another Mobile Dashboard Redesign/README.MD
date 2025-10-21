@@ -11,8 +11,6 @@
 
 ---
 
-**Please Note:** All of these cards are contained within a single **vertical-stack** card on the dashboard, rather than being placed in separate sections.
-
 This whole process/setup took me several weeks/months to create so if you spot any errors or 'better ways of working' (thinking of custom:button-card templates maybe), please let me know by dropping me a message on Reddit, Facebook or the Home Assistant Community forum.
 
 Also I've you've enjoyed this guide and want to show your appreciation some how, please [Buy Me A Coffee here](https://www.buymeacoffee.com/swakes)!
@@ -27,6 +25,8 @@ Also I've you've enjoyed this guide and want to show your appreciation some how,
 - HA Community - https://community.home-assistant.io/u/pqpxd
 
 ---
+
+**Please Note:** All of these cards are contained within a single **vertical-stack** card on the dashboard, rather than being placed in separate sections.
 
 ## Title / Header Card
 <p>
