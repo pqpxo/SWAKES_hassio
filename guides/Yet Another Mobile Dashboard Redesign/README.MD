@@ -62,14 +62,16 @@ Install these custom components via HACS:
 ---
 
 > [!IMPORTANT]
-> Key information users need to know to achieve their goal.
+> All of these cards are contained within a single **vertical-stack** card on the dashboard, rather than being placed in separate sections
+> You might notice that some elements appear misaligned or display incorrectly, as certain variables (such as padding, item/card width or height etc) have been adjusted to suit my mobile display size (Google Pixel Fold).
+> As the title suggests, this dashboard is designed specifically for mobile display and viewing. It may appear misaligned or out of place when viewed on a desktop. All testing and adjustments should therefore be done on a mobile device rather than through a desktop view.
 
 ### Please Note: 
 
- - All of these cards are contained within a single **vertical-stack** card on the dashboard, rather than being placed in separate sections.
+ - .
  
- - You might notice that some elements appear misaligned or display incorrectly, as certain variables (such as padding, item/card width or height etc) have been adjusted to suit my mobile display size (Google Pixel Fold).
- - As the title suggests, this dashboard is designed specifically for mobile display and viewing. It may appear misaligned or out of place when viewed on a desktop. All testing and adjustments should therefore be done on a mobile device rather than through a desktop view.
+ - 
+ - 
 <br />
 
 
