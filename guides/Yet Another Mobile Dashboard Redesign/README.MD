@@ -1,13 +1,11 @@
 
 
-# Yet Another Mobile Dashboard Redesign
+# Yet Another Mobile Dashboard Redesign (2025)
 
-  
 <p>
   <img src="https://raw.githubusercontent.com/pqpxo/SWAKES_hassio/refs/heads/master/guides/Yet%20Another%20Mobile%20Dashboard%20Redesign/Images/screen-20251015-222045-ezgif.com-video-to-gif-converter.gif" width="400" />
 </p>
-
-
+  
 
 1) [**Title / Header Card**](#title--header-card)  
 2) [**Stacked Notifications**](#stacked-notifications)  
@@ -18,32 +16,55 @@
 
 ---
 
-This whole process/setup took me several weeks/months to create so if you spot any errors or 'better ways of working' (thinking of custom:button-card templates maybe), please let me know by dropping me a message on Reddit, Facebook or the Home Assistant Community forum.
+
+
+
+This whole process/setup took me a fair few weeks to create so if you spot any errors or 'better ways of working' (thinking of custom:button-card templates maybe), please let me know by dropping me a message on Reddit, Facebook or the Home Assistant Community forum.
 
 Also I've you've enjoyed this guide and want to show your appreciation some how, please [Buy Me A Coffee here](https://www.buymeacoffee.com/swakes)!
+
+
     
--   Reddit - [https://old.reddit.com/user/swake88/submitted/](https://old.reddit.com/user/swake88/submitted/)
+-   **Reddit** - [https://old.reddit.com/user/swake88/submitted/](https://old.reddit.com/user/swake88/submitted/)
     
--   Blog - [https://makes.swakes.co.uk](https://makes.swakes.co.uk/?fbclid=IwAR2C_NhUkD9BoStN323iteVV36vM665RzfQYAS8BplibtuTl-dT28h2thPM)
+-   **Blog** - [https://makes.swakes.co.uk](https://makes.swakes.co.uk/?fbclid=IwAR2C_NhUkD9BoStN323iteVV36vM665RzfQYAS8BplibtuTl-dT28h2thPM)
     
--   Pastebin - [https://pastebin.com/u/pqpxoxa](https://pastebin.com/u/pqpxoxa?fbclid=IwAR38cCRP1sUIKekn6e8RAer11AkLDKm-eTOGOLhQGK5ieFWaaFDZ6g1QdEw)
+-   **Pastebin** - [https://pastebin.com/u/pqpxoxa](https://pastebin.com/u/pqpxoxa?fbclid=IwAR38cCRP1sUIKekn6e8RAer11AkLDKm-eTOGOLhQGK5ieFWaaFDZ6g1QdEw)
     
-- HA Community - https://community.home-assistant.io/u/pqpxd
+- **HA Community** - https://community.home-assistant.io/u/pqpxd
+
+
+## Custom Components Required
+Install these custom components via HACS:
+
+**Essential Components:**
+- **[Button-card](https://github.com/custom-cards/button-card)** - For custom buttons and advanced layouts
+- **[Card-mod](https://github.com/thomasloven/lovelace-card-mod)** - For custom CSS styling and theming
+- **[Mod-card](https://github.com/thomasloven/lovelace-mod-card)** - For card modifications and enhancements
+- **[Bubble-card](https://github.com/Clooos/Bubble-Card)** - For pop-up modals and floating interfaces
+- **[Mushroom](https://github.com/piitaya/lovelace-mushroom)** - For modern UI components and material design
+
+### Installation via HACS
+
+1. **Open HACS** in your Home Assistant instance
+2. Navigate to **Frontend** section
+3. Click **Explore & Add Repositories**
+4. Search for and install each component
 
 ---
-<br>
+
 
 **Please Note:** All of these cards are contained within a single **vertical-stack** card on the dashboard, rather than being placed in separate sections.
+<br />
 
-<br>
+
+
 
 ## Title / Header Card
 <p>
   <img src="https://raw.githubusercontent.com/pqpxo/SWAKES_hassio/refs/heads/master/guides/Yet%20Another%20Mobile%20Dashboard%20Redesign/Images/titleheader.png" />
 </p>
-  
 <b>Required</b>: custom:button-card
-  
 
     type: custom:button-card
     name: |
@@ -262,7 +283,6 @@ Also I've you've enjoyed this guide and want to show your appreciation some how,
                         - z-index: 9999
                     operator: default
 
-<br>
 
 ## Stacked Notifications
 <p>
@@ -562,8 +582,6 @@ For a more detailed guide [check out this post](https://old.reddit.com/r/homeass
           }
 
 
-<br>
-
 ## Status Row
 
 <p>
@@ -809,8 +827,6 @@ For a more detailed guide [check out this post](https://old.reddit.com/r/homeass
           card:
             - width: px
 
-
-<br>
 
 ## Broadcast Message
 
@@ -1280,8 +1296,6 @@ For a more detailed guide [check out this post](https://old.reddit.com/r/homeass
                               - align-items: center
                               - z-index: 9999
 
-
-<br>
 
 ## TV Remote
 
@@ -2032,8 +2046,6 @@ For a more detailed guide [check out this post](https://old.reddit.com/r/homeass
                           - color: white
                           - background-color: transparent
                           - padding: 6px
-
-<br>
 
 ## Button Rows
 
