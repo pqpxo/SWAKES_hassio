@@ -17,10 +17,12 @@
 5) [**TV Remote**](#tv-remote)
 6) [**Button Rows**](#button-rows)
 
+<br />
+
 ---
 
 
-
+<br />
 
 This whole process/setup took me a fair few weeks to create so if you spot any errors or 'better ways of working' (thinking of custom:button-card templates maybe), please let me know by dropping me a message on Reddit, Facebook or the Home Assistant Community forum.
 
