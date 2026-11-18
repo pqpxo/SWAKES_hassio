@@ -1,239 +1,303 @@
-# Welcome to SWAKES - Home Assistant
+# SWAKES - Home Assistant
 
-Hi there and welcome to my Github repo containing my configuration and setup files/code for Home Assistant. I will en-devour to keep this up to date however please check out my other references and sources in the following links before
+<br />
 
- - [SWAKES Blog](https://hmas.swakes.co.uk/tag/home-assistant/)
- - [SWAKES Reddit](https://old.reddit.com/user/swake88/)
- - [SWAKES Home Assistant Community](https://community.home-assistant.io/u/pqpxd/summary)
- - [Home Assistant Facebook Community Page](https://www.facebook.com/groups/HomeAssistant)
- - [Screenshots](https://github.com/pqpxo/SWAKES_hassio/tree/master/screenshots)
+My Home Assistant dashboards, guides, themes and config, shared so you can borrow ideas for your own setup.
 
-Please note that some files, images, custom components and addons have been referenced but not uploaded in this repo.
+<p align="center">
+  <img src="guides/Yet%20Another%20Mobile%20Dashboard%20Redesign/Images/Screenshot_20251020-144321.png" width="300" alt="Mobile TV remote card" />
+  &nbsp;&nbsp;
+  <img src="guides/Yet%20Another%20Mobile%20Dashboard%20Redesign/Images/Screenshot_20251020-144346.png" width="300" alt="Mobile broadcast message card" />
+</p>
 
-If you like what you've read ... Support me here on Buy Me a Coffee: https://www.buymeacoffee.com/swakes
+<br />
 
----
+> [!TIP]
+> Looking for the latest mobile dashboard? Start with the **[Yet Another Mobile Dashboard Redesign](guides/Yet%20Another%20Mobile%20Dashboard%20Redesign)** guide (October 2025).
 
-**21/10/2025**  - 'Yet Another Mobile Dashboard Redesign' guide can be found [here](https://github.com/pqpxo/SWAKES_hassio/tree/master/guides/Yet%20Another%20Mobile%20Dashboard%20Redesign)
+<br />
 
-**13/02/2023** - 'Refresh 2.0' under 'guides' and included 'mini_bar' breakdown can be found [here](https://github.com/pqpxo/SWAKES_hassio/tree/master/guides/Refresh%202.0)
+## Contents
 
-**16/10/2020** - 'dashboards' and Screenshots can be found [here](https://github.com/pqpxo/SWAKES_hassio/tree/master/dashboards)
+- [What's new](#whats-new)
+- [Guides](#guides)
+- [Screenshots](#screenshots)
+- [What's in this repo](#whats-in-this-repo)
+- [Using this config](#using-this-config)
+- [Current setup](#current-setup)
+  - [Platform](#platform)
+  - [Add-ons](#add-ons)
+  - [Integrations](#integrations)
+  - [HACS](#hacs)
+- [Hardware](#hardware)
+- [Links and support](#links-and-support)
 
----
+<br />
 
-#### Screenshots
-![System Dashboard](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/NEW_System_Dashboard.png)![Light Dashboard](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/NEW_Lights_Dashboard.png)![Security Dashboard](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/NEW_Security_Dashboard.png)![Media Dashboard](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/NEW_Media_Dashboard.png)
+## What's new
 
-## **Security Dashboard (Mobile)**
-![enter image description here](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/sec1.jpg?raw=true)
-![enter image description here](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/sec2.jpg?raw=true)
-![enter image description here](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/sec3.jpg?raw=true)![enter image description here](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/sec4.jpg?raw=true)
+| Date | Update |
+| --- | --- |
+| 18/11/2026 | README rewritten to match the current setup |
+| 21/10/2025 | [Yet Another Mobile Dashboard Redesign](guides/Yet%20Another%20Mobile%20Dashboard%20Redesign) guide |
+| 13/02/2023 | [Refresh 2.0](guides/Refresh%202.0) guide with the "mini bar" breakdown |
+| 16/10/2020 | [Dashboards](dashboards) and screenshots |
 
-## **Dashboards In Progress**
-![enter image description here](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/temp1.jpg?raw=true)![enter image description here](https://github.com/pqpxo/SWAKES_hassio/blob/master/screenshots/temp2.jpg?raw=true)
+<br />
 
+## Guides
 
-# Hardware
+| Guide | What it covers |
+| --- | --- |
+| [Yet Another Mobile Dashboard Redesign](guides/Yet%20Another%20Mobile%20Dashboard%20Redesign) | 2025 phone dashboard: header card, stacked notifications, status row, broadcast messages, TV remote and button rows |
+| [Light Dashboard 2.0](guides/Light%20Dashboard%202.0/YAML) | Floor-by-floor light dashboard built from `button-card`, `state-switch` and `input_select` menus |
+| [Refresh 2.0](guides/Refresh%202.0/mini_bar.md) | The five-button "mini bar" built with `button-card` grid layouts |
+| [Another Redesign](guides/Another%20Redesign/Light%20Card%20Example) | Single light card example |
+| [Blog Examples](guides/Blog%20Examples/livingroom_tv_honeycomb_menu) | Living room TV honeycomb menu from the blog |
 
+<br />
 
-## Operating System
+## Screenshots
 
-#### Ubuntu Sever 18 Virtual Machine (ESXi)     
- - 1vCPU
- - 3GB RAM
- - 40GB HDD
+<table>
+  <tr>
+    <td><img src="screenshots/NEW_System_Dashboard.png" alt="System dashboard" /></td>
+    <td><img src="screenshots/NEW_Lights_Dashboard.png" alt="Lights dashboard" /></td>
+  </tr>
+  <tr>
+    <td align="center">System</td>
+    <td align="center">Lights</td>
+  </tr>
+  <tr>
+    <td><img src="screenshots/NEW_Security_Dashboard.png" alt="Security dashboard" /></td>
+    <td><img src="screenshots/NEW_Media_Dashboard.png" alt="Media dashboard" /></td>
+  </tr>
+  <tr>
+    <td align="center">Security</td>
+    <td align="center">Media</td>
+  </tr>
+</table>
 
-#### HASSIO Supervisor
- - Docker Image
+<details>
+<summary><b>Security dashboard (mobile)</b></summary>
+<br />
+<p>
+  <img src="screenshots/sec1.jpg" width="200" alt="Security mobile 1" />
+  <img src="screenshots/sec2.jpg" width="200" alt="Security mobile 2" />
+  <img src="screenshots/sec3.jpg" width="200" alt="Security mobile 3" />
+  <img src="screenshots/sec4.jpg" width="200" alt="Security mobile 4" />
+</p>
+</details>
 
-#### Add-Ons
-- AppDaemon
-- Dasshio
-- ESPHome
-- File editor
-- Frigate NVR
-- Home Assistant Google Drive Backup
-- MariaDB
-- Mosquitto broker
-- Network UPS Tools
-- SSH & Web Terminal
-- TasmoAdmin
+<details>
+<summary><b>Older work in progress</b></summary>
+<br />
+<p>
+  <img src="screenshots/temp1.jpg" width="400" alt="Work in progress 1" />
+  <img src="screenshots/temp2.jpg" width="400" alt="Work in progress 2" />
+</p>
+</details>
 
-#### Integrations
-- Alarmo
-- Broadlink
-- Browser mod
-- Google Cast
-- Coronavirus (COVID-19)
-- deCONZ
-- ESPHome
-- ESXi Stats
-- Fully Kiosk Browser
-- Garbage Collection
-- Google Calendars
-- Google Assistant
-- HACS
-- Hyperion
-- Meteorologisk institutt (Met.no)
-- Mobile App
-- Monitor Docker
-- Mopidy
-- MQTT
-- Nest
-- OpenWeatherMap
-- Plex Media Server
-- Radarr
-- Sonarr
-- Speedtest.net
-- Spotify
-- Tasmota
-- TP-Link Kasa Smart
-- Transmission
-- UniFi Network
-- UniFi Protect
-- Waze Travel Time
-- WLED
-- Xbox
-- Yeelight 
+More in the [screenshots](screenshots) folder.
 
-#### HACS (Integrations)
-- Alarmo
-- Anniversary
-- Authenticated
-- Auto Areas
-- browser_mod
-- ESXi Stats
-- Event sensor
-- Frigate
-- Fully Kiosk Browser
-- Garbage Collection
-- Google Home
-- Holidays
-- Monitor Docker
-- Mopidy Media Player component
-- Plex Recently Added
-- Radarr Upcoming Media
-- Sonarr Upcoming Media
-- Spotcast
-- Spotify Playlist Sensor
+<br />
 
-#### HACS (Frontend)
-- Alarmo
-- Battery State Card / Entity Row
-- Button Text Card
-- button-card
-- Custom Animated Weather Card
-- Custom brand icons
-- Dark Thermostat
-- ESXi Stats
-- Flexible Horseshoe Card for Lovelace
-- Garbage Collection Card
-- HA Dashboard
-- layout-card
-- Light Entity Card
-- Number Box
-- Select list Card
-- Simple Thermostat
-- Slider Button Card
-- slider-entity-row
-- state-switch
-- Switch popup card
-- Text Divider Row
-- Toggle Control Button Row
+## What's in this repo
 
-## Devices
+| Path | Contents |
+| --- | --- |
+| [`guides/`](guides) | Step-by-step dashboard guides with YAML and images |
+| [`dashboards/`](dashboards) | Full dashboard YAML: lights, media, network, search, security and system (`*_updated.yaml` are the newer versions) |
+| [`dashboards/mobile_dashv?/`](dashboards/mobile_dashv%3F) | Header, nav and phone cards from an earlier mobile dashboard |
+| [`custom_elements/`](custom_elements) | Reusable `button-card` snippets |
+| [`themes/`](themes) | Themes I've used or tweaked, including the SWAKES and Clear Dark variants |
+| [`screenshots/`](screenshots) | Dashboard screenshots |
+| [`configuration.yaml`](configuration.yaml), [`components/`](components), [`automations.yaml`](automations.yaml) | My older YAML config, split into packages |
+
+> [!NOTE]
+> The YAML config (`configuration.yaml`, `components/`, `automations.yaml`) dates from my 2020 to 2023 setup. My live instance is now mostly managed through the UI, so treat these files as examples rather than a working copy.
+
+<br />
+
+## Using this config
+
+This is a reference, not a drop-in install. To reuse a card or dashboard:
+
+1. Install the custom cards it uses through HACS. Each guide lists what it needs.
+2. Copy the YAML into a dashboard in raw configuration editor mode.
+3. Swap my entity IDs for your own. A missing entity will usually break a `button-card` layout.
+4. Tweak sizes and padding. Most cards are tuned for a Google Pixel screen.
+
+> [!IMPORTANT]
+> Some files use `!secret` values, and some custom components, images and add-ons are referenced but not included. You'll need your own `secrets.yaml`.
+
+> [!WARNING]
+> The `dashboards/mobile_dashv?` folder name contains a `?`, which Windows can't create. Cloning on Windows will fail to check out that folder. Use WSL, or download the files you need from GitHub directly.
+
+<br />
+
+## Current setup
+
+### Platform
+
+| | |
+| --- | --- |
+| Home Assistant | 2026.11 |
+| Install type | Home Assistant OS 18 in a KVM virtual machine on Proxmox VE |
+| Database | MariaDB (recorder) |
+| Zigbee | Zigbee2MQTT with an SMLIGHT SLZB-06M coordinator |
+| Thread / Matter | OpenThread Border Router and Matter Server |
+| Remote access | Home Assistant Cloud (Nabu Casa) |
+| Dashboards | 16 dashboards, about 90 views |
+
+<br />
+
+### Add-ons
+
+| Area | Add-ons |
+| --- | --- |
+| Core | Mosquitto broker, MariaDB, Zigbee2MQTT, Matter Server, OpenThread Border Router, ESPHome Device Builder |
+| Editing and backups | File editor, Terminal & SSH, Samba share, Home Assistant Editor, Home Assistant Version Control, Home Assistant Time Machine, Google Drive Backup |
+| Presence and sensing | Everything Presence Zone Configurator, ESPresense Companion, TOMMY Zero, ESPectre Traffic Generator |
+| Cameras and AI | Double Take Proxy, VisionState, Gemini Architect, openWakeWord |
+| Devices | Ring-MQTT with Video Streaming, TasmoAdmin, SWPanel (my ESPHome LVGL panel designer) |
+| Tools | AppDaemon, MQTT Explorer, SQLite Web, Bookstack, Beszel Agent, HAPass, Hearth |
+
+<br />
+
+### Integrations
+
+Around 300 config entries. The main ones:
+
+| Area | Integrations |
+| --- | --- |
+| Lighting and Zigbee | Zigbee2MQTT (MQTT), SMLIGHT, Yeelight, TP-Link Kasa, Tasmota, WLED, Broadlink, Matter, Thread, Xiaomi BLE |
+| Security and cameras | UniFi Protect, Frigate, Ring, Alarmo, LLM Vision, Whodunnit |
+| Network and servers | UniFi Network, AdGuard Home, Proxmox VE, Portainer, PiKVM, Cloudflare, Nmap Tracker, Network Scanner, Ping |
+| Media | Plex, Tautulli, Sonarr, Radarr, Overseerr, SABnzbd, Transmission, Spotify, Google Cast, Samsung TV, Xbox, Radio Browser |
+| Appliances and climate | Home Connect (Bosch), LG ThinQ, SmartThings, Google Nest, Honeywell Lyric |
+| AI and voice | Anthropic (Claude), OpenAI, Google Gemini, Google Assistant, Chime TTS, VoIP, MCP Server |
+| Info and helpers | Met Office, OpenWeatherMap, Waste Collection Schedule, Kleenex Pollen Radar, Flightradar24, 17TRACK, Waze Travel Time, Google Calendar, Pushover, Battery Notes, Watchman, Spook, pyscript |
+
+<br />
+
+### HACS
+
+<details>
+<summary><b>Integrations (37)</b></summary>
+<br />
+
+Arr Stack Integration, browser_mod, Bubble Card Tools, C.A.F.E., Card Builder, Claude Usage, Climate Group, Custom Icons, DashCast, Data Points, Favicon changer, FileTrack, Flightradar24, Fluvy, Frigate Config Builder, HA Percyta, HAGHS, HASS.Agent 2, Home Connect Alt, JetKVM, Kleenex Pollen Radar, Lighting Zone, LLM Vision, Maintenance Supporter, NeonPlan 3D, Network Scanner, Notify Studio, pyscript, SamsungTV Smart, Scrypted, Spook, TOMMY, Universal Notifier, Upgrade Advisor, Watchman, WebRTC Camera, Whodunnit
+
+</details>
+
+<details>
+<summary><b>Frontend cards (43)</b></summary>
+<br />
+
+AdGuard Card, AlertTicker Card, area-card-plus, Arr Stack Card, Atomic Calendar Revive, Bubble Card, Calendar Card Pro, Camera Gallery Card, Chronicle Card, Collapsable cards, Custom brand icons, Custom Features for Home Assistant Cards, Entity Exporter Card, FAB Card, Flex Table, Flightradar Flight Card, Grid Remote Card, ha-catt-fix, Honeycomb Menu, Hourly Weather Card, hui-element, layout-card, Light Pills Card, Mediocre Hass Media Player Cards, mini-graph-card, My Cards Bundle, Navbar card, Nodalia Cards, Paper Buttons Row, Person Tracker Card, raptor orbit card, Recently Added Media Card, Simple Swipe Card, Simple Timer Card, Simple Weather Card, state-switch, status-card, System Monitor Card, template-entity-row, Text Divider Row, TimeFlow Card, Todo Swipe Card, UniFi Device Card
+
+</details>
+
+<details>
+<summary><b>Themes (1)</b></summary>
+<br />
+
+Origami
+
+</details>
+
+<br />
+
+## Hardware
+
 ### Lights
 
-|  **Device** | Connectivity  | Amount  |
-| - | ------------ |  :------------: |
-| TRADFRI bulb E27  | Zigbee (deCONZ)  | 5 |
-| TRADFRI bulb GU10 | Zigbee (deCONZ) | 21 |
-| Lidl HG06106C | Zigbee (deCONZ) | 2 |
-| WS2812b RGB Strip  | WiFi (ESPHome/WLED)  | 10 |
-| Sonoff Basic R2  | WiFi (Tasmota)  | 2 |
-| Hyperion (Raspberry Pi)  | WiFi (Integration)  | 2 |
+| Device | Connection | Qty |
+| --- | --- | :---: |
+| IKEA TRADFRI GU10, white spectrum | Zigbee | 36 |
+| IKEA TRADFRI GU10, colour and white spectrum | Zigbee | 6 |
+| IKEA TRADFRI E27 (various) | Zigbee | 6 |
+| Philips Hue White A60 E27 | Zigbee | 2 |
+| Lidl Livarno Lux GU10 RGB | Zigbee | 1 |
+| Yeelight bulbs | Wi-Fi | |
+| WS2812B LED strips | Wi-Fi (WLED / ESPHome) | |
 
 ### Sensors
 
-|  Device | Connectivity  | Amount  |
-| - | ------------ |  :------------: |
-| Aqara Contact Sensor  | Zigbee (deCONZ)  | 15  |
-| Aqara Temp/Humidity Sensor  | Zigbee (deCONZ)  | 5  |
-| IKEA TRADFRI Motion Sensor | Zigbee (deCONZ)  | 3 |
-| Sonoff Motion Sensor (SNZB-03)  | Zigbee (deCONZ)  | 1  |
-| KERUI Motion Sensor  | 433Mhz (Tasmota)  | 3  |
-| KERUI Contact Sensor  | 433Mhz (Tasmota)  | 1  |
-| Philips Hue Motion/Temp/Light  Sensor  | Zigbee (deCONZ)  | 1  |
-| IKEA VINDRIKTNING (Air Quality Sensor)  | WiFi (ESPHome)   | 1  |
-| HC-S501/S505 Motion Sensor | WiFi (ESPHome)  | 8  |
-| DHT22/DS18B20 Temp/Humidity Sensor | WiFi (ESPHome)  | 5  |
-| Weight Sensor (HX711) | WiFi (ESPHome)  | 1  |
-| Fingerprint Sensor (R503) | WiFi (MQTT)  | 1  |
-| EMASTIFF Smoke Alarm  | 433Mhz (Tasmota)  | 1  |
+| Device | Connection | Qty |
+| --- | --- | :---: |
+| Aqara door and window sensor | Zigbee | 18 |
+| Aqara temperature and humidity sensor | Zigbee | 9 |
+| IKEA TRADFRI motion sensor | Zigbee | 4 |
+| IKEA VALLHORN motion sensor | Zigbee | 4 |
+| SONOFF motion sensor | Zigbee | 4 |
+| Philips Hue outdoor motion sensor | Zigbee | 2 |
+| IKEA BADRING water leak sensor | Zigbee | 2 |
+| IKEA VINDSTYRKA air quality sensor | Zigbee | 1 |
+| IKEA MYGGSPRAY motion sensor | Matter over Thread | 1 |
+| Everything Presence One / Lite (mmWave) | Wi-Fi (ESPHome) | |
+| ESPresense BLE nodes | Wi-Fi (MQTT) | 3 |
+| BirdNET-Go audio analysers | Wi-Fi (MQTT) | 3 |
 
-### Switches
+### Switches and plugs
 
-|  Device | Connectivity  | Amount  |
-| - | ------------ |  :------------: |
-| Heiman Smart Plug (TS011F)   | Zigbee (deCONZ)  | 2  |
-| SmartThings Smart Plug (D0005)   | Zigbee (deCONZ)  | 2  |
-| TP-Link Smart Plug (KP105/KP303)   | WiFi (HA Integration)  | 3  |
-| 5V Relay Module (SRD-05VDC-SL-C)   | WiFi (ESPHome)  | 3  |
-| Sonoff Basic R2  | WiFi (Tasmota)  | 3 |
-| Electric Blinds  | 433Mhz (Tasmota)  | 1 |
-| Smart Air Freshener  | WiFi (ESPHome)  | 1 |
-| LEGO Train  | WiFi (MQTT)  | 1 |
+| Device | Connection | Qty |
+| --- | --- | :---: |
+| Aqara H1 wall switch (double rocker, no neutral) | Zigbee | 1 |
+| UseeLink 4-gang power strip with USB | Zigbee | 1 |
+| IKEA TOFSMYGGA/GRILLPLATS smart plug | Zigbee | 1 |
+| Lidl Silvercrest smart plug | Zigbee | 1 |
+| SmartThings outlet with power meter | Zigbee | 1 |
+| TP-Link Kasa smart plugs | Wi-Fi | |
 
 ### Remotes
 
-|  Device | Connectivity  | Amount  |
-| - | ------------ |  :------------: |
-| IKEA TRADFRI Remote Control | Zigbee (deCONZ)  | 2 |
-| IKEA TRADFRI Dimmer | Zigbee (deCONZ)  | 1 |
-| 3 Button Remote | 433Mhz (Tasmota)  | 1 |
-| Broadlink R3 Mini | WiFi (Integration)  | 1 |
+| Device | Connection | Qty |
+| --- | --- | :---: |
+| IKEA TRADFRI on/off switch | Zigbee | 4 |
+| IKEA STYRBAR remote | Zigbee | 2 |
+| IKEA RODRET dimmer | Zigbee | 2 |
+| Broadlink RM4 (IR/RF) | Wi-Fi | 1 |
 
-### Cameras
+### Security and cameras
 
-|  Device | Connectivity  | Amount  |
-| - | ------------ |  :------------: |
-| Ubiquiti G3 Bullet (UVC-G3-BULLET) | LAN (UniFi Protect)  | 2 |
-| Ubiquiti G3 Flex (UVC-G3-FLEX) | LAN (UniFi Protect)  | 1 |
-| ESP32-CAM (OV2640) | WiFi (ESPHome)  | 1 |
-| Amazon Fire Tablet 7 (Onboard) | WiFi (Integration)  | 1 |
+| Device | Connection | Qty |
+| --- | --- | :---: |
+| UniFi Protect cameras (G5 Turret Ultra, G5 Dome, G3 Instant) | LAN (UniFi Protect) | |
+| Ring Video Doorbell 3 | Wi-Fi (Ring-MQTT) | 1 |
+| Ring Alarm base station and keypads | Wi-Fi / Z-Wave (Ring-MQTT) | 1 + 2 |
+| Ring contact and motion sensors | Z-Wave (Ring-MQTT) | 4 |
 
-### Media
+### Network and servers
 
-|  Device | Connectivity  | Amount  |
-| - | ------------ |  :------------: |
-| Google Home Mini Speaker  | WiFi (Integration)  | 3 |
-| Google Home Speaker  | WiFi (Integration)  | 1 |
-| Google Nest Hub  | WiFi (Integration)  | 1 |
-| Google Chromecast  | WiFi (Integration)  | 1 |
-| Raspberry Pi (Mopidy) | WiFi (LAN)  | 2 |
-| Xbox Series S | WiFi (LAN)  | 1 |
+| Device | Connection |
+| --- | --- |
+| UniFi Dream Machine Pro | LAN (UniFi) |
+| UniFi switches and access points | LAN (UniFi) |
+| SMLIGHT SLZB-06M Zigbee coordinator | LAN |
+| IKEA TRADFRI signal repeater | Zigbee |
+| Proxmox VE host | LAN |
+| PiKVM and JetKVM | LAN |
 
-### Network
+### Appliances and media
 
-|  Device | Connectivity  | Amount  |
-| - | ------------ |  :------------: |
-| Ubiquiti Dream Machine Pro (UDM-PRO)  | LAN (Integration)  | 1 |
-| Ubiquiti UniFi 16-Port PoE Switch (USW-16-POE)  | LAN (Integration)  | 1 |
-| Ubiquiti UniFi 5-Port PoE Switch (USW-Flex-Mini)  | LAN (Integration)  | 1 |
-| Ubiquiti UniFi AP AC LR (UAP-AC-LR)  | LAN (Integration)  | 2 |
-| AdGuard (Raspberry Pi) | LAN (Integration)  | 1 |
-| Sonoff RF Bridge (Tasmota) | WiFi (MQTT)  | 1 |
-| Raspberry Pi (deCONZ - Conbee II) | WiFi (Integration)  | 1 |
+| Device | Connection |
+| --- | --- |
+| Bosch dishwasher | Wi-Fi (Home Connect) |
+| LG fridge freezer | Wi-Fi (LG ThinQ) |
+| Samsung QE65Q80D TV | Wi-Fi (Samsung TV) |
+| Xbox | Wi-Fi (Xbox) |
+| Google Nest / Home speakers and Chromecasts | Wi-Fi (Google Cast) |
+| Aqara Smart Pet Feeder C1 | Zigbee |
 
-### Others
+<br />
 
-|  Device | Connectivity  | Amount  |
-| - | ------------ |  :------------: |
-| APC Smart-UPS (1000va)  | USB (Addon)  | 1 |
-| Pi-KVM (Raspberry Pi)  | LAN (MQTT)  | 1 |
-| Epson XP-4100 Printer (XP-4100)  | WiFi (Integration)  | 1 |
-| Fire Tablet 7 (Fully Kiosk Browser)  | WiFi (Integration)  | 1 |
-| Touchscreen Display (Raspberry Pi)  | WiFi (Dashboard)  | 1 |
-| Dell PowerEdge T330 (ESXi)  | LAN (Integration)  | 1 |
-| Lenovo ThinkCenter PC (Windows 11)  | LAN (MQTT)  | 1 |
+## Links and support
+
+- [SWAKES blog](https://makes.swakes.co.uk/tag/home-assistant/)
+- [Reddit](https://old.reddit.com/user/swake88/)
+- [Home Assistant Community](https://community.home-assistant.io/u/pqpxd/summary)
+- [Home Assistant Facebook group](https://www.facebook.com/groups/HomeAssistant)
+
+If you've found something useful here, you can [buy me a coffee](https://www.buymeacoffee.com/swakes).
