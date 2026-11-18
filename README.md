@@ -108,7 +108,7 @@ More in the [screenshots](screenshots) folder.
 | --- | --- |
 | [`guides/`](guides) | Step-by-step dashboard guides with YAML and images |
 | [`dashboards/`](dashboards) | Full dashboard YAML: lights, media, network, search, security and system (`*_updated.yaml` are the newer versions) |
-| [`dashboards/mobile_dashv?/`](dashboards/mobile_dashv%3F) | Header, nav and phone cards from an earlier mobile dashboard |
+| [`dashboards/mobile_dash/`](dashboards/mobile_dash) | Header, nav and phone cards from an earlier mobile dashboard |
 | [`custom_elements/`](custom_elements) | Reusable `button-card` snippets |
 | [`themes/`](themes) | Themes I've used or tweaked, including the SWAKES and Clear Dark variants |
 | [`screenshots/`](screenshots) | Dashboard screenshots |
@@ -130,10 +130,6 @@ This is a reference, not a drop-in install. To reuse a card or dashboard:
 
 > [!IMPORTANT]
 > Some files use `!secret` values, and some custom components, images and add-ons are referenced but not included. You'll need your own `secrets.yaml`.
-
-> [!WARNING]
-> The `dashboards/mobile_dashv?` folder name contains a `?`, which Windows can't create. Cloning on Windows will fail to check out that folder. Use WSL, or download the files you need from GitHub directly.
-
 <br />
 
 ## Current setup
