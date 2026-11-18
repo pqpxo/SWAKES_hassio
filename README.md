@@ -5,9 +5,7 @@
 My Home Assistant dashboards, guides, themes and config, shared so you can borrow ideas for your own setup.
 
 <p align="center">
-  <img src="guides/Yet%20Another%20Mobile%20Dashboard%20Redesign/Images/Screenshot_20251020-144321.png" width="300" alt="Mobile TV remote card" />
-  &nbsp;&nbsp;
-  <img src="guides/Yet%20Another%20Mobile%20Dashboard%20Redesign/Images/Screenshot_20251020-144346.png" width="300" alt="Mobile broadcast message card" />
+  <img src="screenshots/latest.png" width="400" alt="Mobile home dashboard with quick access rows for lights, cameras, alarm and heating" />
 </p>
 
 <br />
@@ -179,29 +177,207 @@ Around 300 config entries. The main ones:
 
 ### HACS
 
-<details>
-<summary><b>Integrations (37)</b></summary>
-<br />
+81 items installed through HACS. My own projects are marked ★.
 
-Arr Stack Integration, browser_mod, Bubble Card Tools, C.A.F.E., Card Builder, Claude Usage, Climate Group, Custom Icons, DashCast, Data Points, Favicon changer, FileTrack, Flightradar24, Fluvy, Frigate Config Builder, HA Percyta, HAGHS, HASS.Agent 2, Home Connect Alt, JetKVM, Kleenex Pollen Radar, Lighting Zone, LLM Vision, Maintenance Supporter, NeonPlan 3D, Network Scanner, Notify Studio, pyscript, SamsungTV Smart, Scrypted, Spook, TOMMY, Universal Notifier, Upgrade Advisor, Watchman, WebRTC Camera, Whodunnit
+#### Integrations (37)
+
+<details>
+<summary><b>Dashboards and UI</b> (8)</summary>
+
+| Name | What it does |
+| --- | --- |
+| [browser_mod](https://github.com/thomasloven/hass-browser_mod) | Turns each browser into a device you can control, with pop-ups |
+| [Bubble Card Tools](https://github.com/Clooos/Bubble-Card-Tools) | Backend for Bubble Card modules |
+| [Card Builder](https://github.com/studiobts/home-assistant-card-builder) | Build custom cards in a visual editor |
+| [Custom Icons](https://github.com/thomasloven/hass-custom_icons) | Use your own SVG icons |
+| [DashCast](https://github.com/AlexxIT/DashCast) | Cast dashboards to Chromecast devices |
+| [Favicon changer](https://github.com/thomasloven/hass-favicon) | Change the browser tab icon and title |
+| [Fluvy](https://github.com/acosta290/fluvy) | Theme and card library |
+| [NeonPlan 3D](https://github.com/Mastershort/neonplan3d) | Interactive 3D floor plan |
 
 </details>
 
 <details>
-<summary><b>Frontend cards (43)</b></summary>
-<br />
+<summary><b>Automation and scripting</b> (5)</summary>
 
-AdGuard Card, AlertTicker Card, area-card-plus, Arr Stack Card, Atomic Calendar Revive, Bubble Card, Calendar Card Pro, Camera Gallery Card, Chronicle Card, Collapsable cards, Custom brand icons, Custom Features for Home Assistant Cards, Entity Exporter Card, FAB Card, Flex Table, Flightradar Flight Card, Grid Remote Card, ha-catt-fix, Honeycomb Menu, Hourly Weather Card, hui-element, layout-card, Light Pills Card, Mediocre Hass Media Player Cards, mini-graph-card, My Cards Bundle, Navbar card, Nodalia Cards, Paper Buttons Row, Person Tracker Card, raptor orbit card, Recently Added Media Card, Simple Swipe Card, Simple Timer Card, Simple Weather Card, state-switch, status-card, System Monitor Card, template-entity-row, Text Divider Row, TimeFlow Card, Todo Swipe Card, UniFi Device Card
+| Name | What it does |
+| --- | --- |
+| [C.A.F.E.](https://github.com/FezVrasta/cafe-hass) | Visual automation editor |
+| [pyscript](https://github.com/custom-components/pyscript) | Write automations in Python |
+| [Spook](https://github.com/frenck/spook) | Extra actions, helpers and repair checks |
+| [Lighting Zone](https://github.com/rickmoonex/hass-lighting-zone) | Group lights into zones within an area |
+| [Climate Group](https://github.com/bjrnptrsn/climate_group) | Group thermostats into one entity (archived upstream) |
 
 </details>
 
 <details>
-<summary><b>Themes (1)</b></summary>
-<br />
+<summary><b>Monitoring and maintenance</b> (9)</summary>
 
-Origami
+| Name | What it does |
+| --- | --- |
+| [HAGHS](https://github.com/HA-Pulse/home-assistant-global-health-score) | Overall health score for the instance |
+| [Watchman](https://github.com/dummylabs/thewatchman) | Finds missing entities and actions in config |
+| [Upgrade Advisor](https://github.com/brianegge/ha-upgrade-advisor) | Checks release notes against your setup before upgrading |
+| [Maintenance Supporter](https://github.com/iluebbe/maintenance_supporter) | Tracks household maintenance tasks |
+| [FileTrack](https://github.com/TheScubaDiver/FileTrack) | Monitors files for changes |
+| [Data Points](https://github.com/buggedcom/HASS-Data-Points) | Records timestamped events for charts |
+| [HA Percyta](https://github.com/jayjojayson/HA_Percyta) | Audits users, permissions and data access |
+| [Whodunnit](https://github.com/sfox38/WhoDunnit) | Shows who or what caused each state change |
+| [Claude Usage](https://github.com/trickv/hass-claude-usage) | Tracks Claude subscription usage |
 
 </details>
+
+<details>
+<summary><b>Notifications</b> (2)</summary>
+
+| Name | What it does |
+| --- | --- |
+| [Notify Studio ★](https://github.com/pqpxo/ha-notify-studio) | Build, test and template Companion app notifications |
+| [Universal Notifier](https://github.com/jumping2000/universal_notifier) | One action to send to every notification service |
+
+</details>
+
+<details>
+<summary><b>Cameras and AI</b> (4)</summary>
+
+| Name | What it does |
+| --- | --- |
+| [LLM Vision](https://github.com/valentinfrlch/ha-llmvision) | AI descriptions of camera images and events |
+| [WebRTC Camera](https://github.com/AlexxIT/WebRTC) | Low-latency camera streams |
+| [Scrypted](https://github.com/koush/ha_scrypted) | Scrypted camera and NVR integration |
+| [Frigate Config Builder](https://github.com/ojiudezue/frigate-config-builder) | Generates Frigate config from Home Assistant |
+
+</details>
+
+<details>
+<summary><b>Devices and services</b> (9)</summary>
+
+| Name | What it does |
+| --- | --- |
+| [Home Connect Alt](https://github.com/ekutner/home-connect-hass) | Bosch and Siemens appliances |
+| [SamsungTV Smart](https://github.com/ollo69/ha-samsungtv-smart) | Samsung TV control with SmartThings |
+| [HASS.Agent 2](https://github.com/hass-agent/HASS.Agent-Integration) | Windows PC sensors, media and notifications |
+| [JetKVM](https://github.com/Poshy163/HomeAssistant-JetKVM) | JetKVM remote KVM control |
+| [TOMMY](https://github.com/tommy-sense/homeassistant-integration) | Wi-Fi motion sensing zones |
+| [Network Scanner](https://github.com/parvez/network_scanner) | Lists every device on the LAN |
+| [Arr Stack Integration](https://github.com/martinargalas/arr-stack-integration) | Backend for the Arr Stack Card |
+| [Flightradar24](https://github.com/AlexandrErohin/home-assistant-flightradar24) | Flights passing overhead |
+| [Kleenex Pollen Radar](https://github.com/MarcoGos/kleenex_pollenradar) | Local pollen levels |
+
+</details>
+
+#### Frontend cards (43)
+
+<details>
+<summary><b>Layout and navigation</b> (12)</summary>
+
+| Name | What it does |
+| --- | --- |
+| [layout-card](https://github.com/thomasloven/lovelace-layout-card) | Grid, masonry and column layouts |
+| [Bubble Card](https://github.com/Clooos/Bubble-Card) | Pop-ups and minimalist cards |
+| [Navbar card](https://github.com/joseluis9595/lovelace-navbar-card) | Bottom nav bar on phones, side nav on desktop |
+| [Simple Swipe Card](https://github.com/nutteloost/simple-swipe-card) | Swipe between cards |
+| [Collapsable cards](https://github.com/RossMcMillan92/lovelace-collapsable-cards) | Hide cards behind a dropdown |
+| [FAB Card](https://github.com/bhuebschen/fab-card) | Floating action button |
+| [Honeycomb Menu](https://github.com/Sian-Lee-SA/honeycomb-menu) | Hexagon pop-up menu on any card |
+| [state-switch](https://github.com/thomasloven/lovelace-state-switch) | Show different cards depending on a state |
+| [hui-element](https://github.com/thomasloven/lovelace-hui-element) | Use built-in cards and rows anywhere |
+| [Nodalia Cards](https://github.com/danielmigueltejedor/nodalia-cards) | Card set with a shared design system |
+| [My Cards Bundle](https://github.com/AnthonMS/my-cards) | Sliders and buttons |
+| [Custom Features for Home Assistant Cards](https://github.com/Nerwyn/custom-card-features) | Extra buttons, sliders and dropdowns on tile cards |
+
+</details>
+
+<details>
+<summary><b>Rooms and lights</b> (6)</summary>
+
+| Name | What it does |
+| --- | --- |
+| [area-card-plus](https://github.com/xBourner/area-card-plus) | Room cards with status and controls |
+| [status-card](https://github.com/xBourner/status-card) | Summary of what's on, open or active |
+| [Light Pills Card ★](https://github.com/pqpxo/ha-light-pills-card) | Compact room card with 2 to 4 light pills |
+| [Paper Buttons Row](https://github.com/jcwillox/lovelace-paper-buttons-row) | Rows of styled action buttons |
+| [template-entity-row](https://github.com/thomasloven/lovelace-template-entity-row) | Entity rows with templated content |
+| [Text Divider Row](https://github.com/iantrich/text-divider-row) | Text dividers inside entity cards |
+
+</details>
+
+<details>
+<summary><b>Media</b> (5)</summary>
+
+| Name | What it does |
+| --- | --- |
+| [Mediocre Hass Media Player Cards](https://github.com/antontanderup/mediocre-hass-media-player-cards) | Media player cards |
+| [Grid Remote Card](https://github.com/thecodingdad/grid-remote-card) | TV remote built on a grid |
+| [Recently Added Media Card](https://github.com/rusty4444/recently-added-media-card) | Latest Plex films and episodes |
+| [Arr Stack Card](https://github.com/martinargalas/ha-arr-stack-card) | Sonarr, Radarr and download queue in one card |
+| [ha-catt-fix](https://github.com/swiergot/ha-catt-fix) | Stops dashboards timing out when cast |
+
+</details>
+
+<details>
+<summary><b>Cameras and people</b> (2)</summary>
+
+| Name | What it does |
+| --- | --- |
+| [Camera Gallery Card](https://github.com/TheScubaDiver/camera-gallery-card) | Browse camera snapshots and clips |
+| [Person Tracker Card](https://github.com/djdevil/person-tracker-card) | Where everyone is, with battery and status |
+
+</details>
+
+<details>
+<summary><b>Calendars, timers and to-do</b> (6)</summary>
+
+| Name | What it does |
+| --- | --- |
+| [Atomic Calendar Revive](https://github.com/totaldebug/atomic-calendar-revive) | Calendar card |
+| [Calendar Card Pro](https://github.com/alexpfau/calendar-card-pro) | Clean, fast calendar card |
+| [Chronicle Card](https://github.com/KadenThomp36/chronicle-card) | Timeline of events from any source |
+| [Simple Timer Card](https://github.com/eyalgal/simple-timer-card) | Timers in several styles |
+| [TimeFlow Card](https://github.com/Rishi8078/TimeFlow-Card) | Countdown with a progress ring |
+| [Todo Swipe Card](https://github.com/nutteloost/todo-swipe-card) | Swipe between to-do lists |
+
+</details>
+
+<details>
+<summary><b>Weather and data</b> (6)</summary>
+
+| Name | What it does |
+| --- | --- |
+| [Simple Weather Card](https://github.com/kalkih/simple-weather-card) | Minimal weather card |
+| [Hourly Weather Card](https://github.com/decompil3d/lovelace-hourly-weather) | Hourly forecast as a coloured bar |
+| [mini-graph-card](https://github.com/kalkih/mini-graph-card) | Small sensor graphs |
+| [Flex Table](https://github.com/custom-cards/flex-table-card) | Tables built from any entities |
+| [Flightradar Flight Card](https://github.com/plckr/flightradar-flight-card) | Flights from the Flightradar24 integration |
+| [Raptor Orbit Card](https://github.com/Inter-Raptor/raptor-orbit-card) | Raptor Orbit card |
+
+</details>
+
+<details>
+<summary><b>Network and system</b> (5)</summary>
+
+| Name | What it does |
+| --- | --- |
+| [AdGuard Card](https://github.com/homeassistant-extras/adguard-card) | AdGuard Home stats and controls |
+| [UniFi Device Card](https://github.com/bluenazgul/unifi-device-card) | UniFi gateways, switches and APs |
+| [System Monitor Card](https://github.com/juju35/ha-system-monitor-card) | CPU, memory and disk of the host |
+| [AlertTicker Card](https://github.com/djdevil/AlertTicker-Card) | Scrolling alerts and notifications |
+| [Entity Exporter Card](https://github.com/marc-schuetze/ha-entity-exporter-card) | Export entity lists |
+
+</details>
+
+<details>
+<summary><b>Icons</b> (1)</summary>
+
+| Name | What it does |
+| --- | --- |
+| [Custom brand icons](https://github.com/elax46/custom-brand-icons) | Brand icons missing from MDI |
+
+</details>
+
+#### Theme
+
+[Origami](https://github.com/hazymorning/origami), built mainly with Bubble Card.
 
 <br />
 
